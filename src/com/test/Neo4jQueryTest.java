@@ -27,18 +27,8 @@ public class Neo4jQueryTest {
 //    private String dbPath = "D:\\BIMTest\\databases\\QueryTestDB";
     private String dbPath;
     private long nodeCount;
-    private Label label1 = new Label() {
-        @Override
-        public String name() {
-            return "First";
-        }
-    };
-    private Label label2 = new Label() {
-        @Override
-        public String name() {
-            return "Second";
-        }
-    };
+    private Label label = Label.label("First");
+
 
     public Neo4jQueryTest(String dbPath, long nodeCount){
         this.dbPath = dbPath;
@@ -77,10 +67,12 @@ public class Neo4jQueryTest {
                 nodeMap.put("attribute3",i%100000);
                 nodeMap.put("attribute4", i % 10000000);
                 if(i<(nodeCount/2)){
-                    inserter.createNode(i, nodeMap, label1);//这里要加上label
+                    label = Label.label("First");
+
                 }else{
-                    inserter.createNode(i, nodeMap, label2);
+                    label = Label.label("Second");
                 }
+                inserter.createNode(i, nodeMap, label);//这里要加上label
             }
             end = System.currentTimeMillis();
             System.out.println("create-node-time:" + (end - start) + "ms");
@@ -119,10 +111,12 @@ public class Neo4jQueryTest {
                 nodeMap.put("attribute3", i % 100000);
                 nodeMap.put("attribute4", i % 10000000);
                 if(i<(nodeCount/2)){
-                    inserter.createNode(i, nodeMap, label1);//这里要加上label
+                    label = Label.label("First");
+
                 }else{
-                    inserter.createNode(i, nodeMap, label2);
+                    label = Label.label("Second");
                 }
+                inserter.createNode(i, nodeMap, label);//这里要加上label
                 nodeIndex.add(i, nodeMap);//所有的属性都键入了index
             }
             end = System.currentTimeMillis();
@@ -268,7 +262,7 @@ public class Neo4jQueryTest {
         GraphDatabaseService graphDatabaseService = test.getGraphDBService();
         Transaction tx = graphDatabaseService.beginTx();
         try{
-            Iterable<IndexDefinition> indexs = graphDatabaseService.schema().getIndexes(label1);
+            Iterable<IndexDefinition> indexs = graphDatabaseService.schema().getIndexes(label);
             for(IndexDefinition indexDefinition : indexs){
                 System.out.println("index-name:" + indexDefinition.getLabel().name());
                 System.out.print("Property-keys:");

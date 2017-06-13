@@ -5,11 +5,13 @@ import ifc2x3javatoolbox.ifcmodel.IfcModel;
 import jline.internal.Log;
 import org.apache.commons.io.FileUtils;
 import org.neo4j.graphdb.GraphDatabaseService;
+import org.neo4j.graphdb.Label;
 import org.neo4j.graphdb.RelationshipType;
 import org.neo4j.unsafe.batchinsert.BatchInserter;
 import org.neo4j.unsafe.batchinsert.BatchInserters;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -21,13 +23,20 @@ public class IfcReader {
     private static IfcModel ifcModel;
     private static Collection<ClassInterface> ifcObjects;
 
-    private static final String dbPath = "D:\\BIMTest\\databases\\Chongqing";
+    private String ifcFilePath;
+    private String dbPath;
     private GraphDatabaseService graphDB = null;
-    private long startNodeID;
 
     private FileWriter fileWriter;
     private String path = "D:\\BIMserver1.3.4\\bimserver-clean\\ifc-files\\revitT0Properties.txt";
     int IfcProductCount;
+
+
+    public IfcReader(String ifcFilePath, String dbPath){
+        this.ifcFilePath = ifcFilePath;
+        this.dbPath = dbPath;
+    }
+
 
     private static enum RelTypes implements RelationshipType {
         IfcRelConnectsElements,
@@ -51,7 +60,8 @@ public class IfcReader {
         IfcRelSpaceBoundary,
         IfcRelVoidsElement,
         IfcRelAggregates,
-        IfcRelNests
+        IfcRelNests,
+        ReferringTo
     }
 
     private void clearDB(){
@@ -65,7 +75,6 @@ public class IfcReader {
 
     public void generateIfcModel(){
         ifcModel = new IfcModel();
-        String ifcFilePath = "D:\\BIMserver1.3.4\\bimserver-clean\\ifc-files\\ChongqingSMI20150706.ifc";
         File file = new File(ifcFilePath);
         try{
             ifcModel.readStepFile(file);
@@ -123,12 +132,10 @@ public class IfcReader {
 //        String string = null;
 
 
-//        ��ifcRel���Ž�һ�����飻
+
 //        String[] ifcRelTypes = {"IfcRelConnectsElements","IfcRelConnectsPathElements","IfcRelConnectsWithRealizingElements","IfcRelConnectsPortToElement",
 //                "IfcRelConnectsPorts","IfcRelConnectsStructuralActivity","IfcRelConnectsStructuralElement","IfcRelConnectsStructuralMember","IfcRelConnectsWithEccentricity",
 //                "IfcRelContainedInSpatialStructure","","","","","","","","","","","","","","","","","","","","","","",""};
-//        ���а�����Ϊÿһ������в�ͬ�ķ���������Ƿ������Ҳ�������ģ�
-//        ��������Class.forName(string)������
 
 
 
@@ -148,7 +155,7 @@ public class IfcReader {
 
             int flag = 0;
 
-            if(ifcObject instanceof IfcRelConnectsElements){//ÿһ������¼����node id��node type���Ϳ��������createNode�ˣ�
+            if(ifcObject instanceof IfcRelConnectsElements){
 //                string = new String("IfcRelConnectsElements " + ifcObject.getStepLineNumber() + ":\n"  +  "   RelatingElement:" + ((IfcRelConnectsElements) ifcObject).getRelatingElement().getClass().getSimpleName()
 //                        + " " + ((IfcRelConnectsElements) ifcObject).getRelatingElement().getStepLineNumber()  + "\n"
 //                        + "   RelatedElement:" + ((IfcRelConnectsElements) ifcObject).getRelatedElement().getClass().getSimpleName()
@@ -249,7 +256,7 @@ public class IfcReader {
 //                        + "\n" //û��StepLineNumber
 //                        + "   RelatedStructuralActivity:" + ((IfcRelConnectsStructuralActivity) ifcObject).getRelatedStructuralActivity().getClass().getSimpleName()
 //                        + " " + ((IfcRelConnectsStructuralActivity) ifcObject).getRelatedStructuralActivity().getStepLineNumber() + "\n");
-//                ��ΪaID�����ڣ����Բ�������Ӧ��Node;����bID����Ŷ
+//
                 flag = 1;
             } else if(ifcObject instanceof IfcRelConnectsStructuralElement) {
 //                string = new String("IfcRelConnectsStructuralElement " + ifcObject.getStepLineNumber() + ":\n" + "   RelatingElement:" + ((IfcRelConnectsStructuralElement) ifcObject).getRelatingElement().getClass().getSimpleName()
@@ -614,15 +621,14 @@ public class IfcReader {
 //                try{
 //                    fileWriter.write(string+"\n");
 //                    string = null;
-////                   ��Ҫ����flag,aID,bID,�Ƿ�Ϊ0������node��relationship�ˣ�
 //                } catch (Exception e){
 //                    e.printStackTrace();
 //                }
 //            }
-            //nodeListȥ�أ�
+
             long t1 = System.currentTimeMillis();
 
-            if(aID != 0){//&&list����û��
+            if(aID != 0){
                 if(!nodeList.contains(aID)){
                     inserter.createNode(aID,aMap);
                     nodeList.add(aID);
@@ -631,7 +637,7 @@ public class IfcReader {
                 }
             }
             if(flag == 1){
-                if(bID != 0){//&&list����û��
+                if(bID != 0){
                     if(!nodeList.contains(aID)){
                         inserter.createNode(bID, bMap);
                         nodeList.add(bID);
@@ -854,10 +860,153 @@ public class IfcReader {
        }
     }
 
+    public void storeReferringToNeo4j(){
+        clearDB();
+        Map<Integer, String> nodes = new HashMap<>();//所有的nodes
+        Map<Integer, Map<Integer, Integer>> refer = new HashMap<>();//refer关系，值应该是个数组。
+        Map<Integer, Integer> referCount = new HashMap<>();
+        Map<Integer, Integer> referredCount = new HashMap<>();
+        Map<Integer, Integer> totalCount = new HashMap<>();
+        int index;
+        String className;
+        InternalAccessClass internalObject;
+        Label label;
+        CloneableObject parameter;
+        int classId;
+        int referredClassId;
+        int total;
+        Map<Integer, Integer> integerMap = null;
+        Map<String, Object> nodeMap = new HashMap<>();
+        Map<String, Object> relMap = new HashMap<>();
+        relMap.put("attribute1","attribute1Value");
+        BatchInserter inserter = null;
+        try{
+            inserter = BatchInserters.inserter(new File(dbPath));
+
+            for(ClassInterface ifcObject : ifcObjects){//先把各个node以及其label都建立了。然后再扫描一遍建立referringto. 出度和入度都要统计一下。
+                index = ifcObject.getClass().getName().lastIndexOf(".");
+                className = ifcObject.getClass().getName().substring(index + 1);
+                classId = ifcObject.getStepLineNumber();
+                System.out.println(classId + " " + className);
+                nodes.put(classId, className);//将已建立的node存入map
+
+                nodeMap.put("Id", classId);//建立node
+                inserter.createNode(classId, nodeMap, Label.label(className));
+
+                internalObject = (InternalAccessClass) ifcObject;
+                ArrayList<CloneableObject> parameters = InternalAccess.getStepParameter(internalObject);
+
+                total = parameters.size();
+                if(!totalCount.containsKey(classId)){
+                    totalCount.put(classId,total);
+                }
+
+                //做各种统计
+                integerMap = new HashMap<>();
+                for(int i = 0; i < total; i++){
+                    parameter = parameters.get(i);
+                    if(parameter != null){
+                        if(parameter instanceof ClassInterface){
+                            referredClassId = ((ClassInterface) parameter).getStepLineNumber();
+                            integerMap.put(referredClassId,referredClassId);
+//                            refer.put(classId, );
+                            if(!referCount.containsKey(classId)){
+                                referCount.put(classId,1);
+                            } else {
+                                referCount.put(classId,referCount.get(classId)+1);
+                            }
+                            if(!referredCount.containsKey(referredClassId)){
+                                referredCount.put(referredClassId,1);
+                            } else {
+                                referredCount.put(referredClassId,referredCount.get(referredClassId)+1);
+                            }
+                        } else if(parameter instanceof LIST){
+                            System.out.println(i + " parameter is LIST");
+                            LIST<CloneableObject> listParameter =  (LIST<CloneableObject>)parameter;
+                            for(CloneableObject inlineObject : listParameter){
+                                if(inlineObject instanceof ClassInterface){
+                                    referredClassId = ((ClassInterface) inlineObject).getStepLineNumber();
+                                    integerMap.put(referredClassId,referredClassId);
+                                    if(!referCount.containsKey(classId)){
+                                        referCount.put(classId,1);
+                                    } else {
+                                        referCount.put(classId,referCount.get(classId)+1);
+                                    }
+                                    if(!referredCount.containsKey(referredClassId)){
+                                        referredCount.put(referredClassId,1);
+                                    } else {
+                                        referredCount.put(referredClassId,referredCount.get(referredClassId)+1);
+                                    }
+                                }else if(inlineObject instanceof TypeInterface){
+                                    System.out.println("LIST<>:" + inlineObject.getClass().getName());
+                                }
+                            }
+                        } else if(parameter instanceof SET){
+                            System.out.println(i + " parameter is SET");
+                            SET<CloneableObject> setParameter = (SET<CloneableObject>)parameter;
+                            for(CloneableObject inlineObject : setParameter ){
+                                if(inlineObject instanceof ClassInterface){
+                                    referredClassId = ((ClassInterface) inlineObject).getStepLineNumber();
+                                    integerMap.put(referredClassId,referredClassId);
+                                    if(!referCount.containsKey(classId)){
+                                        referCount.put(classId,1);
+                                    } else {
+                                        referCount.put(classId,referCount.get(classId)+1);
+                                    }
+                                    if(!referredCount.containsKey(referredClassId)){
+                                        referredCount.put(referredClassId,1);
+                                    } else {
+                                        referredCount.put(referredClassId,referredCount.get(referredClassId)+1);
+                                    }
+                                }else if(inlineObject instanceof TypeInterface){
+                                    System.out.println("SET<>:" + inlineObject.getClass().getName());
+                                }
+                            }
+
+                        }
+                    } else {
+                        System.out.println(i + " parameter is null");
+                    }
+                }
+                refer.put(classId,integerMap);
+            }
+
+            //根据refer建立relationship
+            for(Map.Entry<Integer, Map<Integer,Integer>> entry : refer.entrySet()){
+                int key = entry.getKey();
+                Map<Integer,Integer> values = entry.getValue();
+                for(Integer value : values.keySet()){
+                    inserter.createRelationship(key, value, RelationshipType.withName("ReferingTo"),relMap);
+                }
+            }
+
+            //根据nodes（id,classname）、totalCount、referCount、referredCount输出csv
+            File countfile = new File("D:\\MyRepository\\BIM\\count.csv");
+            if(countfile.exists()){
+                countfile.delete();
+            }
+            countfile.createNewFile();
+            FileOutputStream fos = new FileOutputStream(countfile);
+            String string;
+            for(Map.Entry<Integer, String> entry : nodes.entrySet()){
+                string = entry.getKey() + "," + entry.getValue() + "," + totalCount.get(entry.getKey()) + "," + referCount.get(entry.getKey()) + "," + referredCount.get(entry.getKey()) + System.lineSeparator();
+                fos.write(string.getBytes());
+            }
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }finally {
+            if(inserter!=null){
+                inserter.shutdown();
+            }
+        }
+
+    }
+
     public static void main(String[] args){
-        IfcReader ifcReader = new IfcReader();
+        IfcReader ifcReader = new IfcReader(args[0], args[1]);
         ifcReader.generateIfcModel();
-        ifcReader.storeNodes();
+        ifcReader.storeReferringToNeo4j();
 //        ifcReader.storeProperties();
 //        ifcReader.findTriples();
     }
