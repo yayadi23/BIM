@@ -887,7 +887,7 @@ public class IfcReader {
                 index = ifcObject.getClass().getName().lastIndexOf(".");
                 className = ifcObject.getClass().getName().substring(index + 1);
                 classId = ifcObject.getStepLineNumber();
-                System.out.println(classId + " " + className);
+                System.out.println(classId);
                 nodes.put(classId, className);//将已建立的node存入map
 
                 nodeMap.put("Id", classId);//建立node
@@ -909,7 +909,6 @@ public class IfcReader {
                         if(parameter instanceof ClassInterface){
                             referredClassId = ((ClassInterface) parameter).getStepLineNumber();
                             integerMap.put(referredClassId,referredClassId);
-//                            refer.put(classId, );
                             if(!referCount.containsKey(classId)){
                                 referCount.put(classId,1);
                             } else {
@@ -921,7 +920,7 @@ public class IfcReader {
                                 referredCount.put(referredClassId,referredCount.get(referredClassId)+1);
                             }
                         } else if(parameter instanceof LIST){
-                            System.out.println(i + " parameter is LIST");
+//                            System.out.println(i + " parameter is LIST");
                             LIST<CloneableObject> listParameter =  (LIST<CloneableObject>)parameter;
                             for(CloneableObject inlineObject : listParameter){
                                 if(inlineObject instanceof ClassInterface){
@@ -938,11 +937,11 @@ public class IfcReader {
                                         referredCount.put(referredClassId,referredCount.get(referredClassId)+1);
                                     }
                                 }else if(inlineObject instanceof TypeInterface){
-                                    System.out.println("LIST<>:" + inlineObject.getClass().getName());
+//                                    System.out.println("LIST<>:" + inlineObject.getClass().getName());
                                 }
                             }
                         } else if(parameter instanceof SET){
-                            System.out.println(i + " parameter is SET");
+//                            System.out.println(i + " parameter is SET");
                             SET<CloneableObject> setParameter = (SET<CloneableObject>)parameter;
                             for(CloneableObject inlineObject : setParameter ){
                                 if(inlineObject instanceof ClassInterface){
@@ -959,13 +958,13 @@ public class IfcReader {
                                         referredCount.put(referredClassId,referredCount.get(referredClassId)+1);
                                     }
                                 }else if(inlineObject instanceof TypeInterface){
-                                    System.out.println("SET<>:" + inlineObject.getClass().getName());
+//                                    System.out.println("SET<>:" + inlineObject.getClass().getName());
                                 }
                             }
 
                         }
                     } else {
-                        System.out.println(i + " parameter is null");
+//                        System.out.println(i + " parameter is null");
                     }
                 }
                 refer.put(classId,integerMap);
@@ -988,8 +987,18 @@ public class IfcReader {
             countfile.createNewFile();
             FileOutputStream fos = new FileOutputStream(countfile);
             String string;
+            int refer1;
+            int referred1;
             for(Map.Entry<Integer, String> entry : nodes.entrySet()){
-                string = entry.getKey() + "," + entry.getValue() + "," + totalCount.get(entry.getKey()) + "," + referCount.get(entry.getKey()) + "," + referredCount.get(entry.getKey()) + System.lineSeparator();
+                refer1 = 0;
+                referred1 = 0;
+                if(referCount.get(entry.getKey()) != null){
+                    refer1 = referCount.get(entry.getKey());
+                }
+                if(referredCount.get(entry.getKey()) != null){
+                    referred1 = referredCount.get(entry.getKey());
+                }
+                string = entry.getKey() + "," + entry.getValue() + "," + totalCount.get(entry.getKey()) + "," + refer1 + "," + referred1 + System.lineSeparator();
                 fos.write(string.getBytes());
             }
 
