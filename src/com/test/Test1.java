@@ -25,18 +25,7 @@ import java.util.Map;
 public class Test1 {
     private String dbPath;
     private long nodeCount;
-    private Label label1 = new Label() {
-        @Override
-        public String name() {
-            return "First";
-        }
-    };
-    private Label label2 = new Label() {
-        @Override
-        public String name() {
-            return "Second";
-        }
-    };
+
 
     public Test1(String dbPath, long nodeCount){
         this.dbPath = dbPath;
@@ -65,9 +54,9 @@ public class Test1 {
                 nodeMap.put("attribute3",i%100000);
                 nodeMap.put("attribute4",i%10000000);
                 if(i<(nodeCount/2)){
-                    inserter.createNode(i, nodeMap, label1);//这里要加上label
+                    inserter.createNode(i, nodeMap, Label.label("First"));//这里要加上label
                 }else{
-                    inserter.createNode(i, nodeMap, label2);
+                    inserter.createNode(i, nodeMap, Label.label("Second"));
                 }
             }
             end = System.currentTimeMillis();
