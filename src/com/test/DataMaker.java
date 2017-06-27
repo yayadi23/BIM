@@ -10,11 +10,13 @@ import java.io.IOException;
  */
 public class DataMaker {
     private String filepath = "";
-    private long count;
+    private long start;
+    private long end;
 
-    public DataMaker(String filepath, long count){
+    public DataMaker(String filepath, long start, long end){
         this.filepath = filepath;
-        this.count = count;
+        this.start = start;
+        this.end = end;
     }
     public void makeIfcWall(){
         try{
@@ -26,15 +28,14 @@ public class DataMaker {
             }
             file.createNewFile();
             fileWriter = new FileWriter(file);
-            for(long i = 0; i < count; i++){
+            for(long i = start; i < end; i++){
                 stringBuilder = new StringBuilder();
-                stringBuilder.append("{\"index\":{\"_id\":\"a" + i + "\"}}\n" + "{\"id\":\"" + i + "\"");
+                stringBuilder.append("{\"index\":{\"_id\":\"a" + i + "\"}}\n" + "{\"id\":\"a" + i + "\"");
                 for(int j = 1; j < 50; j++){
-                    stringBuilder.append(",\"attribute" + j + "\":\"" + i + "\"");
+                    stringBuilder.append(",\"attribute" + j + "\":\"aaaaaaaa" + i + "\"");
                 }
                 stringBuilder.append("}\n");
                 fileWriter.write(stringBuilder.toString());
-                stringBuilder = null;
             }
             fileWriter.close();
         }catch (IOException e){
@@ -52,15 +53,14 @@ public class DataMaker {
             }
             file.createNewFile();
             fileWriter = new FileWriter(file);
-            for(long i = 0; i < count; i++){
+            for(long i = start; i < end; i++){
                 stringBuilder = new StringBuilder();
-                stringBuilder.append("{\"index\":{\"_id\":\"b" + i + "\",\"_parent\":\"a" + i + "\"}}" + "\n" + "{\"id\":\"" + i + "\"");
+                stringBuilder.append("{\"index\":{\"_id\":\"b" + i + "\",\"_parent\":\"a" + i + "\"}}" + "\n" + "{\"id\":\"b" + i + "\"");
                 for(int j = 1; j < 50; j++){
-                    stringBuilder.append(",\"attribute" + j + "\":\"" + i + "\"");
+                    stringBuilder.append(",\"attribute" + j + "\":\"bbbbbbbb" + i + "\"");
                 }
                 stringBuilder.append("}\n");
                 fileWriter.write(stringBuilder.toString());
-                stringBuilder = null;
             }
             fileWriter.close();
         }catch (IOException e){
@@ -78,15 +78,14 @@ public class DataMaker {
             }
             file.createNewFile();
             fileWriter = new FileWriter(file);
-            for(long i = 0; i < count; i++){
+            for(long i = start; i < end; i++){
                 stringBuilder = new StringBuilder();
-                stringBuilder.append("{\"index\":{\"_id\":\"c" + i + "\",\"_parent\":\"b" + i + "\"}}" + "\n" + "{\"id\":\"" + i + "\"");
+                stringBuilder.append("{\"index\":{\"_id\":\"c" + i + "\",\"_parent\":\"b" + i + "\"}}" + "\n" + "{\"id\":\"c" + i + "\"");
                 for(int j = 1; j < 50; j++){
-                    stringBuilder.append(",\"attribute" + j + "\":\"" + i + "\"");
+                    stringBuilder.append(",\"attribute" + j + "\":\"cccccccc" + i + "\"");
                 }
                 stringBuilder.append("}\n");
                 fileWriter.write(stringBuilder.toString());
-                stringBuilder = null;
             }
             fileWriter.close();
         }catch (IOException e){
@@ -96,8 +95,8 @@ public class DataMaker {
 
 
     public static void main(String[] args){
-        DataMaker dataMaker = new DataMaker(args[0], Long.parseLong(args[1]));
-        //dataMaker.makeIfcWall();
+        DataMaker dataMaker = new DataMaker(args[0], Long.parseLong(args[1]), Long.parseLong(args[2]));
+        dataMaker.makeIfcWall();
         dataMaker.makeIfcPropertySet();
         dataMaker.makeIfcPropertySingleValue();
     }
