@@ -53,14 +53,16 @@ public class DataMaker {
             }
             file.createNewFile();
             fileWriter = new FileWriter(file);
-            for(long i = start; i < end; i++){
-                stringBuilder = new StringBuilder();
-                stringBuilder.append("{\"index\":{\"_id\":\"b" + i + "\",\"_parent\":\"a" + i + "\"}}" + "\n" + "{\"id\":\"b" + i + "\"");
-                for(int j = 1; j < 50; j++){
-                    stringBuilder.append(",\"attribute" + j + "\":\"bbbbbbbb" + i + "\"");
+            for(long i = start; i < end; i = i + 5){
+                for(int k = 0; k < 5; k++){
+                    stringBuilder = new StringBuilder();
+                    stringBuilder.append("{\"index\":{\"_id\":\"b" + (i + k) + "\",\"_parent\":\"a" + i + "\"}}" + "\n" + "{\"id\":\"b" + (i + k) + "\"");
+                    for(int j = 1; j < 50; j++){
+                        stringBuilder.append(",\"attribute" + j + "\":\"bbbbbbbb" + (i + k) + "\"");
+                    }
+                    stringBuilder.append("}\n");
+                    fileWriter.write(stringBuilder.toString());
                 }
-                stringBuilder.append("}\n");
-                fileWriter.write(stringBuilder.toString());
             }
             fileWriter.close();
         }catch (IOException e){
@@ -78,14 +80,16 @@ public class DataMaker {
             }
             file.createNewFile();
             fileWriter = new FileWriter(file);
-            for(long i = start; i < end; i++){
-                stringBuilder = new StringBuilder();
-                stringBuilder.append("{\"index\":{\"_id\":\"c" + i + "\",\"_parent\":\"b" + i + "\"}}" + "\n" + "{\"id\":\"c" + i + "\"");
-                for(int j = 1; j < 50; j++){
-                    stringBuilder.append(",\"attribute" + j + "\":\"cccccccc" + i + "\"");
+            for(long i = start; i < end; i = i + 10){
+                for(int k = 0; k < 10; k++){
+                    stringBuilder = new StringBuilder();
+                    stringBuilder.append("{\"index\":{\"_id\":\"c" + (i + k) + "\",\"_parent\":\"b" + i + "\"}}" + "\n" + "{\"id\":\"c" + (i + k) + "\"");
+                    for(int j = 1; j < 50; j++){
+                        stringBuilder.append(",\"attribute" + j + "\":\"cccccccc" + (i + k) + "\"");
+                    }
+                    stringBuilder.append("}\n");
+                    fileWriter.write(stringBuilder.toString());
                 }
-                stringBuilder.append("}\n");
-                fileWriter.write(stringBuilder.toString());
             }
             fileWriter.close();
         }catch (IOException e){
