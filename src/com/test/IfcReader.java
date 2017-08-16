@@ -321,6 +321,7 @@ public class IfcReader {
 //                        + "   RelatedElements:" );
                 aID = ((IfcRelContainedInSpatialStructure) ifcObject).getRelatingStructure().getStepLineNumber();
                 aType = ((IfcRelContainedInSpatialStructure) ifcObject).getRelatingStructure().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelContainedInSpatialStructure;
                 relType = "IfcRelConnectsWithEccentricity";
                 aMap  = new HashMap<>();
@@ -346,6 +347,7 @@ public class IfcReader {
 //                        + "   RelatedCoverings:" );
                 aID = ((IfcRelCoversBldgElements) ifcObject).getRelatingBuildingElement().getStepLineNumber();
                 aType = ((IfcRelCoversBldgElements) ifcObject).getRelatingBuildingElement().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelCoversBldgElements;
                 relType = "IfcRelCoversBldgElements";
                 aMap = new HashMap<>();
@@ -371,6 +373,7 @@ public class IfcReader {
 //                        + "   RelatedCoverings:" );
                 aID = ((IfcRelCoversSpaces) ifcObject).getRelatedSpace().getStepLineNumber();
                 aType = ((IfcRelCoversSpaces) ifcObject).getRelatedSpace().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelCoversSpaces;
                 relType = "IfcRelCoversSpaces";
                 aMap = new HashMap<>();
@@ -415,6 +418,7 @@ public class IfcReader {
 //                        + "   RelatedControlElements:" );
                 aID = ((IfcRelFlowControlElements) ifcObject).getRelatingFlowElement().getStepLineNumber();
                 aType = ((IfcRelFlowControlElements) ifcObject).getRelatingFlowElement().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelFlowControlElements;
                 relType = "IfcRelFlowControlElements";
                 aMap = new HashMap<>();
@@ -459,6 +463,7 @@ public class IfcReader {
 //                        + "   RelatedElements:");
                 aID = ((IfcRelReferencedInSpatialStructure) ifcObject).getRelatingStructure().getStepLineNumber();
                 aType = ((IfcRelReferencedInSpatialStructure) ifcObject).getRelatingStructure().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelReferencedInSpatialStructure;
                 relType = "IfcRelReferencedInSpatialStructure";
                 aMap = new HashMap<>();
@@ -503,6 +508,7 @@ public class IfcReader {
 //                        + "   RelatedBuildings:");
                 aID = ((IfcRelServicesBuildings) ifcObject).getRelatingSystem().getStepLineNumber();
                 aType = ((IfcRelServicesBuildings) ifcObject).getRelatingSystem().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelServicesBuildings;
                 relType = "IfcRelServicesBuildings";
                 aMap  = new HashMap<>();
@@ -537,7 +543,8 @@ public class IfcReader {
                     bType = ((IfcRelSpaceBoundary) ifcObject).getRelatedBuildingElement().getClass().getSimpleName();
                     bMap = new HashMap<>();
                     relMap = new HashMap<>();
-                    bMap.put("type", bMap);
+                    bMap.put("type", bType);
+                    relID = ifcObject.getStepLineNumber();
                     relationship = RelTypes.IfcRelSpaceBoundary;
                     relType = "IfcRelSpaceBoundary";
                     relMap.put("type",relType);
@@ -572,6 +579,7 @@ public class IfcReader {
 //                        + "   RelatedObjects:");
                 aID = ((IfcRelAggregates) ifcObject).getRelatingObject().getStepLineNumber();
                 aType = ((IfcRelAggregates) ifcObject).getRelatingObject().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelAggregates;
                 relType = "IfcRelAggregates";
                 aMap  = new HashMap<>();
@@ -597,6 +605,7 @@ public class IfcReader {
 //                        + "   RelatedObjects:");
                 aID = ((IfcRelNests) ifcObject).getRelatingObject().getStepLineNumber();
                 aType = ((IfcRelNests) ifcObject).getRelatingObject().getClass().getSimpleName();
+                relID = ifcObject.getStepLineNumber();
                 relationship = RelTypes.IfcRelNests;
                 relType = "IfcRelNests";
                 aMap  = new HashMap<>();
@@ -626,22 +635,27 @@ public class IfcReader {
 //                }
 //            }
 
+            System.out.println("relID:" + relID);
             long t1 = System.currentTimeMillis();
 
             if(aID != 0){
                 if(!nodeList.contains(aID)){
-                    inserter.createNode(aID,aMap);
-                    nodeList.add(aID);
                     System.out.println("aID:" + aID);
+                    inserter.createNode(aID, aMap);
+                    nodeList.add(aID);
                     nodeCount++;
                 }
             }
             if(flag == 1){
                 if(bID != 0){
-                    if(!nodeList.contains(aID)){
-                        inserter.createNode(bID, bMap);
-                        nodeList.add(bID);
+                    if(!nodeList.contains(bID)){
                         System.out.println("bID:" + bID);
+                        if(bMap != null){
+                            inserter.createNode(bID, bMap);
+                        }else {
+                            System.out.println("bMap is null!");
+                        }
+                        nodeList.add(bID);
                         nodeCount++;
                     }
                     inserter.createRelationship(aID,bID,relationship,relMap);
@@ -651,9 +665,9 @@ public class IfcReader {
                 if(bMapMap != null){
                     for(long bKey : bMapMap.keySet()){
                         if(!nodeList.contains(bKey)){
-                            inserter.createNode(bKey,bMapMap.get(bKey));
-                            nodeList.add(bKey);
                             System.out.println("bKey:" + bKey);
+                            inserter.createNode(bKey, bMapMap.get(bKey));
+                            nodeList.add(bKey);
                             nodeCount++;
                         }
                         inserter.createRelationship(aID,bKey,relationship,relMap);
@@ -1015,8 +1029,9 @@ public class IfcReader {
     public static void main(String[] args){
         IfcReader ifcReader = new IfcReader(args[0], args[1]);
         ifcReader.generateIfcModel();
-        ifcReader.storeReferringToNeo4j();
+//        ifcReader.storeReferringToNeo4j();
 //        ifcReader.storeProperties();
 //        ifcReader.findTriples();
+        ifcReader.storeNodes();
     }
 }
