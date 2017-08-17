@@ -22,6 +22,7 @@ public class IfcReader {
 
     private static IfcModel ifcModel;
     private static Collection<ClassInterface> ifcObjects;
+    private static Map<String, Label> stringLabelMap = new HashMap<>();
 
     private String ifcFilePath;
     private String dbPath;
@@ -37,6 +38,19 @@ public class IfcReader {
         this.dbPath = dbPath;
     }
 
+    public Label getLabel(String ifcTypeStr){
+        Label label = stringLabelMap.get(ifcTypeStr);
+        if( label == null){
+            label = new Label() {
+                @Override
+                public String name() {
+                    return ifcTypeStr;
+                }
+            };
+            stringLabelMap.put(ifcTypeStr, label);
+        }
+        return label;
+    }
 
     private static enum RelTypes implements RelationshipType {
         IfcRelConnectsElements,
@@ -147,7 +161,7 @@ public class IfcReader {
         for(ClassInterface ifcObject : ifcObjects){
             long aID = 0, bID = 0, relID = 0;
             RelTypes relationship = null;
-            String aType,bType,relType;
+            String aType = null,bType = null, relType = null;
             Map<String, Object> aMap = null;
             Map<String, Object> bMap = null;
             Map<String, Object> relMap = null;
@@ -641,7 +655,7 @@ public class IfcReader {
             if(aID != 0){
                 if(!nodeList.contains(aID)){
                     System.out.println("aID:" + aID);
-                    inserter.createNode(aID, aMap);
+                    inserter.createNode(aID, aMap, Label.label((String) aMap.get("type")));
                     nodeList.add(aID);
                     nodeCount++;
                 }
@@ -650,11 +664,7 @@ public class IfcReader {
                 if(bID != 0){
                     if(!nodeList.contains(bID)){
                         System.out.println("bID:" + bID);
-                        if(bMap != null){
-                            inserter.createNode(bID, bMap);
-                        }else {
-                            System.out.println("bMap is null!");
-                        }
+                        inserter.createNode(bID, bMap, Label.label((String) bMap.get("type")));
                         nodeList.add(bID);
                         nodeCount++;
                     }
@@ -666,7 +676,7 @@ public class IfcReader {
                     for(long bKey : bMapMap.keySet()){
                         if(!nodeList.contains(bKey)){
                             System.out.println("bKey:" + bKey);
-                            inserter.createNode(bKey, bMapMap.get(bKey));
+                            inserter.createNode(bKey, bMapMap.get(bKey), Label.label((String)bMapMap.get(bKey).get("type")));
                             nodeList.add(bKey);
                             nodeCount++;
                         }
