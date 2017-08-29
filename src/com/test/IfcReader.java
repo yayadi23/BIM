@@ -716,14 +716,15 @@ public class IfcReader {
             fileWriter = new FileWriter(file);
 //            ifcModel.getIfcObjectByEntityInstanceName(1);//这是根据id获取出对应的object
 
+
             StringBuilder json1;
             ArrayList<Integer> objectsHasProperties = new ArrayList<>();
             for(ClassInterface ifcObject : ifcObjects){
-
                 int index = ifcObject.getClass().getName().lastIndexOf(".");
                 String className = ifcObject.getClass().getName().substring(index + 1);
                 System.out.println(className);
                 InternalAccessClass object = (InternalAccessClass) ifcObject;
+
                 if(object instanceof IfcRelDefinesByProperties){
                     json1 = new StringBuilder();
                     ArrayList<CloneableObject> parameters1 = InternalAccess.getStepParameter((IfcRelDefinesByProperties)object);//这里得出的是null，而不是一个List。是不是需要从nonInverseAttibutes哪里寻找突破口；No,是因为parse的时候把它置null了。注释掉就可以了。

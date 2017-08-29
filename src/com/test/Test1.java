@@ -97,7 +97,7 @@ public class Test1 {
         BatchInserter inserter = null;
         try{
             long start,end;
-            clearDB();
+//            clearDB();
             inserter = BatchInserters.inserter(new File(dbPath));
             Map<String, Object> nodeMap = new HashMap<>();
             start = System.currentTimeMillis();
@@ -237,21 +237,21 @@ public class Test1 {
                 "create index on :IfcObject7(name)"
         };
 
-        Transaction transaction;
-        transaction = graphdb.beginTx();
+//        Transaction transaction;
+//        transaction = graphdb.beginTx();
         for(int i = 0; i < createIndex.length; i++){
             graphdb.execute(createIndex[i]);
         }
-        Iterator<IndexDefinition> iterator = graphdb.schema().getIndexes().iterator();
-        int indexCount = 0;
-        while (iterator.hasNext()){
-            iterator.next();
-            indexCount++;
-        }
-        transaction.success();
-        transaction.close();
-        System.out.println("indexCount: " + indexCount);
-        System.out.println();
+//        Iterator<IndexDefinition> iterator = graphdb.schema().getIndexes().iterator();
+//        int indexCount = 0;
+//        while (iterator.hasNext()){
+//            iterator.next();
+//            indexCount++;
+//        }
+//        transaction.success();
+//        transaction.close();
+//        System.out.println("indexCount: " + indexCount);
+//        System.out.println();
 
         //construct bloomfilter
         int expectedInsertions = 1000000;
@@ -271,8 +271,8 @@ public class Test1 {
 
         //neo4j depth data query
 
-        transaction = graphdb.beginTx();
-        for(int i = 0; i < 1; i++){
+//        transaction = graphdb.beginTx();
+        for(int i = 1; i < 4; i++){
             //数值是最好是随机的;空值查询另外写；
             start = System.currentTimeMillis();
             Result result = null;
@@ -285,8 +285,8 @@ public class Test1 {
                 for(int k = 0; k < 10; k++){
                     for(int t = 0; t < 100; t++){
                         queryStr = "match (n:IfcObject1{name:\"name" + j + "\"})"
-                                + " - [r1] -> " + "(m:IfcObject2{name:\"" + String.valueOf(j*10 + k) + "\"})"
-                                + " - [r2] -> " + "(s:IfcObject7{name:\""+ String.valueOf((j*10 + k)*1000 + t + 2000000) + "\"})"
+                                + " - [r1] -> " + "(m:IfcObject2{name:\"name" + String.valueOf(j*10 + k) + "\"})"
+                                + " - [r2] -> " + "(s:IfcObject7{name:\"name"+ String.valueOf((j*10 + k)*1000 + t + 2000000) + "\"})"
                                 + " return id(n),id(m),id(s)";
                         if(j == 101 && k == 2 && t == 3){
                             System.out.println(queryStr);
@@ -311,15 +311,15 @@ public class Test1 {
             System.out.println("outofGraphCount: " + outofGraphCount);
             System.out.println();
         }
-        transaction.success();
-        transaction.close();
+//        transaction.success();
+//        transaction.close();
 
 
         //my way to query
 
 
-        transaction = graphdb.beginTx();
-        for(int i = 0; i < 1; i++){
+//        transaction = graphdb.beginTx();
+        for(int i = 1; i < 4; i++){
             //数值是最好是随机的;空值查询另外写；
             Result myResult = null;
             String bfQueryStr = null; //这个数值要跟上面的一致；
@@ -342,7 +342,7 @@ public class Test1 {
                             break;
                         }
 
-                        bfQueryStr = "match (m:IfcObject2{name:\"" + String.valueOf(j*10 + k) + "\"}) return id(m)";
+                        bfQueryStr = "match (m:IfcObject2{name:\"name" + String.valueOf(j*10 + k) + "\"}) return id(m)";
                         myResult = graphdb.execute(bfQueryStr);
                         keyList = myResult.columns();
                         if (myResult.hasNext()){
@@ -352,7 +352,7 @@ public class Test1 {
                             break;
                         }
 
-                        bfQueryStr = "match (s:IfcObject7{name:\"" + String.valueOf((j*10 + k)*1000 + t + 2000000) + "\"}) return id(s)";
+                        bfQueryStr = "match (s:IfcObject7{name:\"name" + String.valueOf((j*10 + k)*1000 + t + 2000000) + "\"}) return id(s)";
                         myResult = graphdb.execute(bfQueryStr);
                         keyList = myResult.columns();
                         if (myResult.hasNext()){
@@ -375,36 +375,30 @@ public class Test1 {
             System.out.println("outofbfCount: " + outofbfCount);
             System.out.println();
         }
-        transaction.success();
-        transaction.close();
-        graphdb.shutdown();
+//        transaction.success();
+//        transaction.close();
     }
 
     public static void main(String args[]){
         Test1 test1 = new Test1(args[0],Long.parseLong(args[1]));
-//        test1.storeWithoutIndex();
 
 //        test1.storeDepthData();
 
         GraphDatabaseService graphdb = test1.openDB();
-//        test1.newQuery(graphdb);
-        Transaction transaction = graphdb.beginTx();
-        String query = "match (n) return count(n)";
-        Result result = graphdb.execute(query);
-        Map<String, Object> row = null;
-        while(result.hasNext()){
-            row = result.next();
-            System.out.println(row.get(result.columns().get(0)));
-        }
-        ResourceIterator<Node> nodeIter = graphdb.getAllNodes().iterator();
-        int count111 = 0;
-        while(nodeIter.hasNext()){
-            nodeIter.next();
-            count111++;
-        }
-        System.out.println(count111);
-        transaction.success();
-        transaction.close();
+        test1.newQuery(graphdb);
+
+
+//        String query = "match (n) return count(n)";
+//        String query = "match (n:IfcObject1{name:\"name100\"}) - [r1] -> (m:IfcObject2{name:\"name1000\"}) - [r2] -> (s:IfcObject7{name:\"name3000000\"}) return id(n),id(m),id(s)";
+//        Result result = graphdb.execute(query);
+//        Map<String, Object> row = null;
+//        while(result.hasNext()){
+//            row = result.next();
+//            System.out.println(row.get(result.columns().get(0)));
+//        }
+
         graphdb.shutdown();
+
+
     }
 }

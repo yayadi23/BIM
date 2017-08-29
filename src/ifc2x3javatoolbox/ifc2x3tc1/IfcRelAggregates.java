@@ -17,10 +17,21 @@ public class IfcRelAggregates extends IfcRelDecomposes implements ClassInterface
 	private java.util.ArrayList<CloneableObject> stepParameter = null;
 	private java.util.HashSet<ObjectChangeListener> listenerList = null;
 	protected int stepLineNumber;
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","RelatingObject","RelatedObjects"};
+
+	String[] getAttributes() {
+		return IfcRelAggregates.attributes;
+	}
+
+
+
 	/**
 	* The default constructor.
 	**/
-	public IfcRelAggregates(){}
+	public IfcRelAggregates(){
+		getAttributes();
+
+	}
 
 	/**
 	* Constructs a new IfcRelAggregates object using the given parameters.
