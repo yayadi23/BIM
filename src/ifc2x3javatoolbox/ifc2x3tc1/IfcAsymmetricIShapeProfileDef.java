@@ -30,6 +30,14 @@ public class IfcAsymmetricIShapeProfileDef extends IfcIShapeProfileDef implement
 	**/
 	public IfcAsymmetricIShapeProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","OverallWidth"
+			,"OverallDepth","WebThickness","FlangeThickness","FilletRadius","TopFlangeWidth","TopFlangeThickness","TopFlangeFilletRadius",
+			"CentreOfGravityInY"};
+
+	public String[] getAttributes() {
+		return IfcAsymmetricIShapeProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAsymmetricIShapeProfileDef object using the given parameters.
 	*

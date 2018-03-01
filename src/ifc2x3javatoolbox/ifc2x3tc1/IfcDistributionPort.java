@@ -24,6 +24,13 @@ public class IfcDistributionPort extends IfcPort implements ClassInterface
 	**/
 	public IfcDistributionPort(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","FlowDirection"};
+
+	public String[] getAttributes() {
+		return IfcDistributionPort.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDistributionPort object using the given parameters.
 	*

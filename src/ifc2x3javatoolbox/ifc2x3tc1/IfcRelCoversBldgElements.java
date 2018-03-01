@@ -26,6 +26,14 @@ public class IfcRelCoversBldgElements extends IfcRelConnects implements ClassInt
 	**/
 	public IfcRelCoversBldgElements(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingBuildingElement","RelatedCoverings"};
+
+	public String[] getAttributes() {
+		return IfcRelCoversBldgElements.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcRelCoversBldgElements object using the given parameters.
 	*

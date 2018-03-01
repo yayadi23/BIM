@@ -19,7 +19,7 @@ public class IfcRelAggregates extends IfcRelDecomposes implements ClassInterface
 	protected int stepLineNumber;
 	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","RelatingObject","RelatedObjects"};
 
-	String[] getAttributes() {
+	public String[] getAttributes() {
 		return IfcRelAggregates.attributes;
 	}
 
@@ -28,10 +28,7 @@ public class IfcRelAggregates extends IfcRelDecomposes implements ClassInterface
 	/**
 	* The default constructor.
 	**/
-	public IfcRelAggregates(){
-		getAttributes();
-
-	}
+	public IfcRelAggregates(){}
 
 	/**
 	* Constructs a new IfcRelAggregates object using the given parameters.

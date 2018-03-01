@@ -21,6 +21,12 @@ public class IfcWorkSchedule extends IfcWorkControl implements ClassInterface
 	* The default constructor.
 	**/
 	public IfcWorkSchedule(){}
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","Identifier","CreationDate","Creators","Purpose","Duration","TotalFloat","StartTime","FinishTime","WorkControlType","UserDefinedControlType"};
+
+	public String[] getAttributes(){
+		return IfcWorkSchedule.attributes;
+	}
 
 	/**
 	* Constructs a new IfcWorkSchedule object using the given parameters.

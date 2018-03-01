@@ -26,6 +26,12 @@ public class IfcSurfaceStyle extends IfcPresentationStyle implements IfcPresenta
 	**/
 	public IfcSurfaceStyle(){}
 
+	private static final String[] attributes = new String[]{"Name","Side","Styles"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSurfaceStyle object using the given parameters.
 	*

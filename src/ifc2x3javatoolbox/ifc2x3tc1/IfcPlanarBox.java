@@ -24,6 +24,12 @@ public class IfcPlanarBox extends IfcPlanarExtent implements ClassInterface
 	**/
 	public IfcPlanarBox(){}
 
+	private static final String[] attributes = new String[]{"SizeInX","SizeInY","Placement"};
+
+	public String[] getAttributes() {
+		return IfcPlanarBox.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPlanarBox object using the given parameters.
 	*

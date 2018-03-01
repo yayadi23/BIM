@@ -24,6 +24,12 @@ public class IfcCsgSolid extends IfcSolidModel implements ClassInterface
 	**/
 	public IfcCsgSolid(){}
 
+	private static final String[] attributes = new String[]{"TreeRootExpression"};
+
+	public String[] getAttributes() {
+		return IfcCsgSolid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCsgSolid object using the given parameters.
 	*

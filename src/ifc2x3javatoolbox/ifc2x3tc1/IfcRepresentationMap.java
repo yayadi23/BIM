@@ -27,6 +27,12 @@ public class IfcRepresentationMap extends InternalAccessClass implements ClassIn
 	**/
 	public IfcRepresentationMap(){}
 
+	private static final String[] attributes = new String[]{"MappingOrigin","MappedRepresentation"};
+
+	public String[] getAttributes() {
+		return IfcRepresentationMap.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRepresentationMap object using the given parameters.
 	*

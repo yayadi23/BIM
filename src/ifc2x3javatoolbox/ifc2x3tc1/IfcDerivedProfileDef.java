@@ -28,6 +28,12 @@ public class IfcDerivedProfileDef extends IfcProfileDef implements ClassInterfac
 	**/
 	public IfcDerivedProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","ParentProfile","Operator","Label"};
+
+	public String[] getAttributes() {
+		return IfcDerivedProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDerivedProfileDef object using the given parameters.
 	*

@@ -32,6 +32,13 @@ public class IfcConstraintAggregationRelationship extends InternalAccessClass im
 	**/
 	public IfcConstraintAggregationRelationship(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","RelatingConstraint","RelatedConstraints","LogicalAggregator"};
+
+	public String[] getAttributes() {
+		return IfcConstraintAggregationRelationship.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcConstraintAggregationRelationship object using the given parameters.
 	*

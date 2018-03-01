@@ -28,6 +28,12 @@ public class IfcBooleanResult extends IfcGeometricRepresentationItem implements 
 	**/
 	public IfcBooleanResult(){}
 
+	private static final String[] attributes = new String[]{"Operator","FirstOperand","SecondOperand"};
+
+	public String[] getAttributes() {
+		return IfcBooleanResult.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBooleanResult object using the given parameters.
 	*

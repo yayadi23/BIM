@@ -26,6 +26,12 @@ public abstract class IfcSweptSurface extends IfcSurface implements ClassInterfa
 	**/
 	public IfcSweptSurface(){}
 
+	private static final String[] attributes = new String[]{"SweptCurve","Position"};
+
+	public String[] getAttributes(){
+		return IfcSweptSurface.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSweptSurface object using the given parameters.
 	*

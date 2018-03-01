@@ -28,6 +28,12 @@ public class IfcFillAreaStyleTiles extends IfcGeometricRepresentationItem implem
 	**/
 	public IfcFillAreaStyleTiles(){}
 
+	private static final String[] attributes = new String[]{"TilingPattern","Tiles","TilingScale"};
+
+	public String[] getAttributes() {
+		return IfcFillAreaStyleTiles.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFillAreaStyleTiles object using the given parameters.
 	*

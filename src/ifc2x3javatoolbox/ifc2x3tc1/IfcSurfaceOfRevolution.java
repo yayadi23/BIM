@@ -24,6 +24,12 @@ public class IfcSurfaceOfRevolution extends IfcSweptSurface implements ClassInte
 	**/
 	public IfcSurfaceOfRevolution(){}
 
+
+	private static final String[] attributes = new String[]{"SweptCurve","Position","AxisPosition"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceOfRevolution.attributes;
+	}
 	/**
 	* Constructs a new IfcSurfaceOfRevolution object using the given parameters.
 	*

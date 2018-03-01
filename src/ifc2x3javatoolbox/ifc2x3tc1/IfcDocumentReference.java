@@ -23,6 +23,12 @@ public class IfcDocumentReference extends IfcExternalReference implements ClassI
 	**/
 	public IfcDocumentReference(){}
 
+	private static final String[] attributes = new String[]{"Location","ItemReference","Name"};
+
+	public String[] getAttributes() {
+		return IfcDocumentReference.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDocumentReference object using the given parameters.
 	*

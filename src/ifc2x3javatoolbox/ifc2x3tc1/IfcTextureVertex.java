@@ -24,6 +24,12 @@ public class IfcTextureVertex extends InternalAccessClass implements ClassInterf
 	**/
 	public IfcTextureVertex(){}
 
+	private static final String[] attributes = new String[]{"Coordinates"};
+
+	public String[] getAttributes(){
+		return IfcTextureVertex.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextureVertex object using the given parameters.
 	*

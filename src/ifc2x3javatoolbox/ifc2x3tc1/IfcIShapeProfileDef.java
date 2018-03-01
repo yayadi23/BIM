@@ -32,6 +32,13 @@ public class IfcIShapeProfileDef extends IfcParameterizedProfileDef implements C
 	**/
 	public IfcIShapeProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position"
+			,"OverallWidth","OverallDepth","WebThickness","FlangeThickness","FilletRadius"};
+
+	public String[] getAttributes() {
+		return IfcIShapeProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcIShapeProfileDef object using the given parameters.
 	*

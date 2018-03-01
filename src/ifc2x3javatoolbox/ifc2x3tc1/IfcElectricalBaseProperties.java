@@ -38,6 +38,14 @@ public class IfcElectricalBaseProperties extends IfcEnergyProperties implements 
 	**/
 	public IfcElectricalBaseProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"EnergySequence","UserDefinedEnergySequence","ElectricCurrentType","InputVoltage","InputFrequency"
+			,"FullLoadCurrent","MinimumCircuitCurrent","MaximumPowerInput","RatedPowerInput","InputPhase"};
+
+	public String[] getAttributes() {
+		return IfcElectricalBaseProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricalBaseProperties object using the given parameters.
 	*

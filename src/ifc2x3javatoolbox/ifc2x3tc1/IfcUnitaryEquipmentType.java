@@ -24,6 +24,14 @@ public class IfcUnitaryEquipmentType extends IfcEnergyConversionDeviceType imple
 	**/
 	public IfcUnitaryEquipmentType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcUnitaryEquipmentType.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcUnitaryEquipmentType object using the given parameters.
 	*

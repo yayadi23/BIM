@@ -36,6 +36,12 @@ public class File_Name extends InternalAccessClass implements ClassInterface
 	**/
 	public File_Name(){}
 
+	private static final String[] attributes = new String[]{"name","timeStamp","author","organization","preprocessorVersion","originatingSystem","authorization"};
+
+	public String[] getAttributes() {
+		return File_Name.attributes;
+	}
+
 	/**
 	* Constructs a new File_Name object using the given parameters.
 	*

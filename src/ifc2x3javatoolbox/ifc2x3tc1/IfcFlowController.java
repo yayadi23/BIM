@@ -22,6 +22,14 @@ public class IfcFlowController extends IfcDistributionFlowElement implements Cla
 	**/
 	public IfcFlowController(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFlowController.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcFlowController object using the given parameters.
 	*

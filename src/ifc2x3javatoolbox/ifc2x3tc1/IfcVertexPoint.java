@@ -24,6 +24,12 @@ public class IfcVertexPoint extends IfcVertex implements IfcPointOrVertexPoint, 
 	**/
 	public IfcVertexPoint(){}
 
+	private static final String[] attributes = new String[]{"VertexGeometry"};
+
+	public String[] getAttributes(){
+		return IfcVertexPoint.attributes;
+	}
+
 	/**
 	* Constructs a new IfcVertexPoint object using the given parameters.
 	*

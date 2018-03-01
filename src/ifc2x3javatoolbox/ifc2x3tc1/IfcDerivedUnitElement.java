@@ -26,6 +26,12 @@ public class IfcDerivedUnitElement extends InternalAccessClass implements ClassI
 	**/
 	public IfcDerivedUnitElement(){}
 
+	private static final String[] attributes = new String[]{"Unit","Exponent"};
+
+	public String[] getAttributes() {
+		return IfcDerivedUnitElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDerivedUnitElement object using the given parameters.
 	*

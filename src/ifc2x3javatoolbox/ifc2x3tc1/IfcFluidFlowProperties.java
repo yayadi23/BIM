@@ -52,6 +52,16 @@ public class IfcFluidFlowProperties extends IfcPropertySetDefinition implements 
 	**/
 	public IfcFluidFlowProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"PropertySource","FlowConditionTimeSeries","VelocityTimeSeries","FlowrateTimeSeries"
+	,"Fluid","PressureTimeSeries","UserDefinedPropertySource","TemperatureSingleValue","WetBulbTemperatureSingleValue"
+	,"WetBulbTemperatureTimeSeries","TemperatureTimeSeries","FlowrateSingleValue","FlowConditionSingleValue"
+	,"VelocitySingleValue","PressureSingleValue"};
+
+	public String[] getAttributes() {
+		return IfcFluidFlowProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFluidFlowProperties object using the given parameters.
 	*

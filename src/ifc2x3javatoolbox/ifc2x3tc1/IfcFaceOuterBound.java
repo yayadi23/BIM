@@ -22,6 +22,12 @@ public class IfcFaceOuterBound extends IfcFaceBound implements ClassInterface
 	**/
 	public IfcFaceOuterBound(){}
 
+	private static final String[] attributes = new String[]{"Bound","Orientation"};
+
+	public String[] getAttributes() {
+		return IfcFaceOuterBound.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFaceOuterBound object using the given parameters.
 	*

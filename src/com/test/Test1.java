@@ -1,5 +1,6 @@
 package com.test;
 
+
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 import org.apache.commons.io.FileUtils;
@@ -23,13 +24,14 @@ import java.util.Map;
 
 /**
  * Created by Diak on 2017/5/27.
+ * bloomfilteræŸ¥è¯¢è¯•éªŒä¸ŽcypheræŸ¥è¯¢è¯•éªŒ
  */
 public class Test1 {
     private String dbPath;
     private long nodeCount;
 
     private static enum RelTypes implements RelationshipType {
-        aggragetes;//¿´À´Ö»ÄÜÖ§³ÅÒ»ÖÖ¹ØÏµ
+        aggragetes;//ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ö§ï¿½ï¿½Ò»ï¿½Ö¹ï¿½Ïµ
     }
 
     public Test1(String dbPath, long nodeCount){
@@ -39,7 +41,7 @@ public class Test1 {
 
     private void clearDB(){
         try{
-            FileUtils.deleteDirectory(new File(dbPath));//±ä³ÉÊäÈëµÄ²ÎÊý
+            FileUtils.deleteDirectory(new File(dbPath));//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,7 +61,7 @@ public class Test1 {
                 nodeMap.put("attribute3",i%100000);
                 nodeMap.put("attribute4",i%10000000);
                 if(i<(nodeCount/2)){
-                    inserter.createNode(i, nodeMap, Label.label("First"));//ÕâÀïÒª¼ÓÉÏlabel
+                    inserter.createNode(i, nodeMap, Label.label("First"));//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½label
                 }else{
                     inserter.createNode(i, nodeMap, Label.label("Second"));
                 }
@@ -273,7 +275,7 @@ public class Test1 {
 
 //        transaction = graphdb.beginTx();
         for(int i = 1; i < 4; i++){
-            //ÊýÖµÊÇ×îºÃÊÇËæ»úµÄ;¿ÕÖµ²éÑ¯ÁíÍâÐ´£»
+            //ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;ï¿½ï¿½Öµï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½
             start = System.currentTimeMillis();
             Result result = null;
             String queryStr = null;
@@ -288,9 +290,9 @@ public class Test1 {
                                 + " - [r1] -> " + "(m:IfcObject2{name:\"name" + String.valueOf(j*10 + k) + "\"})"
                                 + " - [r2] -> " + "(s:IfcObject7{name:\"name"+ String.valueOf((j*10 + k)*1000 + t + 2000000) + "\"})"
                                 + " return id(n),id(m),id(s)";
-                        if(j == 101 && k == 2 && t == 3){
-                            System.out.println(queryStr);
-                        }
+//                        if(j == 101 && k == 2 && t == 3){
+//                            System.out.println(queryStr);
+//                        }
                         result = graphdb.execute(queryStr);
                         if(result.hasNext()){
                             keyList = result.columns();
@@ -306,9 +308,9 @@ public class Test1 {
                 }
             }
             end = System.currentTimeMillis();
-            System.out.println(i + "th" + " neo4j-lookup-time: " + String.valueOf(end - start) + " ms");
-            System.out.println("inGraphCount: " + inGraphCount);
-            System.out.println("outofGraphCount: " + outofGraphCount);
+            System.out.println(i + "th" + "-lookup-time based on Cypher: " + String.valueOf(end - start) + " ms");
+//            System.out.println("inGraphCount: " + inGraphCount);
+//            System.out.println("outofGraphCount: " + outofGraphCount);
             System.out.println();
         }
 //        transaction.success();
@@ -320,9 +322,9 @@ public class Test1 {
 
 //        transaction = graphdb.beginTx();
         for(int i = 1; i < 4; i++){
-            //ÊýÖµÊÇ×îºÃÊÇËæ»úµÄ;¿ÕÖµ²éÑ¯ÁíÍâÐ´£»
+            //ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;ï¿½ï¿½Öµï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½
             Result myResult = null;
-            String bfQueryStr = null; //Õâ¸öÊýÖµÒª¸úÉÏÃæµÄÒ»ÖÂ£»
+            String bfQueryStr = null; //ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÒªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â£ï¿½
             StringBuilder composedId = null;
             List<String> keyList = null;
             int inbfCount = 0;
@@ -370,9 +372,9 @@ public class Test1 {
             }
 
             end = System.currentTimeMillis();
-            System.out.println(i + "th" + " myway-lookup-time: " + String.valueOf(end - start) + " ms");
-            System.out.println("inbfCount: " + inbfCount);
-            System.out.println("outofbfCount: " + outofbfCount);
+            System.out.println(i + "th" + "-lookup-time based on BloomFilter: " + String.valueOf(end - start) + " ms");
+//            System.out.println("inbfCount: " + inbfCount);
+//            System.out.println("outofbfCount: " + outofbfCount);
             System.out.println();
         }
 //        transaction.success();

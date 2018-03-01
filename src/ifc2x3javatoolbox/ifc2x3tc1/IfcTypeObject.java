@@ -27,6 +27,13 @@ public class IfcTypeObject extends IfcObjectDefinition implements ClassInterface
 	**/
 	public IfcTypeObject(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets"};
+
+	public String[] getAttributes(){
+		return IfcTypeObject.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTypeObject object using the given parameters.
 	*

@@ -34,6 +34,14 @@ public class IfcRelConnectsStructuralMember extends IfcRelConnects implements Cl
 	**/
 	public IfcRelConnectsStructuralMember(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingStructuralMember","RelatedStructuralConnection","AppliedCondition","AdditionalConditions"
+	,"SupportedLength","ConditionCoordinateSystem"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsStructuralMember.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelConnectsStructuralMember object using the given parameters.
 	*

@@ -22,6 +22,12 @@ public class IfcExternallyDefinedSymbol extends IfcExternalReference implements 
 	**/
 	public IfcExternallyDefinedSymbol(){}
 
+	private static final String[] attributes = new String[]{"Location","ItemReference","Name"};
+
+	public String[] getAttributes() {
+		return IfcExternallyDefinedSymbol.attributes;
+	}
+
 	/**
 	* Constructs a new IfcExternallyDefinedSymbol object using the given parameters.
 	*

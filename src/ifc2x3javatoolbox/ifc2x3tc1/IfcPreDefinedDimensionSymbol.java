@@ -22,6 +22,13 @@ public class IfcPreDefinedDimensionSymbol extends IfcPreDefinedSymbol implements
 	**/
 	public IfcPreDefinedDimensionSymbol(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcPreDefinedDimensionSymbol.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcPreDefinedDimensionSymbol object using the given parameters.
 	*

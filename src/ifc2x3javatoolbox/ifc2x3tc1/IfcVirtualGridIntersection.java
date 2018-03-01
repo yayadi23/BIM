@@ -26,6 +26,13 @@ public class IfcVirtualGridIntersection extends InternalAccessClass implements C
 	**/
 	public IfcVirtualGridIntersection(){}
 
+
+	private static final String[] attributes = new String[]{"IntersectingAxes","OffsetDistances"};
+
+	public String[] getAttributes(){
+		return IfcVirtualGridIntersection.attributes;
+	}
+
 	/**
 	* Constructs a new IfcVirtualGridIntersection object using the given parameters.
 	*

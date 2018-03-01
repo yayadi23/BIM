@@ -24,6 +24,12 @@ public class IfcBoxedHalfSpace extends IfcHalfSpaceSolid implements ClassInterfa
 	**/
 	public IfcBoxedHalfSpace(){}
 
+	private static final String[] attributes = new String[]{"BaseSurface","AgreementFlag","Enclosure"};
+
+	public String[] getAttributes() {
+		return IfcBoxedHalfSpace.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBoxedHalfSpace object using the given parameters.
 	*

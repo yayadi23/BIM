@@ -22,6 +22,13 @@ public class IfcCrewResource extends IfcConstructionResource implements ClassInt
 	**/
 	public IfcCrewResource(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Position","Name","Description"
+			,"ObjectType","ResourceIdentifier","ResourceGroup","ResourceConsumption","BaseQuantity"};
+
+	public String[] getAttributes() {
+		return IfcCrewResource.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCrewResource object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcCoilType extends IfcEnergyConversionDeviceType implements ClassI
 	**/
 	public IfcCoilType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCoilType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCoilType object using the given parameters.
 	*

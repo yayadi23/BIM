@@ -26,6 +26,13 @@ public class IfcSubContractResource extends IfcConstructionResource implements C
 	**/
 	public IfcSubContractResource(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ResourceIdentifier","ResourceGroup","ResourceConsumption","BaseQuantity","SubContractor","JobDescription"};
+
+	public String[] getAttributes(){
+		return IfcSubContractResource.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSubContractResource object using the given parameters.
 	*

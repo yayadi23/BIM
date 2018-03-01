@@ -26,6 +26,12 @@ public class IfcHalfSpaceSolid extends IfcGeometricRepresentationItem implements
 	**/
 	public IfcHalfSpaceSolid(){}
 
+	private static final String[] attributes = new String[]{"BaseSurface","AgreementFlag"};
+
+	public String[] getAttributes() {
+		return IfcHalfSpaceSolid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcHalfSpaceSolid object using the given parameters.
 	*

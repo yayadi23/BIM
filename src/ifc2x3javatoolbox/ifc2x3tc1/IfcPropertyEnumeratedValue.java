@@ -26,6 +26,12 @@ public class IfcPropertyEnumeratedValue extends IfcSimpleProperty implements Cla
 	**/
 	public IfcPropertyEnumeratedValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","EnumerationValues","EnumerationReference"};
+
+	public String[] getAttributes() {
+		return IfcPropertyEnumeratedValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyEnumeratedValue object using the given parameters.
 	*

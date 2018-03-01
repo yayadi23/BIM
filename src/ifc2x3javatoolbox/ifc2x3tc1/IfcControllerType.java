@@ -24,6 +24,13 @@ public class IfcControllerType extends IfcDistributionControlElementType impleme
 	**/
 	public IfcControllerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcControllerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcControllerType object using the given parameters.
 	*

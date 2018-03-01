@@ -34,6 +34,13 @@ public class IfcReinforcementBarProperties extends InternalAccessClass implement
 	**/
 	public IfcReinforcementBarProperties(){}
 
+	private static final String[] attributes = new String[]{"TotalCrossSectionArea","SteelGrade","BarSurface","EffectiveDepth"
+			,"NominalBarDiameter","BarCount"};
+
+	public String[] getAttributes() {
+		return IfcReinforcementBarProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcReinforcementBarProperties object using the given parameters.
 	*

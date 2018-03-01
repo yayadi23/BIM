@@ -24,6 +24,14 @@ public class IfcRampFlightType extends IfcBuildingElementType implements ClassIn
 	**/
 	public IfcRampFlightType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcRampFlightType.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcRampFlightType object using the given parameters.
 	*

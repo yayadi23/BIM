@@ -59,6 +59,19 @@ public class IfcScheduleTimeControl extends IfcControl implements ClassInterface
 	**/
 	public IfcScheduleTimeControl(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name"
+			,"Description","ObjectType","ActualStart"
+			,"EarlyStart","LateStart","ScheduleStart"
+			,"ActualFinish","EarlyFinish","LateFinish"
+			,"ScheduleFinish","ScheduleDuration","ActualDuration"
+			,"RemainingTime","FreeFloat","TotalFloat"
+			,"IsCritical","StatusTime","StartFloat","FinishFloat","Completion"};
+
+	public String[] getAttributes(){
+		return IfcScheduleTimeControl.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcScheduleTimeControl object using the given parameters.
 	*

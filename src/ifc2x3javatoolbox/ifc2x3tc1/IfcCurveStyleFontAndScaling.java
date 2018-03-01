@@ -28,6 +28,12 @@ public class IfcCurveStyleFontAndScaling extends InternalAccessClass implements 
 	**/
 	public IfcCurveStyleFontAndScaling(){}
 
+	private static final String[] attributes = new String[]{"Name","CurveFont","CurveFontScaling"};
+
+	public String[] getAttributes() {
+		return IfcCurveStyleFontAndScaling.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCurveStyleFontAndScaling object using the given parameters.
 	*

@@ -27,6 +27,12 @@ public abstract class IfcTextureCoordinate extends InternalAccessClass implement
 		resolveInverses();
 	}
 
+	private static final String[] attributes = new String[]{};
+
+	public String[] getAttributes(){
+		return IfcTextureCoordinate.attributes;
+	}
+
 	/**
 	 * This method is used internally and should NOT be used for own purposes.
 	**/

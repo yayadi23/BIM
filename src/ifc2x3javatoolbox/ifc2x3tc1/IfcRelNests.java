@@ -22,6 +22,13 @@ public class IfcRelNests extends IfcRelDecomposes implements ClassInterface
 	**/
 	public IfcRelNests(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingObject","RelatedObjects"};
+
+	public String[] getAttributes() {
+		return IfcRelNests.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelNests object using the given parameters.
 	*

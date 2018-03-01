@@ -34,6 +34,14 @@ public class IfcMechanicalConcreteMaterialProperties extends IfcMechanicalMateri
 	**/
 	public IfcMechanicalConcreteMaterialProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","DynamicViscosity","YoungModulus"
+	,"ShearModulus","PoissonRatio","ThermalExpansionCoefficient","CompressiveStrength"
+	,"MaxAggregateSize","AdmixturesDescription","Workability","ProtectivePoreRatio","WaterImpermeability"};
+
+	public String[] getAttributes() {
+		return IfcMechanicalConcreteMaterialProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMechanicalConcreteMaterialProperties object using the given parameters.
 	*

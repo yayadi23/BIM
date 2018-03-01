@@ -22,6 +22,12 @@ public class IfcGeometricCurveSet extends IfcGeometricSet implements ClassInterf
 	**/
 	public IfcGeometricCurveSet(){}
 
+	private static final String[] attributes = new String[]{"Elements"};
+
+	public String[] getAttributes() {
+		return IfcGeometricCurveSet.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGeometricCurveSet object using the given parameters.
 	*

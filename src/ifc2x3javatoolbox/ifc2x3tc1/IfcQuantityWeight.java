@@ -24,6 +24,12 @@ public class IfcQuantityWeight extends IfcPhysicalSimpleQuantity implements Clas
 	**/
 	public IfcQuantityWeight(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Unit","WeightValue"};
+
+	public String[] getAttributes() {
+		return IfcQuantityWeight.attributes;
+	}
+
 	/**
 	* Constructs a new IfcQuantityWeight object using the given parameters.
 	*

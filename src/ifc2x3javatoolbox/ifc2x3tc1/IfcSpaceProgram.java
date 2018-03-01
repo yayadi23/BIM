@@ -34,6 +34,13 @@ public class IfcSpaceProgram extends IfcControl implements ClassInterface
 	**/
 	public IfcSpaceProgram(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","SpaceProgramIdentifier","MaxRequiredArea","MinRequiredArea","RequestedLocation","StandardRequiredArea"};
+
+	public String[] getAttributes(){
+		return IfcSpaceProgram.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSpaceProgram object using the given parameters.
 	*

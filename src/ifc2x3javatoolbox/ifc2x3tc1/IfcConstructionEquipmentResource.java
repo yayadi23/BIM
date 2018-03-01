@@ -22,6 +22,13 @@ public class IfcConstructionEquipmentResource extends IfcConstructionResource im
 	**/
 	public IfcConstructionEquipmentResource(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType"
+			,"ResourceIdentifier","ResourceGroup","ResourceConsumption","BaseQuantity"};
+
+	public String[] getAttributes() {
+		return IfcConstructionEquipmentResource.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConstructionEquipmentResource object using the given parameters.
 	*

@@ -28,6 +28,13 @@ public class IfcProcedure extends IfcProcess implements ClassInterface
 	**/
 	public IfcProcedure(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ProcedureID","ProcedureType","UserDefinedProcedureType"};
+
+	public String[] getAttributes() {
+		return IfcProcedure.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProcedure object using the given parameters.
 	*

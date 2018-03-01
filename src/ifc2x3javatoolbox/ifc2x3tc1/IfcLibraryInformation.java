@@ -32,6 +32,13 @@ public class IfcLibraryInformation extends InternalAccessClass implements ClassI
 	**/
 	public IfcLibraryInformation(){}
 
+	private static final String[] attributes = new String[]{"Name","Version","Publisher","VersionDate"
+			,"LibraryReference"};
+
+	public String[] getAttributes() {
+		return IfcLibraryInformation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLibraryInformation object using the given parameters.
 	*

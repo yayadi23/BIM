@@ -22,6 +22,12 @@ public class IfcExternallyDefinedSurfaceStyle extends IfcExternalReference imple
 	**/
 	public IfcExternallyDefinedSurfaceStyle(){}
 
+	private static final String[] attributes = new String[]{"Location","ItemReference","Name"};
+
+	public String[] getAttributes() {
+		return IfcExternallyDefinedSurfaceStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcExternallyDefinedSurfaceStyle object using the given parameters.
 	*

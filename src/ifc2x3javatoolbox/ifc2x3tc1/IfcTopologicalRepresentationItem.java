@@ -25,6 +25,12 @@ public abstract class IfcTopologicalRepresentationItem extends IfcRepresentation
 	{
 		resolveInverses();
 	}
+	private static final String[] attributes = new String[]{};
+
+	public String[] getAttributes(){
+		return IfcTopologicalRepresentationItem.attributes;
+	}
+
 
 	/**
 	 * This method is used internally and should NOT be used for own purposes.

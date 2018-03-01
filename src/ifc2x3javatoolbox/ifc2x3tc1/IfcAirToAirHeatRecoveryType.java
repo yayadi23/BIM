@@ -24,6 +24,13 @@ public class IfcAirToAirHeatRecoveryType extends IfcEnergyConversionDeviceType i
 	**/
 	public IfcAirToAirHeatRecoveryType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name"
+			,"Description","ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcAirToAirHeatRecoveryType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAirToAirHeatRecoveryType object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcArbitraryOpenProfileDef extends IfcProfileDef implements ClassIn
 	**/
 	public IfcArbitraryOpenProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Curve"};
+
+	public String[] getAttributes() {
+		return IfcArbitraryOpenProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcArbitraryOpenProfileDef object using the given parameters.
 	*

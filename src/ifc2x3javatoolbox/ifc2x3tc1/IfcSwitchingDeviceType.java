@@ -24,6 +24,13 @@ public class IfcSwitchingDeviceType extends IfcFlowControllerType implements Cla
 	**/
 	public IfcSwitchingDeviceType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcSwitchingDeviceType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSwitchingDeviceType object using the given parameters.
 	*

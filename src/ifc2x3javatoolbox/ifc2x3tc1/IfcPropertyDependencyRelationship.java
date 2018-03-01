@@ -32,6 +32,13 @@ public class IfcPropertyDependencyRelationship extends InternalAccessClass imple
 	**/
 	public IfcPropertyDependencyRelationship(){}
 
+	private static final String[] attributes = new String[]{"DependingProperty","DependantProperty","Name","Description"
+	,"Expression"};
+
+	public String[] getAttributes() {
+		return IfcPropertyDependencyRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyDependencyRelationship object using the given parameters.
 	*

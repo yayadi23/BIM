@@ -22,6 +22,13 @@ public class IfcFurnishingElementType extends IfcElementType implements ClassInt
 	**/
 	public IfcFurnishingElementType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType"};
+
+	public String[] getAttributes() {
+		return IfcFurnishingElementType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFurnishingElementType object using the given parameters.
 	*

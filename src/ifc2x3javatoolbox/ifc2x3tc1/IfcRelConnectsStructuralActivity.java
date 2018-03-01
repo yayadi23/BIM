@@ -26,6 +26,14 @@ public class IfcRelConnectsStructuralActivity extends IfcRelConnects implements 
 	**/
 	public IfcRelConnectsStructuralActivity(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingElement","RelatedStructuralActivity"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsStructuralActivity.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcRelConnectsStructuralActivity object using the given parameters.
 	*

@@ -26,6 +26,12 @@ public class IfcPropertyReferenceValue extends IfcSimpleProperty implements Clas
 	**/
 	public IfcPropertyReferenceValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","UsageName","PropertyReference"};
+
+	public String[] getAttributes() {
+		return IfcPropertyReferenceValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyReferenceValue object using the given parameters.
 	*

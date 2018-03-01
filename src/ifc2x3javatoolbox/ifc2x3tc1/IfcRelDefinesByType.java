@@ -24,6 +24,14 @@ public class IfcRelDefinesByType extends IfcRelDefines implements ClassInterface
 	**/
 	public IfcRelDefinesByType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingType"};
+
+	public String[] getAttributes() {
+		return IfcRelDefinesByType.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcRelDefinesByType object using the given parameters.
 	*

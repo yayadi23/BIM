@@ -26,6 +26,12 @@ public class IfcFaceSurface extends IfcFace implements IfcSurfaceOrFaceSurface, 
 	**/
 	public IfcFaceSurface(){}
 
+	private static final String[] attributes = new String[]{"Bounds","FaceSurface","SameSense"};
+
+	public String[] getAttributes() {
+		return IfcFaceSurface.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFaceSurface object using the given parameters.
 	*

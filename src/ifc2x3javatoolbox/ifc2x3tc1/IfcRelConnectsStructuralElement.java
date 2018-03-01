@@ -26,6 +26,13 @@ public class IfcRelConnectsStructuralElement extends IfcRelConnects implements C
 	**/
 	public IfcRelConnectsStructuralElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingElement","RelatedStructuralMember"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsStructuralElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelConnectsStructuralElement object using the given parameters.
 	*

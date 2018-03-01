@@ -24,6 +24,13 @@ public class IfcWasteTerminalType extends IfcFlowTerminalType implements ClassIn
 	**/
 	public IfcWasteTerminalType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcWasteTerminalType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWasteTerminalType object using the given parameters.
 	*

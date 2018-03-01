@@ -24,6 +24,13 @@ public class IfcFurnitureType extends IfcFurnishingElementType implements ClassI
 	**/
 	public IfcFurnitureType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","AssemblyPlace"};
+
+	public String[] getAttributes() {
+		return IfcFurnitureType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFurnitureType object using the given parameters.
 	*

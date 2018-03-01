@@ -44,6 +44,14 @@ public class IfcDoorLiningProperties extends IfcPropertySetDefinition implements
 	**/
 	public IfcDoorLiningProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"LiningDepth","LiningThickness","ThresholdDepth","ThresholdThickness","TransomThickness","TransomOffset","LiningOffset"
+	,"ThresholdOffset","CasingThickness","CasingDepth","ShapeAspectStyle"};
+
+	public String[] getAttributes() {
+		return IfcDoorLiningProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDoorLiningProperties object using the given parameters.
 	*

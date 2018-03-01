@@ -24,6 +24,13 @@ public class IfcElectricApplianceType extends IfcFlowTerminalType implements Cla
 	**/
 	public IfcElectricApplianceType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcElectricApplianceType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricApplianceType object using the given parameters.
 	*

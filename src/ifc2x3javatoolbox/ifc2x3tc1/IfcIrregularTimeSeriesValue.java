@@ -26,6 +26,12 @@ public class IfcIrregularTimeSeriesValue extends InternalAccessClass implements 
 	**/
 	public IfcIrregularTimeSeriesValue(){}
 
+	private static final String[] attributes = new String[]{"TimeStamp","ListValues"};
+
+	public String[] getAttributes() {
+		return IfcIrregularTimeSeriesValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcIrregularTimeSeriesValue object using the given parameters.
 	*

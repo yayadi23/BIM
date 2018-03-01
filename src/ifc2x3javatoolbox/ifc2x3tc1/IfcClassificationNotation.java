@@ -24,6 +24,12 @@ public class IfcClassificationNotation extends InternalAccessClass implements Cl
 	**/
 	public IfcClassificationNotation(){}
 
+	private static final String[] attributes = new String[]{"NotationFacets"};
+
+	public String[] getAttributes() {
+		return IfcClassificationNotation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcClassificationNotation object using the given parameters.
 	*

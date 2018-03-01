@@ -26,6 +26,13 @@ public class IfcRelAssignsToProcess extends IfcRelAssigns implements ClassInterf
 	**/
 	public IfcRelAssignsToProcess(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingProcess","QuantityInProcess"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsToProcess.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsToProcess object using the given parameters.
 	*

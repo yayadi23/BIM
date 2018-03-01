@@ -30,6 +30,13 @@ public class IfcProductsOfCombustionProperties extends IfcMaterialProperties imp
 	**/
 	public IfcProductsOfCombustionProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","SpecificHeatCapacity","N20Content"
+	,"COContent","CO2Content"};
+
+	public String[] getAttributes() {
+		return IfcProductsOfCombustionProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProductsOfCombustionProperties object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcFillAreaStyleTileSymbolWithStyle extends IfcGeometricRepresentat
 	**/
 	public IfcFillAreaStyleTileSymbolWithStyle(){}
 
+	private static final String[] attributes = new String[]{"Symbol"};
+
+	public String[] getAttributes() {
+		return IfcFillAreaStyleTileSymbolWithStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFillAreaStyleTileSymbolWithStyle object using the given parameters.
 	*

@@ -28,6 +28,13 @@ public class IfcSpace extends IfcSpatialStructureElement implements ClassInterfa
 	**/
 	public IfcSpace(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","LongName","CompositionType","InteriorOrExteriorSpace","ElevationWithFlooring"};
+
+	public String[] getAttributes(){
+		return IfcSpace.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSpace object using the given parameters.
 	*

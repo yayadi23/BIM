@@ -28,6 +28,12 @@ public class IfcStructuralLoadPlanarForce extends IfcStructuralLoadStatic implem
 	**/
 	public IfcStructuralLoadPlanarForce(){}
 
+	private static final String[] attributes = new String[]{"Name","DisplacementX","DisplacementY","DisplacementZ"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadPlanarForce.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLoadPlanarForce object using the given parameters.
 	*

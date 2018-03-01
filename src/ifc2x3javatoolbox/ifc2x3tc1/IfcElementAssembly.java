@@ -26,6 +26,13 @@ public class IfcElementAssembly extends IfcElement implements ClassInterface
 	**/
 	public IfcElementAssembly(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","AssemblyPlace","AssemblyPlace"};
+
+	public String[] getAttributes() {
+		return IfcElementAssembly.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElementAssembly object using the given parameters.
 	*

@@ -22,6 +22,12 @@ public class IfcPreDefinedTerminatorSymbol extends IfcPreDefinedSymbol implement
 	**/
 	public IfcPreDefinedTerminatorSymbol(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcPreDefinedTerminatorSymbol.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPreDefinedTerminatorSymbol object using the given parameters.
 	*

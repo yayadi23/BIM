@@ -26,6 +26,12 @@ public class IfcVertex extends IfcTopologicalRepresentationItem implements Class
 		resolveInverses();
 	}
 
+	private static final String[] attributes = new String[]{};
+
+	public String[] getAttributes(){
+		return IfcVertex.attributes;
+	}
+
 	/**
 	 * This method is used internally and should NOT be used for own purposes.
 	**/

@@ -17,6 +17,13 @@ public class IfcActor extends IfcObject implements ClassInterface
 	private java.util.ArrayList<CloneableObject> stepParameter = null;
 	private java.util.HashSet<ObjectChangeListener> listenerList = null;
 	protected int stepLineNumber;
+
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType","TheActor"};
+
+	public String[] getAttributes() {
+		return IfcActor.attributes;
+	}
+
 	/** TheActor is an DEMANDED attribute - may not be null**/
 	protected IfcActorSelect TheActor;
 	protected SET<IfcRelAssignsToActor> IsActingUpon_Inverse;

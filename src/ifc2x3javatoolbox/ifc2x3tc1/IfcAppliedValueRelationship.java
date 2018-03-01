@@ -32,6 +32,13 @@ public class IfcAppliedValueRelationship extends InternalAccessClass implements 
 	**/
 	public IfcAppliedValueRelationship(){}
 
+
+	private static final String[] attributes = new String[]{"ComponentOfTotal","Components","ArithmeticOperator","Name","Description"};
+
+	public String[] getAttributes() {
+		return IfcAppliedValueRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAppliedValueRelationship object using the given parameters.
 	*

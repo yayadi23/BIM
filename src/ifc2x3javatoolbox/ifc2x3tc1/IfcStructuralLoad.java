@@ -24,6 +24,13 @@ public abstract class IfcStructuralLoad extends InternalAccessClass implements C
 	**/
 	public IfcStructuralLoad(){}
 
+
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoad.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLoad object using the given parameters.
 	*

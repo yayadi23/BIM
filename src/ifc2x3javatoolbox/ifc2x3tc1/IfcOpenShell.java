@@ -22,6 +22,12 @@ public class IfcOpenShell extends IfcConnectedFaceSet implements IfcShell, Class
 	**/
 	public IfcOpenShell(){}
 
+	private static final String[] attributes = new String[]{"CfsFaces"};
+
+	public String[] getAttributes() {
+		return IfcOpenShell.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOpenShell object using the given parameters.
 	*

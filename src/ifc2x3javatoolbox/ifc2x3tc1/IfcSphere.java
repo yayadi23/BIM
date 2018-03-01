@@ -24,6 +24,13 @@ public class IfcSphere extends IfcCsgPrimitive3D implements ClassInterface
 	**/
 	public IfcSphere(){}
 
+
+	private static final String[] attributes = new String[]{"Position","Radius"};
+
+	public String[] getAttributes(){
+		return IfcSphere.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSphere object using the given parameters.
 	*

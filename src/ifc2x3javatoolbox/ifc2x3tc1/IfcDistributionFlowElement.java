@@ -23,6 +23,14 @@ public class IfcDistributionFlowElement extends IfcDistributionElement implement
 	**/
 	public IfcDistributionFlowElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcDistributionFlowElement.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcDistributionFlowElement object using the given parameters.
 	*

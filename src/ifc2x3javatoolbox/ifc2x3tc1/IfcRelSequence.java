@@ -30,6 +30,13 @@ public class IfcRelSequence extends IfcRelConnects implements ClassInterface
 	**/
 	public IfcRelSequence(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingProcess","RelatedProcess","TimeLag","SequenceType"};
+
+	public String[] getAttributes() {
+		return IfcRelSequence.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelSequence object using the given parameters.
 	*

@@ -30,6 +30,14 @@ public class IfcRelConnectsPathElements extends IfcRelConnectsElements implement
 	**/
 	public IfcRelConnectsPathElements(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ConnectionGeometry","RelatingElement","RelatedElement","RelatingPriorities"
+	,"RelatedPriorities","RelatedConnectionType","RelatingConnectionType"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsPathElements.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelConnectsPathElements object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcQuantityLength extends IfcPhysicalSimpleQuantity implements Clas
 	**/
 	public IfcQuantityLength(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Unit","LengthValue"};
+
+	public String[] getAttributes() {
+		return IfcQuantityLength.attributes;
+	}
+
 	/**
 	* Constructs a new IfcQuantityLength object using the given parameters.
 	*

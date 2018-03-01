@@ -22,6 +22,12 @@ public class IfcAnnotationSurfaceOccurrence extends IfcAnnotationOccurrence impl
 	**/
 	public IfcAnnotationSurfaceOccurrence(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationSurfaceOccurrence.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAnnotationSurfaceOccurrence object using the given parameters.
 	*

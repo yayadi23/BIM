@@ -24,6 +24,13 @@ public class IfcDuctSegmentType extends IfcFlowSegmentType implements ClassInter
 	**/
 	public IfcDuctSegmentType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcDuctSegmentType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDuctSegmentType object using the given parameters.
 	*

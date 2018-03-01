@@ -28,6 +28,12 @@ public class IfcColourRgb extends IfcColourSpecification implements ClassInterfa
 	**/
 	public IfcColourRgb(){}
 
+	private static final String[] attributes = new String[]{"Name","Red","Green","Blue"};
+
+	public String[] getAttributes() {
+		return IfcColourRgb.attributes;
+	}
+
 	/**
 	* Constructs a new IfcColourRgb object using the given parameters.
 	*

@@ -26,6 +26,14 @@ public class IfcRegularTimeSeries extends IfcTimeSeries implements ClassInterfac
 	**/
 	public IfcRegularTimeSeries(){}
 
+
+	private static final String[] attributes = new String[]{"Name","Description","StartTime","EndTime"
+	,"TimeSeriesDataType","DataOrigin","UserDefinedDataOrigin","Unit","TimeStep","Values"};
+
+	public String[] getAttributes() {
+		return IfcRegularTimeSeries.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRegularTimeSeries object using the given parameters.
 	*

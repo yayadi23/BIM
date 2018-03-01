@@ -24,6 +24,13 @@ public class IfcImageTexture extends IfcSurfaceTexture implements ClassInterface
 	**/
 	public IfcImageTexture(){}
 
+	private static final String[] attributes = new String[]{"RepeatS","RepeatT","TextureType"
+			,"TextureTransform","UrlReference"};
+
+	public String[] getAttributes() {
+		return IfcImageTexture.attributes;
+	}
+
 	/**
 	* Constructs a new IfcImageTexture object using the given parameters.
 	*

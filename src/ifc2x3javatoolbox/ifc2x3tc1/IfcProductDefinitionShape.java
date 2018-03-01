@@ -24,6 +24,13 @@ public class IfcProductDefinitionShape extends IfcProductRepresentation implemen
 	**/
 	public IfcProductDefinitionShape(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Representations"};
+
+	public String[] getAttributes() {
+		return IfcProductDefinitionShape.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcProductDefinitionShape object using the given parameters.
 	*

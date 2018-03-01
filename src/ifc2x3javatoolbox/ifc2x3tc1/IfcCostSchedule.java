@@ -38,6 +38,13 @@ public class IfcCostSchedule extends IfcControl implements ClassInterface
 	**/
 	public IfcCostSchedule(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType"
+	,"SubmittedBy","PreparedBy","SubmittedOn","Status","TargetUsers","UpdateDate","ID","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCostSchedule.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCostSchedule object using the given parameters.
 	*

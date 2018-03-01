@@ -22,6 +22,12 @@ public class IfcTopologyRepresentation extends IfcShapeModel implements ClassInt
 	**/
 	public IfcTopologyRepresentation(){}
 
+	private static final String[] attributes = new String[]{"ContextOfItems","RepresentationIdentifier","RepresentationType","Items"};
+
+	public String[] getAttributes(){
+		return IfcTopologyRepresentation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTopologyRepresentation object using the given parameters.
 	*

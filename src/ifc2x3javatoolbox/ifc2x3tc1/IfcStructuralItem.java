@@ -23,6 +23,13 @@ public abstract class IfcStructuralItem extends IfcProduct implements IfcStructu
 	**/
 	public IfcStructuralItem(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation"};
+
+	public String[] getAttributes(){
+		return IfcStructuralItem.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralItem object using the given parameters.
 	*

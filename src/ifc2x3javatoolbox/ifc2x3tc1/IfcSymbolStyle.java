@@ -24,6 +24,12 @@ public class IfcSymbolStyle extends IfcPresentationStyle implements IfcPresentat
 	**/
 	public IfcSymbolStyle(){}
 
+	private static final String[] attributes = new String[]{"Name","StyleOfSymbol"};
+
+	public String[] getAttributes(){
+		return IfcSymbolStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSymbolStyle object using the given parameters.
 	*

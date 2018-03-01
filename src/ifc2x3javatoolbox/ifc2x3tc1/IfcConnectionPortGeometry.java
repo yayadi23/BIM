@@ -28,6 +28,12 @@ public class IfcConnectionPortGeometry extends IfcConnectionGeometry implements 
 	**/
 	public IfcConnectionPortGeometry(){}
 
+	private static final String[] attributes = new String[]{"LocationAtRelatingElement","LocationAtRelatedElement","ProfileOfPort"};
+
+	public String[] getAttributes() {
+		return IfcConnectionPortGeometry.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConnectionPortGeometry object using the given parameters.
 	*

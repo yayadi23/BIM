@@ -26,6 +26,12 @@ public class IfcConnectionCurveGeometry extends IfcConnectionGeometry implements
 	**/
 	public IfcConnectionCurveGeometry(){}
 
+	private static final String[] attributes = new String[]{"CurveOnRelatingElement","CurveOnRelatedElement"};
+
+	public String[] getAttributes() {
+		return IfcConnectionCurveGeometry.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConnectionCurveGeometry object using the given parameters.
 	*

@@ -23,6 +23,13 @@ public class IfcAnnotation extends IfcProduct implements ClassInterface
 	**/
 	public IfcAnnotation(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name"
+			,"Description","ObjectType","ObjectPlacement","Representation"};
+
+	public String[] getAttributes() {
+		return IfcAnnotation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAnnotation object using the given parameters.
 	*

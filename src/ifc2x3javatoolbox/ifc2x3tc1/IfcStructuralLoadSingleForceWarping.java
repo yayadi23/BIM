@@ -24,6 +24,12 @@ public class IfcStructuralLoadSingleForceWarping extends IfcStructuralLoadSingle
 	**/
 	public IfcStructuralLoadSingleForceWarping(){}
 
+	private static final String[] attributes = new String[]{"Name","ForceX","ForceY","ForceZ","MomentX","MomentY","MomentZ","WarpingMoment"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadSingleForceWarping.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLoadSingleForceWarping object using the given parameters.
 	*

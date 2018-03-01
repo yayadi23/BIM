@@ -30,6 +30,13 @@ public class IfcMaterialLayerSetUsage extends InternalAccessClass implements Cla
 	**/
 	public IfcMaterialLayerSetUsage(){}
 
+	private static final String[] attributes = new String[]{"ForLayerSet","LayerSetDirection"
+	,"DirectionSense","OffsetFromReferenceLine"};
+
+	public String[] getAttributes() {
+		return IfcMaterialLayerSetUsage.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMaterialLayerSetUsage object using the given parameters.
 	*

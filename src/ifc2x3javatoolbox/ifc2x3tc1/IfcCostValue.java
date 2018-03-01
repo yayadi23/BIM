@@ -26,6 +26,13 @@ public class IfcCostValue extends IfcAppliedValue implements IfcMetricValueSelec
 	**/
 	public IfcCostValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","AppliedValue","UnitBasis","ApplicableDate"
+			,"FixedUntilDate","CostType","Condition"};
+
+	public String[] getAttributes() {
+		return IfcCostValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCostValue object using the given parameters.
 	*

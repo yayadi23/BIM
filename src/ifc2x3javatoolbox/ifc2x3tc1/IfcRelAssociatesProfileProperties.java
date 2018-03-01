@@ -28,6 +28,13 @@ public class IfcRelAssociatesProfileProperties extends IfcRelAssociates implemen
 	**/
 	public IfcRelAssociatesProfileProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingProfileProperties","ProfileSectionLocation","ProfileOrientation"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesProfileProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociatesProfileProperties object using the given parameters.
 	*

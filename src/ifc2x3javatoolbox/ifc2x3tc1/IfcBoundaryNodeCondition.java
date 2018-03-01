@@ -34,6 +34,15 @@ public class IfcBoundaryNodeCondition extends IfcBoundaryCondition implements Cl
 	**/
 	public IfcBoundaryNodeCondition(){}
 
+	private static final String[] attributes = new String[]{"Name","LinearStiffnessX"
+			,"LinearStiffnessY","LinearStiffnessZ","RotationalStiffnessX"
+	,"RotationalStiffnessY","RotationalStiffnessZ"};
+
+	public String[] getAttributes() {
+		return IfcBoundaryNodeCondition.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcBoundaryNodeCondition object using the given parameters.
 	*

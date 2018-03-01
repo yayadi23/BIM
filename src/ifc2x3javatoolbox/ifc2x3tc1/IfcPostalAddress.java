@@ -36,6 +36,13 @@ public class IfcPostalAddress extends IfcAddress implements ClassInterface
 	**/
 	public IfcPostalAddress(){}
 
+	private static final String[] attributes = new String[]{"Purpose","Description","UserDefinedPurpose","InternalLocation"
+	,"AddressLines","PostalBox","Town","Region","PostalCode","Country"};
+
+	public String[] getAttributes() {
+		return IfcPostalAddress.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPostalAddress object using the given parameters.
 	*

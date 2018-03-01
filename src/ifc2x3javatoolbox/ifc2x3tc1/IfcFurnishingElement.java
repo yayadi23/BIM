@@ -22,6 +22,13 @@ public class IfcFurnishingElement extends IfcElement implements ClassInterface
 	**/
 	public IfcFurnishingElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFurnishingElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFurnishingElement object using the given parameters.
 	*

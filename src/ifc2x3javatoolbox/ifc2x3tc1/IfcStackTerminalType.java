@@ -24,6 +24,13 @@ public class IfcStackTerminalType extends IfcFlowTerminalType implements ClassIn
 	**/
 	public IfcStackTerminalType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcStackTerminalType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStackTerminalType object using the given parameters.
 	*

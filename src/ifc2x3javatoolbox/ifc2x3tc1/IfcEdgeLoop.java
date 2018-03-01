@@ -24,6 +24,12 @@ public class IfcEdgeLoop extends IfcLoop implements ClassInterface
 	**/
 	public IfcEdgeLoop(){}
 
+	private static final String[] attributes = new String[]{"EdgeList"};
+
+	public String[] getAttributes() {
+		return IfcEdgeLoop.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEdgeLoop object using the given parameters.
 	*

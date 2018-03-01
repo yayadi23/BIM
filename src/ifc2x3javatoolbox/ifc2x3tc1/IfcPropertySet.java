@@ -24,6 +24,13 @@ public class IfcPropertySet extends IfcPropertySetDefinition implements ClassInt
 	**/
 	public IfcPropertySet(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"HasProperties"};
+
+	public String[] getAttributes() {
+		return IfcPropertySet.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertySet object using the given parameters.
 	*

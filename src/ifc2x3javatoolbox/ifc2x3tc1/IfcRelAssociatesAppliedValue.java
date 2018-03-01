@@ -24,6 +24,13 @@ public class IfcRelAssociatesAppliedValue extends IfcRelAssociates implements Cl
 	**/
 	public IfcRelAssociatesAppliedValue(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingAppliedValue"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesAppliedValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociatesAppliedValue object using the given parameters.
 	*

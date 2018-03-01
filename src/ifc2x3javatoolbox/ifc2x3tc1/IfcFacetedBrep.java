@@ -22,6 +22,12 @@ public class IfcFacetedBrep extends IfcManifoldSolidBrep implements ClassInterfa
 	**/
 	public IfcFacetedBrep(){}
 
+	private static final String[] attributes = new String[]{"Outer"};
+
+	public String[] getAttributes() {
+		return IfcFacetedBrep.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFacetedBrep object using the given parameters.
 	*

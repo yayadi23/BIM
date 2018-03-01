@@ -22,6 +22,14 @@ public abstract class IfcSpatialStructureElementType extends IfcElementType impl
 	**/
 	public IfcSpatialStructureElementType(){}
 
+
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType"};
+
+	public String[] getAttributes(){
+		return IfcSpatialStructureElementType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSpatialStructureElementType object using the given parameters.
 	*

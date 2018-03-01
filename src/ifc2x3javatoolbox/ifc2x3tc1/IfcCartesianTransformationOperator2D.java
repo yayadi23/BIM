@@ -22,6 +22,13 @@ public class IfcCartesianTransformationOperator2D extends IfcCartesianTransforma
 	**/
 	public IfcCartesianTransformationOperator2D(){}
 
+	private static final String[] attributes = new String[]{"Axis1","Axis2","LocalOrigin","Scale"};
+
+	public String[] getAttributes() {
+		return IfcCartesianTransformationOperator2D.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcCartesianTransformationOperator2D object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcJunctionBoxType extends IfcFlowFittingType implements ClassInter
 	**/
 	public IfcJunctionBoxType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcJunctionBoxType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcJunctionBoxType object using the given parameters.
 	*

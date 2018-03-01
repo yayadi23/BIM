@@ -22,6 +22,12 @@ public abstract class IfcStructuralLoadStatic extends IfcStructuralLoad implemen
 	**/
 	public IfcStructuralLoadStatic(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadStatic.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLoadStatic object using the given parameters.
 	*

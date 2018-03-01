@@ -26,6 +26,13 @@ public class IfcWindow extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcWindow(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag","OverallHeight","OverallWidth"};
+
+	public String[] getAttributes(){
+		return IfcWindow.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWindow object using the given parameters.
 	*

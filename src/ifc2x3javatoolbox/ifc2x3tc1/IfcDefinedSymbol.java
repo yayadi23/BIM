@@ -26,6 +26,12 @@ public class IfcDefinedSymbol extends IfcGeometricRepresentationItem implements 
 	**/
 	public IfcDefinedSymbol(){}
 
+	private static final String[] attributes = new String[]{"Definition","Target"};
+
+	public String[] getAttributes() {
+		return IfcDefinedSymbol.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDefinedSymbol object using the given parameters.
 	*

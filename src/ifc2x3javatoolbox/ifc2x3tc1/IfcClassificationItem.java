@@ -30,6 +30,13 @@ public class IfcClassificationItem extends InternalAccessClass implements ClassI
 	**/
 	public IfcClassificationItem(){}
 
+	private static final String[] attributes = new String[]{"Notation","ItemOf","Title"};
+
+	public String[] getAttributes() {
+		return IfcClassificationItem.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcClassificationItem object using the given parameters.
 	*

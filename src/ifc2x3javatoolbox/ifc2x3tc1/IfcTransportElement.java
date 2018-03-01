@@ -28,6 +28,14 @@ public class IfcTransportElement extends IfcElement implements ClassInterface
 	**/
 	public IfcTransportElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag","OperationType","CapacityByWeight","CapacityByNumber"};
+
+	public String[] getAttributes(){
+		return IfcTransportElement.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcTransportElement object using the given parameters.
 	*

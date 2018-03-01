@@ -29,6 +29,13 @@ public class IfcGrid extends IfcProduct implements ClassInterface
 	**/
 	public IfcGrid(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","UAxes","VAxes","WAxes"};
+
+	public String[] getAttributes() {
+		return IfcGrid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGrid object using the given parameters.
 	*

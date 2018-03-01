@@ -23,6 +23,13 @@ public class IfcActorRole extends InternalAccessClass implements ClassInterface
 	protected IfcLabel UserDefinedRole;
 	/** Description is an OPTIONAL attribute**/
 	protected IfcText Description;
+
+	private static final String[] attributes = new String[]{"Role","UserDefinedRole","Description"};
+
+	public String[] getAttributes() {
+		return IfcActorRole.attributes;
+	}
+
 	/**
 	* The default constructor.
 	**/

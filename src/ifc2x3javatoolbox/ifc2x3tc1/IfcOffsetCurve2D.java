@@ -28,6 +28,12 @@ public class IfcOffsetCurve2D extends IfcCurve implements ClassInterface
 	**/
 	public IfcOffsetCurve2D(){}
 
+	private static final String[] attributes = new String[]{"BasisCurve","Distance","SelfIntersect"};
+
+	public String[] getAttributes() {
+		return IfcOffsetCurve2D.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOffsetCurve2D object using the given parameters.
 	*

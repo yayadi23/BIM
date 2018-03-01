@@ -24,6 +24,14 @@ public class IfcElectricHeaterType extends IfcFlowTerminalType implements ClassI
 	**/
 	public IfcElectricHeaterType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcElectricHeaterType.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcElectricHeaterType object using the given parameters.
 	*

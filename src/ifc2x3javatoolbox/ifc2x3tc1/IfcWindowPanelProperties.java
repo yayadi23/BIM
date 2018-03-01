@@ -32,6 +32,14 @@ public class IfcWindowPanelProperties extends IfcPropertySetDefinition implement
 	**/
 	public IfcWindowPanelProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"OperationType","PanelPosition","FrameDepth","FrameThickness","ShapeAspectStyle"};
+
+	public String[] getAttributes(){
+		return IfcWindowPanelProperties.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcWindowPanelProperties object using the given parameters.
 	*

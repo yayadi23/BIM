@@ -28,6 +28,12 @@ public class IfcExtendedMaterialProperties extends IfcMaterialProperties impleme
 	**/
 	public IfcExtendedMaterialProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","ExtendedProperties","Description","Name"};
+
+	public String[] getAttributes() {
+		return IfcExtendedMaterialProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcExtendedMaterialProperties object using the given parameters.
 	*

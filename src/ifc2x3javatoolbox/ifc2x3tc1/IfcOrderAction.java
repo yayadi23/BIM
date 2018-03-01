@@ -24,6 +24,13 @@ public class IfcOrderAction extends IfcTask implements ClassInterface
 	**/
 	public IfcOrderAction(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","TaskId","Status","WorkMethod","IsMilestone","Priority","ActionID"};
+
+	public String[] getAttributes() {
+		return IfcOrderAction.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOrderAction object using the given parameters.
 	*

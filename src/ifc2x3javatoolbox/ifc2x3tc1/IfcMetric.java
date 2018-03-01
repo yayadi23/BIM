@@ -28,6 +28,13 @@ public class IfcMetric extends IfcConstraint implements ClassInterface
 	**/
 	public IfcMetric(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","ConstraintGrade","ConstraintSource"
+			,"CreatingActor","CreationTime","UserDefinedGrade","Benchmark","ValueSource","DataValue"};
+
+	public String[] getAttributes() {
+		return IfcMetric.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMetric object using the given parameters.
 	*

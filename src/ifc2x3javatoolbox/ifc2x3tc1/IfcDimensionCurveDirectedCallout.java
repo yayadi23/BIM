@@ -22,6 +22,12 @@ public class IfcDimensionCurveDirectedCallout extends IfcDraughtingCallout imple
 	**/
 	public IfcDimensionCurveDirectedCallout(){}
 
+	private static final String[] attributes = new String[]{"Contents"};
+
+	public String[] getAttributes() {
+		return IfcDimensionCurveDirectedCallout.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDimensionCurveDirectedCallout object using the given parameters.
 	*

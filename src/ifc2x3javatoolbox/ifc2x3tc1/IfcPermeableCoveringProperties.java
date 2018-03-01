@@ -32,6 +32,13 @@ public class IfcPermeableCoveringProperties extends IfcPropertySetDefinition imp
 	**/
 	public IfcPermeableCoveringProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"OperationType","PanelPosition","FrameDepth","FrameThickness","ShapeAspectStyle"};
+
+	public String[] getAttributes() {
+		return IfcPermeableCoveringProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPermeableCoveringProperties object using the given parameters.
 	*

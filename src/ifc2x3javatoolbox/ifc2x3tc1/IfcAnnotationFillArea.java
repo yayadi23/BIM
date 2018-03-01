@@ -26,6 +26,12 @@ public class IfcAnnotationFillArea extends IfcGeometricRepresentationItem implem
 	**/
 	public IfcAnnotationFillArea(){}
 
+	private static final String[] attributes = new String[]{"OuterBoundary","InnerBoundaries"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationFillArea.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAnnotationFillArea object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcRelAssignsToProduct extends IfcRelAssigns implements ClassInterf
 	**/
 	public IfcRelAssignsToProduct(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingProduct"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsToProduct.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsToProduct object using the given parameters.
 	*

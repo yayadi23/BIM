@@ -23,6 +23,13 @@ public class IfcOpeningElement extends IfcFeatureElementSubtraction implements C
 	**/
 	public IfcOpeningElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcOpeningElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOpeningElement object using the given parameters.
 	*

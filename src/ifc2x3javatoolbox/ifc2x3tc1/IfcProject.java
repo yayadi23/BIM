@@ -30,6 +30,13 @@ public class IfcProject extends IfcObject implements ClassInterface
 	**/
 	public IfcProject(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","LongName","Phase","RepresentationContexts","UnitsInContext"};
+
+	public String[] getAttributes() {
+		return IfcProject.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProject object using the given parameters.
 	*

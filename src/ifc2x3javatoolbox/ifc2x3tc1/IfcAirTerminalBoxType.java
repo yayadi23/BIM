@@ -19,6 +19,14 @@ public class IfcAirTerminalBoxType extends IfcFlowControllerType implements Clas
 	protected int stepLineNumber;
 	/** PredefinedType is an DEMANDED attribute - may not be null**/
 	protected IfcAirTerminalBoxTypeEnum PredefinedType;
+
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name"
+	,"Description","ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcAirTerminalBoxType.attributes;
+	}
+
 	/**
 	* The default constructor.
 	**/

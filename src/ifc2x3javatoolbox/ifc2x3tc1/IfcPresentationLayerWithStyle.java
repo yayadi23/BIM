@@ -30,6 +30,13 @@ public class IfcPresentationLayerWithStyle extends IfcPresentationLayerAssignmen
 	**/
 	public IfcPresentationLayerWithStyle(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","AssignedItems","Identifier"
+	,"LayerOn","LayerFrozen","LayerBlocked","LayerStyles"};
+
+	public String[] getAttributes() {
+		return IfcPresentationLayerWithStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPresentationLayerWithStyle object using the given parameters.
 	*

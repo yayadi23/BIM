@@ -24,6 +24,13 @@ public class IfcRelOverridesProperties extends IfcRelDefinesByProperties impleme
 	**/
 	public IfcRelOverridesProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingPropertyDefinition","OverridingProperties"};
+
+	public String[] getAttributes() {
+		return IfcRelOverridesProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelOverridesProperties object using the given parameters.
 	*

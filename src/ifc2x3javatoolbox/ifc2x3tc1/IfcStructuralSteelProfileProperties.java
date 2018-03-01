@@ -30,6 +30,18 @@ public class IfcStructuralSteelProfileProperties extends IfcStructuralProfilePro
 	**/
 	public IfcStructuralSteelProfileProperties(){}
 
+	private static final String[] attributes = new String[]{"ProfileName","ProfileDefinition","PhysicalWeight","Perimeter",
+			"MinimumPlateThickness","MaximumPlateThickness","CrossSectionArea","TorsionalConstantX"
+	,"MomentOfInertiaYZ","MomentOfInertiaY","MomentOfInertiaZ","WarpingConstant","ShearCentreZ",
+			"ShearCentreY","ShearDeformationAreaZ","ShearDeformationAreaY","MaximumSectionModulusY",
+			"MinimumSectionModulusY","MaximumSectionModulusZ","MinimumSectionModulusZ","TorsionalSectionModulus"
+	,"CentreOfGravityInX","CentreOfGravityInY","ShearAreaZ","ShearAreaY","PlasticShapeFactorY","PlasticShapeFactorZ"};
+
+	public String[] getAttributes(){
+		return IfcStructuralSteelProfileProperties.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcStructuralSteelProfileProperties object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcSubedge extends IfcEdge implements ClassInterface
 	**/
 	public IfcSubedge(){}
 
+	private static final String[] attributes = new String[]{"EdgeStart","EdgeEnd","ParentEdge"};
+
+	public String[] getAttributes(){
+		return IfcSubedge.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSubedge object using the given parameters.
 	*

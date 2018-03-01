@@ -22,6 +22,13 @@ public class IfcFlowStorageDevice extends IfcDistributionFlowElement implements 
 	**/
 	public IfcFlowStorageDevice(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFlowStorageDevice.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowStorageDevice object using the given parameters.
 	*

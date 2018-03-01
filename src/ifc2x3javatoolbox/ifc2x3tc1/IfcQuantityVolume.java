@@ -24,6 +24,12 @@ public class IfcQuantityVolume extends IfcPhysicalSimpleQuantity implements Clas
 	**/
 	public IfcQuantityVolume(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Unit","VolumeValue"};
+
+	public String[] getAttributes() {
+		return IfcQuantityVolume.attributes;
+	}
+
 	/**
 	* Constructs a new IfcQuantityVolume object using the given parameters.
 	*

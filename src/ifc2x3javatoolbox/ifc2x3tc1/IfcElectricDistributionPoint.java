@@ -26,6 +26,13 @@ public class IfcElectricDistributionPoint extends IfcFlowController implements C
 	**/
 	public IfcElectricDistributionPoint(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","DistributionPointFunction","UserDefinedFunction"};
+
+	public String[] getAttributes() {
+		return IfcElectricDistributionPoint.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricDistributionPoint object using the given parameters.
 	*

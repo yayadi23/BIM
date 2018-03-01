@@ -30,6 +30,12 @@ public abstract class IfcSurfaceTexture extends InternalAccessClass implements C
 	**/
 	public IfcSurfaceTexture(){}
 
+	private static final String[] attributes = new String[]{"RepeatS","RepeatT","TextureType","TextureTransform"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceTexture.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSurfaceTexture object using the given parameters.
 	*

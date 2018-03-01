@@ -26,6 +26,13 @@ public class IfcChamferEdgeFeature extends IfcEdgeFeature implements ClassInterf
 	**/
 	public IfcChamferEdgeFeature(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ObjectType","ObjectPlacement","Representation","Tag","FeatureLength","Width","Height"};
+
+	public String[] getAttributes() {
+		return IfcChamferEdgeFeature.attributes;
+	}
+
 	/**
 	* Constructs a new IfcChamferEdgeFeature object using the given parameters.
 	*

@@ -26,6 +26,12 @@ public class IfcConnectionPointGeometry extends IfcConnectionGeometry implements
 	**/
 	public IfcConnectionPointGeometry(){}
 
+	private static final String[] attributes = new String[]{"PointOnRelatingElement","PointOnRelatedElement"};
+
+	public String[] getAttributes() {
+		return IfcConnectionPointGeometry.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConnectionPointGeometry object using the given parameters.
 	*

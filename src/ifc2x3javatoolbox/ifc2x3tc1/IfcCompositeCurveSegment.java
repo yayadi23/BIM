@@ -29,6 +29,12 @@ public class IfcCompositeCurveSegment extends IfcGeometricRepresentationItem imp
 	**/
 	public IfcCompositeCurveSegment(){}
 
+	private static final String[] attributes = new String[]{"Transition","SameSense","ParentCurve"};
+
+	public String[] getAttributes() {
+		return IfcCompositeCurveSegment.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCompositeCurveSegment object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcClassificationNotationFacet extends InternalAccessClass implemen
 	**/
 	public IfcClassificationNotationFacet(){}
 
+	private static final String[] attributes = new String[]{"NotationValue"};
+
+	public String[] getAttributes() {
+		return IfcClassificationNotationFacet.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcClassificationNotationFacet object using the given parameters.
 	*

@@ -28,6 +28,12 @@ public class IfcCoordinatedUniversalTimeOffset extends InternalAccessClass imple
 	**/
 	public IfcCoordinatedUniversalTimeOffset(){}
 
+	private static final String[] attributes = new String[]{"HourOffset","MinuteOffset","Sense"};
+
+	public String[] getAttributes() {
+		return IfcCoordinatedUniversalTimeOffset.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCoordinatedUniversalTimeOffset object using the given parameters.
 	*

@@ -26,6 +26,12 @@ public class IfcTimeSeriesReferenceRelationship extends InternalAccessClass impl
 	**/
 	public IfcTimeSeriesReferenceRelationship(){}
 
+	private static final String[] attributes = new String[]{"ReferencedTimeSeries","TimeSeriesReferences"};
+
+	public String[] getAttributes(){
+		return IfcTimeSeriesReferenceRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTimeSeriesReferenceRelationship object using the given parameters.
 	*

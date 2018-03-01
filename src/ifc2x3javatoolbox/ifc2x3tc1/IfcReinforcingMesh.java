@@ -38,6 +38,16 @@ public class IfcReinforcingMesh extends IfcReinforcingElement implements ClassIn
 	**/
 	public IfcReinforcingMesh(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","SteelGrade","MeshLength"
+			,"MeshWidth","LongitudinalBarNominalDiameter","TransverseBarNominalDiameter"
+			,"LongitudinalBarCrossSectionArea","TransverseBarCrossSectionArea","LongitudinalBarSpacing"
+	,"TransverseBarSpacing"};
+
+	public String[] getAttributes() {
+		return IfcReinforcingMesh.attributes;
+	}
+
 	/**
 	* Constructs a new IfcReinforcingMesh object using the given parameters.
 	*

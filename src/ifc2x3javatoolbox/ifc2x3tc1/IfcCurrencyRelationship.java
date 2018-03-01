@@ -32,6 +32,12 @@ public class IfcCurrencyRelationship extends InternalAccessClass implements Clas
 	**/
 	public IfcCurrencyRelationship(){}
 
+	private static final String[] attributes = new String[]{"RelatingMonetaryUnit","RelatedMonetaryUnit","ExchangeRate","RateDateTime","RateSource"};
+
+	public String[] getAttributes() {
+		return IfcCurrencyRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCurrencyRelationship object using the given parameters.
 	*

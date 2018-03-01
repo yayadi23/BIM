@@ -28,6 +28,12 @@ public class IfcRectangularPyramid extends IfcCsgPrimitive3D implements ClassInt
 	**/
 	public IfcRectangularPyramid(){}
 
+	private static final String[] attributes = new String[]{"Position","XLength","YLength","Height"};
+
+	public String[] getAttributes() {
+		return IfcRectangularPyramid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRectangularPyramid object using the given parameters.
 	*

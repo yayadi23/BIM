@@ -22,6 +22,13 @@ public class IfcWallStandardCase extends IfcWall implements ClassInterface
 	**/
 	public IfcWallStandardCase(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes(){
+		return IfcWallStandardCase.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWallStandardCase object using the given parameters.
 	*

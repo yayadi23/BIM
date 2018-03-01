@@ -34,6 +34,12 @@ public class IfcStructuralLoadSingleForce extends IfcStructuralLoadStatic implem
 	**/
 	public IfcStructuralLoadSingleForce(){}
 
+	private static final String[] attributes = new String[]{"Name","ForceX","ForceY","ForceZ","MomentX","MomentY","MomentZ"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadSingleForce.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLoadSingleForce object using the given parameters.
 	*

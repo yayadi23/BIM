@@ -26,6 +26,14 @@ public class IfcBlobTexture extends IfcSurfaceTexture implements ClassInterface
 	**/
 	public IfcBlobTexture(){}
 
+	private static final String[] attributes = new String[]{"RepeatS","RepeatT","TextureType","TextureTransform"
+			,"RasterFormat","RasterCode"};
+
+	public String[] getAttributes() {
+		return IfcBlobTexture.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcBlobTexture object using the given parameters.
 	*

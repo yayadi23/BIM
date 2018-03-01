@@ -28,6 +28,12 @@ public class IfcPersonAndOrganization extends InternalAccessClass implements Ifc
 	**/
 	public IfcPersonAndOrganization(){}
 
+	private static final String[] attributes = new String[]{"ThePerson","TheOrganization","Roles"};
+
+	public String[] getAttributes() {
+		return IfcPersonAndOrganization.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPersonAndOrganization object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcRelOccupiesSpaces extends IfcRelAssignsToActor implements ClassI
 	**/
 	public IfcRelOccupiesSpaces(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingActor","ActingRole"};
+
+	public String[] getAttributes() {
+		return IfcRelOccupiesSpaces.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelOccupiesSpaces object using the given parameters.
 	*

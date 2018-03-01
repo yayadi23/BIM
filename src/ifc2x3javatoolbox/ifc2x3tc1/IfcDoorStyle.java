@@ -30,6 +30,15 @@ public class IfcDoorStyle extends IfcTypeProduct implements ClassInterface
 	**/
 	public IfcDoorStyle(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","OperationType"
+	,"ConstructionType","ParameterTakesPrecedence","Sizeable"};
+
+	public String[] getAttributes() {
+		return IfcDoorStyle.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcDoorStyle object using the given parameters.
 	*

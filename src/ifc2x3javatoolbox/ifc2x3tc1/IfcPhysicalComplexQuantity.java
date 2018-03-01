@@ -30,6 +30,12 @@ public class IfcPhysicalComplexQuantity extends IfcPhysicalQuantity implements C
 	**/
 	public IfcPhysicalComplexQuantity(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","HasQuantities","Discrimination","Quality","Usage"};
+
+	public String[] getAttributes() {
+		return IfcPhysicalComplexQuantity.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPhysicalComplexQuantity object using the given parameters.
 	*

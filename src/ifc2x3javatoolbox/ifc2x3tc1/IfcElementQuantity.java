@@ -26,6 +26,14 @@ public class IfcElementQuantity extends IfcPropertySetDefinition implements Clas
 	**/
 	public IfcElementQuantity(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"MethodOfMeasurement","Quantities"};
+
+	public String[] getAttributes() {
+		return IfcElementQuantity.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcElementQuantity object using the given parameters.
 	*

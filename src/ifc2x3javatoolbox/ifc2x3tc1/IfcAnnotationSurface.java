@@ -26,6 +26,11 @@ public class IfcAnnotationSurface extends IfcGeometricRepresentationItem impleme
 	**/
 	public IfcAnnotationSurface(){}
 
+	private static final String[] attributes = new String[]{"Item","TextureCoordinates"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationSurface.attributes;
+	}
 	/**
 	* Constructs a new IfcAnnotationSurface object using the given parameters.
 	*

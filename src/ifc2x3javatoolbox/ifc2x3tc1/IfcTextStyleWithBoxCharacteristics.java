@@ -32,6 +32,12 @@ public class IfcTextStyleWithBoxCharacteristics extends InternalAccessClass impl
 	**/
 	public IfcTextStyleWithBoxCharacteristics(){}
 
+	private static final String[] attributes = new String[]{"BoxHeight","BoxWidth","BoxSlantAngle","BoxRotateAngle","CharacterSpacing"};
+
+	public String[] getAttributes(){
+		return IfcTextStyleWithBoxCharacteristics.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextStyleWithBoxCharacteristics object using the given parameters.
 	*

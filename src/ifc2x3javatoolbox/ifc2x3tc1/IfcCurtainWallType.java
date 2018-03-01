@@ -24,6 +24,13 @@ public class IfcCurtainWallType extends IfcBuildingElementType implements ClassI
 	**/
 	public IfcCurtainWallType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ApplicableOccurrence"
+			,"HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCurtainWallType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCurtainWallType object using the given parameters.
 	*

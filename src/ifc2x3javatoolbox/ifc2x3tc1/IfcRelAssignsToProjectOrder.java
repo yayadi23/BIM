@@ -22,6 +22,13 @@ public class IfcRelAssignsToProjectOrder extends IfcRelAssignsToControl implemen
 	**/
 	public IfcRelAssignsToProjectOrder(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingControl"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsToProjectOrder.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsToProjectOrder object using the given parameters.
 	*

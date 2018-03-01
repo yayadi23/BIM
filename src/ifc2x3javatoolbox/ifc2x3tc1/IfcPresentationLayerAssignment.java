@@ -30,6 +30,13 @@ public class IfcPresentationLayerAssignment extends InternalAccessClass implemen
 	**/
 	public IfcPresentationLayerAssignment(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","AssignedItems","Identifier"};
+
+	public String[] getAttributes() {
+		return IfcPresentationLayerAssignment.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcPresentationLayerAssignment object using the given parameters.
 	*

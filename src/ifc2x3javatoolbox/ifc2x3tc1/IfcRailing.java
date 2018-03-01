@@ -24,6 +24,13 @@ public class IfcRailing extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcRailing(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcRailing.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRailing object using the given parameters.
 	*

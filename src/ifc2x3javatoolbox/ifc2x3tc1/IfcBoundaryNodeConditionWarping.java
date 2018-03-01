@@ -24,6 +24,14 @@ public class IfcBoundaryNodeConditionWarping extends IfcBoundaryNodeCondition im
 	**/
 	public IfcBoundaryNodeConditionWarping(){}
 
+	private static final String[] attributes = new String[]{"Name","LinearStiffnessX"
+			,"LinearStiffnessY","LinearStiffnessZ","RotationalStiffnessX"
+			,"RotationalStiffnessY","RotationalStiffnessZ","WarpingStiffness"};
+
+	public String[] getAttributes() {
+		return IfcBoundaryNodeConditionWarping.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBoundaryNodeConditionWarping object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcVibrationIsolatorType extends IfcDiscreteAccessoryType implement
 	**/
 	public IfcVibrationIsolatorType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcVibrationIsolatorType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcVibrationIsolatorType object using the given parameters.
 	*

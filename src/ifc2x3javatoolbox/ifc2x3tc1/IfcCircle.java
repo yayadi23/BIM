@@ -24,6 +24,12 @@ public class IfcCircle extends IfcConic implements ClassInterface
 	**/
 	public IfcCircle(){}
 
+	private static final String[] attributes = new String[]{"Position","Radius"};
+
+	public String[] getAttributes() {
+		return IfcCircle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCircle object using the given parameters.
 	*

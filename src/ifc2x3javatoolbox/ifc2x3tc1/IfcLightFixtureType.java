@@ -24,6 +24,13 @@ public class IfcLightFixtureType extends IfcFlowTerminalType implements ClassInt
 	**/
 	public IfcLightFixtureType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcLightFixtureType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLightFixtureType object using the given parameters.
 	*

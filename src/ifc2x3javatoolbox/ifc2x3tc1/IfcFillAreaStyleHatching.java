@@ -32,6 +32,13 @@ public class IfcFillAreaStyleHatching extends IfcGeometricRepresentationItem imp
 	**/
 	public IfcFillAreaStyleHatching(){}
 
+	private static final String[] attributes = new String[]{"HatchLineAppearance","StartOfNextHatchLine"
+	,"PointOfReferenceHatchLine","PatternStart","HatchLineAngle"};
+
+	public String[] getAttributes() {
+		return IfcFillAreaStyleHatching.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFillAreaStyleHatching object using the given parameters.
 	*

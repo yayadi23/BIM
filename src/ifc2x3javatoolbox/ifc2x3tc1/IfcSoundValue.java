@@ -28,6 +28,14 @@ public class IfcSoundValue extends IfcPropertySetDefinition implements ClassInte
 	**/
 	public IfcSoundValue(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"SoundLevelTimeSeries","Frequency","SoundLevelSingleValue"};
+
+	public String[] getAttributes(){
+		return IfcSoundValue.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcSoundValue object using the given parameters.
 	*

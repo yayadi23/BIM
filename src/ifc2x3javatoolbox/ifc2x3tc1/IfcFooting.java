@@ -24,6 +24,13 @@ public class IfcFooting extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcFooting(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcFooting.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFooting object using the given parameters.
 	*

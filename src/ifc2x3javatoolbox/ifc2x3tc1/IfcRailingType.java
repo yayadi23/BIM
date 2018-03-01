@@ -24,6 +24,13 @@ public class IfcRailingType extends IfcBuildingElementType implements ClassInter
 	**/
 	public IfcRailingType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcRailingType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRailingType object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcAnnotationTextOccurrence extends IfcAnnotationOccurrence impleme
 	**/
 	public IfcAnnotationTextOccurrence(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationTextOccurrence.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcAnnotationTextOccurrence object using the given parameters.
 	*

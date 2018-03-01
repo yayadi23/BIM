@@ -22,6 +22,13 @@ public class IfcEquipmentStandard extends IfcControl implements ClassInterface
 	**/
 	public IfcEquipmentStandard(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType"};
+
+	public String[] getAttributes() {
+		return IfcEquipmentStandard.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEquipmentStandard object using the given parameters.
 	*

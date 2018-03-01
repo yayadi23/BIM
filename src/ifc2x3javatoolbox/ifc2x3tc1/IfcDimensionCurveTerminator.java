@@ -24,6 +24,13 @@ public class IfcDimensionCurveTerminator extends IfcTerminatorSymbol implements 
 	**/
 	public IfcDimensionCurveTerminator(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name","AnnotatedCurve","Role"};
+
+	public String[] getAttributes() {
+		return IfcDimensionCurveTerminator.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcDimensionCurveTerminator object using the given parameters.
 	*

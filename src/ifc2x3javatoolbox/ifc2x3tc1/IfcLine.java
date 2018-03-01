@@ -26,6 +26,12 @@ public class IfcLine extends IfcCurve implements ClassInterface
 	**/
 	public IfcLine(){}
 
+	private static final String[] attributes = new String[]{"Pnt","Dir"};
+
+	public String[] getAttributes() {
+		return IfcLine.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLine object using the given parameters.
 	*

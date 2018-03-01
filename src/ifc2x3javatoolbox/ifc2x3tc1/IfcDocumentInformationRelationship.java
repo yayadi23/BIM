@@ -28,6 +28,12 @@ public class IfcDocumentInformationRelationship extends InternalAccessClass impl
 	**/
 	public IfcDocumentInformationRelationship(){}
 
+	private static final String[] attributes = new String[]{"RelatingDocument","RelatedDocuments","RelationshipType"};
+
+	public String[] getAttributes() {
+		return IfcDocumentInformationRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDocumentInformationRelationship object using the given parameters.
 	*

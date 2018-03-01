@@ -26,6 +26,13 @@ public class IfcProxy extends IfcProduct implements ClassInterface
 	**/
 	public IfcProxy(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","ProxyType","Tag"};
+
+	public String[] getAttributes() {
+		return IfcProxy.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProxy object using the given parameters.
 	*

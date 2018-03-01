@@ -28,6 +28,12 @@ public class IfcCalendarDate extends InternalAccessClass implements IfcObjectRef
 	**/
 	public IfcCalendarDate(){}
 
+	private static final String[] attributes = new String[]{"DayComponent","MonthComponent","YearComponent"};
+
+	public String[] getAttributes() {
+		return IfcCalendarDate.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCalendarDate object using the given parameters.
 	*

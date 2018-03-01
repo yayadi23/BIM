@@ -24,6 +24,12 @@ public class IfcTimeSeriesValue extends InternalAccessClass implements ClassInte
 	**/
 	public IfcTimeSeriesValue(){}
 
+	private static final String[] attributes = new String[]{"ListValues"};
+
+	public String[] getAttributes(){
+		return IfcTimeSeriesValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTimeSeriesValue object using the given parameters.
 	*

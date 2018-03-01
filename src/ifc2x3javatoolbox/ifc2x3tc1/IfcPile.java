@@ -26,6 +26,13 @@ public class IfcPile extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcPile(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","PredefinedType","ConstructionType"};
+
+	public String[] getAttributes() {
+		return IfcPile.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPile object using the given parameters.
 	*

@@ -28,6 +28,12 @@ public class IfcStyledItem extends IfcRepresentationItem implements ClassInterfa
 	**/
 	public IfcStyledItem(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes(){
+		return IfcStyledItem.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStyledItem object using the given parameters.
 	*

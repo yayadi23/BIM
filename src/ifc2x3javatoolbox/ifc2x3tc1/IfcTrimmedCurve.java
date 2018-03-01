@@ -32,6 +32,12 @@ public class IfcTrimmedCurve extends IfcBoundedCurve implements ClassInterface
 	**/
 	public IfcTrimmedCurve(){}
 
+	private static final String[] attributes = new String[]{"BasisCurve","Trim1","Trim2","SenseAgreement",
+			"MasterRepresentation"};
+
+	public String[] getAttributes(){
+		return IfcTrimmedCurve.attributes;
+	}
 	/**
 	* Constructs a new IfcTrimmedCurve object using the given parameters.
 	*

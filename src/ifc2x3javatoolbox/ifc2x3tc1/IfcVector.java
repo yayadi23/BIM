@@ -26,6 +26,12 @@ public class IfcVector extends IfcGeometricRepresentationItem implements IfcVect
 	**/
 	public IfcVector(){}
 
+	private static final String[] attributes = new String[]{"Orientation","Magnitude"};
+
+	public String[] getAttributes(){
+		return IfcVector.attributes;
+	}
+
 	/**
 	* Constructs a new IfcVector object using the given parameters.
 	*

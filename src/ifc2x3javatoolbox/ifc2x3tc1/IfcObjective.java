@@ -30,6 +30,14 @@ public class IfcObjective extends IfcConstraint implements ClassInterface
 	**/
 	public IfcObjective(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","ConstraintGrade","ConstraintSource"
+			,"CreatingActor","CreationTime","UserDefinedGrade","BenchmarkValues","ResultValues","ObjectiveQualifier"
+	,"UserDefinedQualifier"};
+
+	public String[] getAttributes() {
+		return IfcObjective.attributes;
+	}
+
 	/**
 	* Constructs a new IfcObjective object using the given parameters.
 	*

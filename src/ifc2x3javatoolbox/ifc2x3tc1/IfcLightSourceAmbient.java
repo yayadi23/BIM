@@ -22,6 +22,12 @@ public class IfcLightSourceAmbient extends IfcLightSource implements ClassInterf
 	**/
 	public IfcLightSourceAmbient(){}
 
+	private static final String[] attributes = new String[]{"Name","LightColour","AmbientIntensity","Intensity"};
+
+	public String[] getAttributes() {
+		return IfcLightSourceAmbient.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLightSourceAmbient object using the given parameters.
 	*

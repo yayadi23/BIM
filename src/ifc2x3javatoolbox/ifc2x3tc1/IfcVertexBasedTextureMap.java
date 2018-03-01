@@ -26,6 +26,12 @@ public class IfcVertexBasedTextureMap extends InternalAccessClass implements Cla
 	**/
 	public IfcVertexBasedTextureMap(){}
 
+	private static final String[] attributes = new String[]{"TextureVertices","TexturePoints"};
+
+	public String[] getAttributes(){
+		return IfcVertexBasedTextureMap.attributes;
+	}
+
 	/**
 	* Constructs a new IfcVertexBasedTextureMap object using the given parameters.
 	*

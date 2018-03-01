@@ -26,6 +26,12 @@ public class IfcExtrudedAreaSolid extends IfcSweptAreaSolid implements ClassInte
 	**/
 	public IfcExtrudedAreaSolid(){}
 
+	private static final String[] attributes = new String[]{"SweptArea","Position","ExtrudedDirection","Depth"};
+
+	public String[] getAttributes() {
+		return IfcExtrudedAreaSolid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcExtrudedAreaSolid object using the given parameters.
 	*

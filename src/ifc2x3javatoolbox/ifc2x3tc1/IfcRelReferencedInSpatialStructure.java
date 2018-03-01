@@ -26,6 +26,13 @@ public class IfcRelReferencedInSpatialStructure extends IfcRelConnects implement
 	**/
 	public IfcRelReferencedInSpatialStructure(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedElements","RelatingStructure"};
+
+	public String[] getAttributes() {
+		return IfcRelReferencedInSpatialStructure.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelReferencedInSpatialStructure object using the given parameters.
 	*

@@ -26,6 +26,12 @@ public class IfcCompositeCurve extends IfcBoundedCurve implements ClassInterface
 	**/
 	public IfcCompositeCurve(){}
 
+	private static final String[] attributes = new String[]{"Segments","SelfIntersect"};
+
+	public String[] getAttributes() {
+		return IfcCompositeCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCompositeCurve object using the given parameters.
 	*

@@ -33,6 +33,12 @@ public class IfcRepresentation extends InternalAccessClass implements IfcLayered
 	**/
 	public IfcRepresentation(){}
 
+	private static final String[] attributes = new String[]{"ContextOfItems","RepresentationIdentifier","RepresentationType","Items"};
+
+	public String[] getAttributes() {
+		return IfcRepresentation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRepresentation object using the given parameters.
 	*

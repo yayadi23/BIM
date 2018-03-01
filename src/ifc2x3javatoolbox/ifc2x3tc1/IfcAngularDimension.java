@@ -22,6 +22,12 @@ public class IfcAngularDimension extends IfcDimensionCurveDirectedCallout implem
 	**/
 	public IfcAngularDimension(){}
 
+	private static final String[] attributes = new String[]{"Contents"};
+
+	public String[] getAttributes() {
+		return IfcAngularDimension.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAngularDimension object using the given parameters.
 	*

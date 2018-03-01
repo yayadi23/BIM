@@ -26,6 +26,12 @@ public class IfcSurfaceOfLinearExtrusion extends IfcSweptSurface implements Clas
 	**/
 	public IfcSurfaceOfLinearExtrusion(){}
 
+	private static final String[] attributes = new String[]{"SweptCurve","Position","ExtrudedDirection","Depth"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceOfLinearExtrusion.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSurfaceOfLinearExtrusion object using the given parameters.
 	*

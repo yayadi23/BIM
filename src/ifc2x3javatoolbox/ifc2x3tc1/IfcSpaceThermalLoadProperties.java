@@ -42,6 +42,13 @@ public class IfcSpaceThermalLoadProperties extends IfcPropertySetDefinition impl
 	**/
 	public IfcSpaceThermalLoadProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableValueRatio","ThermalLoadSource","PropertySource","SourceDescription","MaximumValue","MinimumValue",
+	"ThermalLoadTimeSeriesValues","UserDefinedThermalLoadSource","UserDefinedPropertySource","ThermalLoadType"};
+
+	public String[] getAttributes(){
+		return IfcSpaceThermalLoadProperties.attributes;
+	}
 	/**
 	* Constructs a new IfcSpaceThermalLoadProperties object using the given parameters.
 	*

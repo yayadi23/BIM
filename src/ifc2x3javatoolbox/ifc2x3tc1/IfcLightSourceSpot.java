@@ -30,6 +30,15 @@ public class IfcLightSourceSpot extends IfcLightSourcePositional implements Clas
 	**/
 	public IfcLightSourceSpot(){}
 
+	private static final String[] attributes = new String[]{"Name","LightColour","AmbientIntensity","Intensity"
+			,"Position","Radius","ConstantAttenuation","DistanceAttenuation","QuadricAttenuation"
+	,"Orientation","ConcentrationExponent","SpreadAngle","BeamWidthAngle"};
+
+	public String[] getAttributes() {
+		return IfcLightSourceSpot.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcLightSourceSpot object using the given parameters.
 	*

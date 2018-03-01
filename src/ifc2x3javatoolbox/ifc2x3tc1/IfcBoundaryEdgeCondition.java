@@ -34,6 +34,14 @@ public class IfcBoundaryEdgeCondition extends IfcBoundaryCondition implements Cl
 	**/
 	public IfcBoundaryEdgeCondition(){}
 
+	private static final String[] attributes = new String[]{"Name","LinearStiffnessByLengthX"
+	,"LinearStiffnessByLengthY","LinearStiffnessByLengthZ","RotationalStiffnessByLengthX"
+	,"RotationalStiffnessByLengthY","RotationalStiffnessByLengthZ"};
+
+	public String[] getAttributes() {
+		return IfcBoundaryEdgeCondition.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBoundaryEdgeCondition object using the given parameters.
 	*

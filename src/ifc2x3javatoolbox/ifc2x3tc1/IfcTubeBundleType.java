@@ -24,6 +24,13 @@ public class IfcTubeBundleType extends IfcEnergyConversionDeviceType implements 
 	**/
 	public IfcTubeBundleType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcTubeBundleType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTubeBundleType object using the given parameters.
 	*

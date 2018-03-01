@@ -22,6 +22,13 @@ public class IfcFlowMovingDevice extends IfcDistributionFlowElement implements C
 	**/
 	public IfcFlowMovingDevice(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFlowMovingDevice.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowMovingDevice object using the given parameters.
 	*

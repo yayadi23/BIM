@@ -24,6 +24,12 @@ public class IfcAxis1Placement extends IfcPlacement implements ClassInterface
 	**/
 	public IfcAxis1Placement(){}
 
+	private static final String[] attributes = new String[]{"Location","Axis"};
+
+	public String[] getAttributes() {
+		return IfcAxis1Placement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAxis1Placement object using the given parameters.
 	*

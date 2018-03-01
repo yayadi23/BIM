@@ -30,6 +30,13 @@ public class IfcGeometricRepresentationSubContext extends IfcGeometricRepresenta
 	**/
 	public IfcGeometricRepresentationSubContext(){}
 
+	private static final String[] attributes = new String[]{"ContextIdentifier","ContextType","CoordinateSpaceDimension"
+			,"Precision","WorldCoordinateSystem","TrueNorth","ParentContext","TargetScale","TargetView","UserDefinedTargetView"};
+
+	public String[] getAttributes() {
+		return IfcGeometricRepresentationSubContext.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGeometricRepresentationSubContext object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcSystemFurnitureElementType extends IfcFurnishingElementType impl
 	**/
 	public IfcSystemFurnitureElementType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType"};
+
+	public String[] getAttributes(){
+		return IfcSystemFurnitureElementType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSystemFurnitureElementType object using the given parameters.
 	*

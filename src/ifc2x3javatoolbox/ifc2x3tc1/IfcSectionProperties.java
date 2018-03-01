@@ -28,6 +28,13 @@ public class IfcSectionProperties extends InternalAccessClass implements ClassIn
 	**/
 	public IfcSectionProperties(){}
 
+	private static final String[] attributes = new String[]{"SectionType","StartProfile","EndProfile"};
+
+	public String[] getAttributes(){
+		return IfcSectionProperties.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcSectionProperties object using the given parameters.
 	*

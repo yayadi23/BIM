@@ -24,6 +24,13 @@ public class IfcDuctSilencerType extends IfcFlowTreatmentDeviceType implements C
 	**/
 	public IfcDuctSilencerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcDuctSilencerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDuctSilencerType object using the given parameters.
 	*

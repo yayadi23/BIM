@@ -24,6 +24,13 @@ public class IfcAlarmType extends IfcDistributionControlElementType implements C
 	**/
 	public IfcAlarmType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name"
+			,"Description","ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcAlarmType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAlarmType object using the given parameters.
 	*

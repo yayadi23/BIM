@@ -22,6 +22,12 @@ public class IfcLinearDimension extends IfcDimensionCurveDirectedCallout impleme
 	**/
 	public IfcLinearDimension(){}
 
+	private static final String[] attributes = new String[]{"Contents"};
+
+	public String[] getAttributes() {
+		return IfcLinearDimension.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLinearDimension object using the given parameters.
 	*

@@ -26,6 +26,13 @@ public class IfcRelAssociatesConstraint extends IfcRelAssociates implements Clas
 	**/
 	public IfcRelAssociatesConstraint(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","Intent","RelatingConstraint"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesConstraint.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociatesConstraint object using the given parameters.
 	*

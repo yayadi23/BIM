@@ -25,6 +25,13 @@ public abstract class IfcAddress extends InternalAccessClass implements IfcObjec
 	protected IfcLabel UserDefinedPurpose;
 	protected SET<IfcPerson> OfPerson_Inverse;
 	protected SET<IfcOrganization> OfOrganization_Inverse;
+
+	private static final String[] attributes = new String[]{"Purpose","Description","UserDefinedPurpose"};
+
+	public String[] getAttributes() {
+		return IfcAddress.attributes;
+	}
+
 	/**
 	* The default constructor.
 	**/

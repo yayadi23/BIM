@@ -32,6 +32,13 @@ public class IfcRibPlateProfileProperties extends IfcProfileProperties implement
 	**/
 	public IfcRibPlateProfileProperties(){}
 
+	private static final String[] attributes = new String[]{"ProfileName","ProfileDefinition","Thickness","RibHeight"
+	,"RibWidth","RibSpacing","Direction"};
+
+	public String[] getAttributes() {
+		return IfcRibPlateProfileProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRibPlateProfileProperties object using the given parameters.
 	*

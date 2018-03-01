@@ -31,6 +31,13 @@ public class IfcGeometricRepresentationContext extends IfcRepresentationContext 
 	**/
 	public IfcGeometricRepresentationContext(){}
 
+	private static final String[] attributes = new String[]{"ContextIdentifier","ContextType","CoordinateSpaceDimension"
+	,"Precision","WorldCoordinateSystem","TrueNorth"};
+
+	public String[] getAttributes() {
+		return IfcGeometricRepresentationContext.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGeometricRepresentationContext object using the given parameters.
 	*

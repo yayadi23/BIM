@@ -34,6 +34,14 @@ public class IfcSectionReinforcementProperties extends InternalAccessClass imple
 	**/
 	public IfcSectionReinforcementProperties(){}
 
+
+	private static final String[] attributes = new String[]{"LongitudinalStartPosition","LongitudinalEndPosition","TransversePosition","ReinforcementRole",
+	"SectionDefinition","CrossSectionReinforcementDefinitions"};
+
+	public String[] getAttributes(){
+		return IfcSectionReinforcementProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSectionReinforcementProperties object using the given parameters.
 	*

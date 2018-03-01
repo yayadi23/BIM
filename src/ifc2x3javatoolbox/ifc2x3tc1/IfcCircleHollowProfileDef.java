@@ -24,6 +24,12 @@ public class IfcCircleHollowProfileDef extends IfcCircleProfileDef implements Cl
 	**/
 	public IfcCircleHollowProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","Radius","WallThickness"};
+
+	public String[] getAttributes() {
+		return IfcCircleHollowProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCircleHollowProfileDef object using the given parameters.
 	*

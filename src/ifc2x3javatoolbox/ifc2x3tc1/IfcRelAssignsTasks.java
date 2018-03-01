@@ -24,6 +24,13 @@ public class IfcRelAssignsTasks extends IfcRelAssignsToControl implements ClassI
 	**/
 	public IfcRelAssignsTasks(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingObject","RelatedObjectsType","RelatingControl","TimeForTask"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsTasks.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsTasks object using the given parameters.
 	*

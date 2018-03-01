@@ -22,6 +22,13 @@ public class IfcDiscreteAccessoryType extends IfcElementComponentType implements
 	**/
 	public IfcDiscreteAccessoryType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType"};
+
+	public String[] getAttributes() {
+		return IfcDiscreteAccessoryType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDiscreteAccessoryType object using the given parameters.
 	*

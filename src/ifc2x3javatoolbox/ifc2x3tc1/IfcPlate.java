@@ -22,6 +22,13 @@ public class IfcPlate extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcPlate(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcPlate.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPlate object using the given parameters.
 	*

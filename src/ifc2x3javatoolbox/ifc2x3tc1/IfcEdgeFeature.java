@@ -24,6 +24,7 @@ public abstract class IfcEdgeFeature extends IfcFeatureElementSubtraction implem
 	**/
 	public IfcEdgeFeature(){}
 
+
 	/**
 	* Constructs a new IfcEdgeFeature object using the given parameters.
 	*

@@ -28,6 +28,12 @@ public class IfcLightDistributionData extends InternalAccessClass implements Cla
 	**/
 	public IfcLightDistributionData(){}
 
+	private static final String[] attributes = new String[]{"MainPlaneAngle","SecondaryPlaneAngle","LuminousIntensity"};
+
+	public String[] getAttributes() {
+		return IfcLightDistributionData.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLightDistributionData object using the given parameters.
 	*

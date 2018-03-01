@@ -32,6 +32,13 @@ public class IfcGridAxis extends InternalAccessClass implements ClassInterface
 	**/
 	public IfcGridAxis(){}
 
+	private static final String[] attributes = new String[]{"AxisTag","AxisCurve","SameSense"};
+
+	public String[] getAttributes() {
+		return IfcGridAxis.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcGridAxis object using the given parameters.
 	*

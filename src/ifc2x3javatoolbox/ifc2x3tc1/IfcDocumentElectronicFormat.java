@@ -28,6 +28,12 @@ public class IfcDocumentElectronicFormat extends InternalAccessClass implements 
 	**/
 	public IfcDocumentElectronicFormat(){}
 
+	private static final String[] attributes = new String[]{"FileExtension","MimeContentType","MimeSubtype"};
+
+	public String[] getAttributes() {
+		return IfcDocumentElectronicFormat.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDocumentElectronicFormat object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcProtectiveDeviceType extends IfcFlowControllerType implements Cl
 	**/
 	public IfcProtectiveDeviceType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcProtectiveDeviceType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProtectiveDeviceType object using the given parameters.
 	*

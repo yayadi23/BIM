@@ -22,6 +22,12 @@ public abstract class IfcStyleModel extends IfcRepresentation implements ClassIn
 	**/
 	public IfcStyleModel(){}
 
+	private static final String[] attributes = new String[]{"ContextOfItems","RepresentationIdentifier","RepresentationType","Items"};
+
+	public String[] getAttributes(){
+		return IfcStyleModel.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStyleModel object using the given parameters.
 	*

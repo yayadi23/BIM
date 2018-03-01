@@ -26,6 +26,13 @@ public class IfcConditionCriterion extends IfcControl implements ClassInterface
 	**/
 	public IfcConditionCriterion(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","Criterion","CriterionDateTime"};
+
+	public String[] getAttributes() {
+		return IfcConditionCriterion.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConditionCriterion object using the given parameters.
 	*

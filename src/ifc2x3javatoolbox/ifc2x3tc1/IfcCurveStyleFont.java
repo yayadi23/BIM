@@ -26,6 +26,12 @@ public class IfcCurveStyleFont extends InternalAccessClass implements IfcCurveSt
 	**/
 	public IfcCurveStyleFont(){}
 
+	private static final String[] attributes = new String[]{"Name","PatternList"};
+
+	public String[] getAttributes() {
+		return IfcCurveStyleFont.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCurveStyleFont object using the given parameters.
 	*

@@ -28,6 +28,13 @@ public class IfcBlock extends IfcCsgPrimitive3D implements ClassInterface
 	**/
 	public IfcBlock(){}
 
+	private static final String[] attributes = new String[]{"Position","XLength","YLength","ZLength"};
+
+	public String[] getAttributes() {
+		return IfcBlock.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcBlock object using the given parameters.
 	*

@@ -30,6 +30,12 @@ public class IfcOrganizationRelationship extends InternalAccessClass implements 
 	**/
 	public IfcOrganizationRelationship(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","RelatingOrganization","RelatedOrganizations"};
+
+	public String[] getAttributes() {
+		return IfcOrganizationRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOrganizationRelationship object using the given parameters.
 	*

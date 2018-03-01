@@ -24,6 +24,13 @@ public class IfcFanType extends IfcFlowMovingDeviceType implements ClassInterfac
 	**/
 	public IfcFanType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcFanType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFanType object using the given parameters.
 	*

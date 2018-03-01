@@ -24,6 +24,13 @@ public class IfcLaborResource extends IfcConstructionResource implements ClassIn
 	**/
 	public IfcLaborResource(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ResourceIdentifier","ResourceGroup","ResourceConsumption","BaseQuantity","SkillSet"};
+
+	public String[] getAttributes() {
+		return IfcLaborResource.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLaborResource object using the given parameters.
 	*
@@ -255,7 +262,7 @@ public class IfcLaborResource extends IfcConstructionResource implements ClassIn
 
 	/**
 	 * This method registers an ObjectChangeListener to this object. An event is fired whenever one of its values was changed.
-	 * 
+	 *
 	 *@param listener the listener to register
 	**/
 	public void addObjectChangeListener(ObjectChangeListener listener)
@@ -266,7 +273,7 @@ public class IfcLaborResource extends IfcConstructionResource implements ClassIn
 
 	/**
 	 * This method unregisters an ObjectChangeListener from this object.
-	 * 
+	 *
 	 *@param listener the listener to unregister
 	**/
 	public void removeObjectChangeListener(ObjectChangeListener listener)

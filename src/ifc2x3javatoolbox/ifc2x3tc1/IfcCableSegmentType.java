@@ -24,6 +24,13 @@ public class IfcCableSegmentType extends IfcFlowSegmentType implements ClassInte
 	**/
 	public IfcCableSegmentType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCableSegmentType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCableSegmentType object using the given parameters.
 	*

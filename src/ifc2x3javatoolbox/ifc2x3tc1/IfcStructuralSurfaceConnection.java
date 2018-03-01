@@ -22,6 +22,14 @@ public class IfcStructuralSurfaceConnection extends IfcStructuralConnection impl
 	**/
 	public IfcStructuralSurfaceConnection(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedCondition"};
+
+	public String[] getAttributes(){
+		return IfcStructuralSurfaceConnection.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcStructuralSurfaceConnection object using the given parameters.
 	*

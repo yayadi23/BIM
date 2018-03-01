@@ -22,6 +22,12 @@ public class IfcAnnotationSymbolOccurrence extends IfcAnnotationOccurrence imple
 	**/
 	public IfcAnnotationSymbolOccurrence(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationSymbolOccurrence.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAnnotationSymbolOccurrence object using the given parameters.
 	*

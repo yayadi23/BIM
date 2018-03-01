@@ -38,6 +38,13 @@ public class IfcSurfaceStyleRendering extends IfcSurfaceStyleShading implements 
 	**/
 	public IfcSurfaceStyleRendering(){}
 
+	private static final String[] attributes = new String[]{"SurfaceColour","Transparency","DiffuseColour","TransmissionColour",
+			"DiffuseTransmissionColour","ReflectionColour","SpecularColour","SpecularHighlight","ReflectanceMethod"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceStyleRendering.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSurfaceStyleRendering object using the given parameters.
 	*

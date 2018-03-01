@@ -29,6 +29,12 @@ public class IfcMaterialLayer extends InternalAccessClass implements IfcObjectRe
 	**/
 	public IfcMaterialLayer(){}
 
+	private static final String[] attributes = new String[]{"Material","LayerThickness","IsVentilated"};
+
+	public String[] getAttributes() {
+		return IfcMaterialLayer.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMaterialLayer object using the given parameters.
 	*

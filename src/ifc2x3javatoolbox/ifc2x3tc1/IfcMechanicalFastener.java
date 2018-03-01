@@ -26,6 +26,13 @@ public class IfcMechanicalFastener extends IfcFastener implements ClassInterface
 	**/
 	public IfcMechanicalFastener(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","NominalDiameter","NominalLength"};
+
+	public String[] getAttributes() {
+		return IfcMechanicalFastener.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMechanicalFastener object using the given parameters.
 	*

@@ -26,6 +26,12 @@ public class IfcRightCircularCylinder extends IfcCsgPrimitive3D implements Class
 	**/
 	public IfcRightCircularCylinder(){}
 
+	private static final String[] attributes = new String[]{"Position","Height","Radius"};
+
+	public String[] getAttributes() {
+		return IfcRightCircularCylinder.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRightCircularCylinder object using the given parameters.
 	*

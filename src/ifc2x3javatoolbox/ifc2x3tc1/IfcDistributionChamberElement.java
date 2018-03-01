@@ -22,6 +22,13 @@ public class IfcDistributionChamberElement extends IfcDistributionFlowElement im
 	**/
 	public IfcDistributionChamberElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcDistributionChamberElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDistributionChamberElement object using the given parameters.
 	*

@@ -26,6 +26,13 @@ public class IfcRectangleProfileDef extends IfcParameterizedProfileDef implement
 	**/
 	public IfcRectangleProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","XDim"
+			,"YDim"};
+
+	public String[] getAttributes() {
+		return IfcRectangleProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRectangleProfileDef object using the given parameters.
 	*

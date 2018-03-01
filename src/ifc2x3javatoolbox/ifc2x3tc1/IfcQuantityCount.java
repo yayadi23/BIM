@@ -24,6 +24,12 @@ public class IfcQuantityCount extends IfcPhysicalSimpleQuantity implements Class
 	**/
 	public IfcQuantityCount(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Unit","CountValue"};
+
+	public String[] getAttributes() {
+		return IfcQuantityCount.attributes;
+	}
+
 	/**
 	* Constructs a new IfcQuantityCount object using the given parameters.
 	*

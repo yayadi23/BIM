@@ -15,4 +15,5 @@ public interface ClassInterface extends RootInterface
 	public void addObjectChangeListener(ObjectChangeListener listener);
 	public void removeObjectChangeListener(ObjectChangeListener listener);
 	public void removeAllObjectChangeListeners();
+	public String[] getAttributes();
 }

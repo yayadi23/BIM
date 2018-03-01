@@ -26,6 +26,12 @@ public class IfcGridPlacement extends IfcObjectPlacement implements ClassInterfa
 	**/
 	public IfcGridPlacement(){}
 
+	private static final String[] attributes = new String[]{"PlacementLocation","PlacementRefDirection"};
+
+	public String[] getAttributes() {
+		return IfcGridPlacement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGridPlacement object using the given parameters.
 	*

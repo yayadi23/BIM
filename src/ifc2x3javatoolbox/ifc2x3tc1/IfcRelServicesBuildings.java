@@ -26,6 +26,13 @@ public class IfcRelServicesBuildings extends IfcRelConnects implements ClassInte
 	**/
 	public IfcRelServicesBuildings(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingSystem","RelatedBuildings"};
+
+	public String[] getAttributes() {
+		return IfcRelServicesBuildings.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelServicesBuildings object using the given parameters.
 	*

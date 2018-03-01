@@ -22,6 +22,13 @@ public class IfcDraughtingPreDefinedTextFont extends IfcPreDefinedTextFont imple
 	**/
 	public IfcDraughtingPreDefinedTextFont(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcDraughtingPreDefinedTextFont.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcDraughtingPreDefinedTextFont object using the given parameters.
 	*

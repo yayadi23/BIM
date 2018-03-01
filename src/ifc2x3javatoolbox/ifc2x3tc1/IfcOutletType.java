@@ -24,6 +24,13 @@ public class IfcOutletType extends IfcFlowTerminalType implements ClassInterface
 	**/
 	public IfcOutletType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcOutletType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOutletType object using the given parameters.
 	*

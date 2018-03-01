@@ -39,6 +39,13 @@ public class IfcApproval extends InternalAccessClass implements ClassInterface
 	**/
 	public IfcApproval(){}
 
+	private static final String[] attributes = new String[]{"Description","ApprovalDateTime","ApprovalStatus","ApprovalLevel","ApprovalQualifier"
+	,"Name","Identifier"};
+
+	public String[] getAttributes() {
+		return IfcApproval.attributes;
+	}
+
 	/**
 	* Constructs a new IfcApproval object using the given parameters.
 	*

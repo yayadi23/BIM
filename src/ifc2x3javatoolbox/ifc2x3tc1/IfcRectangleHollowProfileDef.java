@@ -28,6 +28,13 @@ public class IfcRectangleHollowProfileDef extends IfcRectangleProfileDef impleme
 	**/
 	public IfcRectangleHollowProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","XDim"
+			,"YDim","WallThickness","InnerFilletRadius","OuterFilletRadius"};
+
+	public String[] getAttributes() {
+		return IfcRectangleHollowProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRectangleHollowProfileDef object using the given parameters.
 	*

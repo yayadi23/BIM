@@ -24,6 +24,11 @@ public class File_Schema extends InternalAccessClass implements ClassInterface
 	**/
 	public File_Schema(){}
 
+	private static final String[] attributes = new String[]{"schemaIdentifiers"};
+
+	public String[] getAttributes() {
+		return File_Schema.attributes;
+	}
 	/**
 	* Constructs a new File_Schema object using the given parameters.
 	*

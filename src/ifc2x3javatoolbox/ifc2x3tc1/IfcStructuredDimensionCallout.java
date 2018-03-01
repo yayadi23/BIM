@@ -22,6 +22,12 @@ public class IfcStructuredDimensionCallout extends IfcDraughtingCallout implemen
 	**/
 	public IfcStructuredDimensionCallout(){}
 
+	private static final String[] attributes = new String[]{"Contents"};
+
+	public String[] getAttributes(){
+		return IfcStructuredDimensionCallout.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuredDimensionCallout object using the given parameters.
 	*

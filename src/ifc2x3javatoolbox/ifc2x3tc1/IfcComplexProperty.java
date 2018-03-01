@@ -26,6 +26,12 @@ public class IfcComplexProperty extends IfcProperty implements ClassInterface
 	**/
 	public IfcComplexProperty(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","UsageName","HasProperties"};
+
+	public String[] getAttributes() {
+		return IfcComplexProperty.attributes;
+	}
+
 	/**
 	* Constructs a new IfcComplexProperty object using the given parameters.
 	*

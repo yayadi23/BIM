@@ -30,6 +30,12 @@ public class IfcBoundingBox extends IfcGeometricRepresentationItem implements Cl
 	**/
 	public IfcBoundingBox(){}
 
+	private static final String[] attributes = new String[]{"Corner","XDim","YDim","ZDim"};
+
+	public String[] getAttributes() {
+		return IfcBoundingBox.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBoundingBox object using the given parameters.
 	*

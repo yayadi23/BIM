@@ -26,6 +26,12 @@ public class IfcClassificationItemRelationship extends InternalAccessClass imple
 	**/
 	public IfcClassificationItemRelationship(){}
 
+	private static final String[] attributes = new String[]{"RelatingItem","RelatedItems"};
+
+	public String[] getAttributes() {
+		return IfcClassificationItemRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcClassificationItemRelationship object using the given parameters.
 	*

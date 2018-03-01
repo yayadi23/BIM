@@ -24,6 +24,12 @@ public class IfcArbitraryProfileDefWithVoids extends IfcArbitraryClosedProfileDe
 	**/
 	public IfcArbitraryProfileDefWithVoids(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","OuterCurve","InnerCurves"};
+
+	public String[] getAttributes() {
+		return IfcArbitraryProfileDefWithVoids.attributes;
+	}
+
 	/**
 	* Constructs a new IfcArbitraryProfileDefWithVoids object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcSurfaceStyleWithTextures extends InternalAccessClass implements 
 	**/
 	public IfcSurfaceStyleWithTextures(){}
 
+	private static final String[] attributes = new String[]{"Textures"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceStyleWithTextures.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcSurfaceStyleWithTextures object using the given parameters.
 	*

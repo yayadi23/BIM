@@ -28,6 +28,13 @@ public class IfcEnvironmentalImpactValue extends IfcAppliedValue implements Clas
 	**/
 	public IfcEnvironmentalImpactValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","AppliedValue","UnitBasis"
+			,"ApplicableDate","FixedUntilDate","ImpactType","Category","UserDefinedCategory"};
+
+	public String[] getAttributes() {
+		return IfcEnvironmentalImpactValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEnvironmentalImpactValue object using the given parameters.
 	*

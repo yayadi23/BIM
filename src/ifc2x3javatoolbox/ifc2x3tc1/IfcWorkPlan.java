@@ -21,6 +21,13 @@ public class IfcWorkPlan extends IfcWorkControl implements ClassInterface
 	* The default constructor.
 	**/
 	public IfcWorkPlan(){}
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","Identifier","CreationDate","Creators","Purpose","Duration","TotalFloat","StartTime","FinishTime","WorkControlType","UserDefinedControlType"};
+
+	public String[] getAttributes(){
+		return IfcWorkPlan.attributes;
+	}
+
 
 	/**
 	* Constructs a new IfcWorkPlan object using the given parameters.

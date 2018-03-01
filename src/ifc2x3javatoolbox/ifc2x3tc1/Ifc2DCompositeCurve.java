@@ -17,6 +17,13 @@ public class Ifc2DCompositeCurve extends IfcCompositeCurve implements ClassInter
 	private java.util.ArrayList<CloneableObject> stepParameter = null;
 	private java.util.HashSet<ObjectChangeListener> listenerList = null;
 	protected int stepLineNumber;
+
+	private static final String[] attributes = new String[]{"Segments","SelfIntersect"};
+
+	public String[] getAttributes() {
+		return Ifc2DCompositeCurve.attributes;
+	}
+
 	/**
 	* The default constructor.
 	**/

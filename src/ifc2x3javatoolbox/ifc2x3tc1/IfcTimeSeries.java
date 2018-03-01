@@ -39,6 +39,13 @@ public abstract class IfcTimeSeries extends InternalAccessClass implements IfcOb
 	**/
 	public IfcTimeSeries(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","StartTime","EndTime",
+			"TimeSeriesDataType","DataOrigin","UserDefinedDataOrigin","Unit"};
+
+	public String[] getAttributes(){
+		return IfcTimeSeries.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTimeSeries object using the given parameters.
 	*

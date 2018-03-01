@@ -24,6 +24,13 @@ public class IfcRelAssociates extends IfcRelationship implements ClassInterface
 	**/
 	public IfcRelAssociates(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociates.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociates object using the given parameters.
 	*

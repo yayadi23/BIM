@@ -26,6 +26,13 @@ public class IfcStructuralSurfaceMember extends IfcStructuralMember implements C
 	**/
 	public IfcStructuralSurfaceMember(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","PredefinedType","Thickness"};
+
+	public String[] getAttributes(){
+		return IfcStructuralSurfaceMember.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralSurfaceMember object using the given parameters.
 	*

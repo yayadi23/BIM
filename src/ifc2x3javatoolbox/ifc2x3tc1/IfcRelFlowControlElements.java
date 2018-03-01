@@ -26,6 +26,13 @@ public class IfcRelFlowControlElements extends IfcRelConnects implements ClassIn
 	**/
 	public IfcRelFlowControlElements(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedControlElements","RelatingFlowElement"};
+
+	public String[] getAttributes() {
+		return IfcRelFlowControlElements.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelFlowControlElements object using the given parameters.
 	*

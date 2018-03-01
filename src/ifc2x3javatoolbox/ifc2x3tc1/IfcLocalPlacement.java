@@ -26,6 +26,12 @@ public class IfcLocalPlacement extends IfcObjectPlacement implements ClassInterf
 	**/
 	public IfcLocalPlacement(){}
 
+	private static final String[] attributes = new String[]{"PlacementRelTo","RelativePlacement"};
+
+	public String[] getAttributes() {
+		return IfcLocalPlacement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLocalPlacement object using the given parameters.
 	*

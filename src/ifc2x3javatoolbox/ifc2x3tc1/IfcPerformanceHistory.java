@@ -24,6 +24,13 @@ public class IfcPerformanceHistory extends IfcControl implements ClassInterface
 	**/
 	public IfcPerformanceHistory(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","LifeCyclePhase"};
+
+	public String[] getAttributes() {
+		return IfcPerformanceHistory.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPerformanceHistory object using the given parameters.
 	*

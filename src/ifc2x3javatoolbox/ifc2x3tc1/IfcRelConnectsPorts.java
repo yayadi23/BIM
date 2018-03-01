@@ -28,6 +28,13 @@ public class IfcRelConnectsPorts extends IfcRelConnects implements ClassInterfac
 	**/
 	public IfcRelConnectsPorts(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingPort","RelatedPort","RealizingElement"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsPorts.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelConnectsPorts object using the given parameters.
 	*

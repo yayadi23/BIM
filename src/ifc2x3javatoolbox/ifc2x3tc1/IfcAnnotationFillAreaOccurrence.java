@@ -26,6 +26,13 @@ public class IfcAnnotationFillAreaOccurrence extends IfcAnnotationOccurrence imp
 	**/
 	public IfcAnnotationFillAreaOccurrence(){}
 
+
+	private static final String[] attributes = new String[]{"Item","Styles","Name","FillStyleTarget","GlobalOrLocal"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationFillAreaOccurrence.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAnnotationFillAreaOccurrence object using the given parameters.
 	*

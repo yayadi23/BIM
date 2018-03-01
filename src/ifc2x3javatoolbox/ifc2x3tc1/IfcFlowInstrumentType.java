@@ -24,6 +24,13 @@ public class IfcFlowInstrumentType extends IfcDistributionControlElementType imp
 	**/
 	public IfcFlowInstrumentType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcFlowInstrumentType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowInstrumentType object using the given parameters.
 	*

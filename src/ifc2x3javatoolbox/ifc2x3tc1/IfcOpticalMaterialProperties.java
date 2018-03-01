@@ -40,6 +40,14 @@ public class IfcOpticalMaterialProperties extends IfcMaterialProperties implemen
 	**/
 	public IfcOpticalMaterialProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","VisibleTransmittance","SolarTransmittance","ThermalIrTransmittance"
+			,"ThermalIrEmissivityBack","ThermalIrEmissivityFront","VisibleReflectanceBack","VisibleReflectanceFront"
+	,"SolarReflectanceFront","SolarReflectanceBack"};
+
+	public String[] getAttributes() {
+		return IfcOpticalMaterialProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOpticalMaterialProperties object using the given parameters.
 	*

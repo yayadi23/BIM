@@ -36,6 +36,13 @@ public class IfcWaterProperties extends IfcMaterialProperties implements ClassIn
 	**/
 	public IfcWaterProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","IsPotable","Hardness","AlkalinityConcentration",
+			"AcidityConcentration","ImpuritiesContent","PHLevel","DissolvedSolidsContent"};
+
+	public String[] getAttributes(){
+		return IfcWaterProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWaterProperties object using the given parameters.
 	*

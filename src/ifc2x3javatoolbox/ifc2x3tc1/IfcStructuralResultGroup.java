@@ -29,6 +29,13 @@ public class IfcStructuralResultGroup extends IfcGroup implements ClassInterface
 	**/
 	public IfcStructuralResultGroup(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","TheoryType","ResultForLoadGroup","IsLinear"};
+
+	public String[] getAttributes(){
+		return IfcStructuralResultGroup.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralResultGroup object using the given parameters.
 	*

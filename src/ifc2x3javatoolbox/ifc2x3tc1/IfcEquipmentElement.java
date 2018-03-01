@@ -22,6 +22,13 @@ public class IfcEquipmentElement extends IfcElement implements ClassInterface
 	**/
 	public IfcEquipmentElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcEquipmentElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEquipmentElement object using the given parameters.
 	*

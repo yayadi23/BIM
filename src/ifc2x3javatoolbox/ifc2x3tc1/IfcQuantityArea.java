@@ -24,6 +24,12 @@ public class IfcQuantityArea extends IfcPhysicalSimpleQuantity implements ClassI
 	**/
 	public IfcQuantityArea(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Unit","AreaValue"};
+
+	public String[] getAttributes() {
+		return IfcQuantityArea.attributes;
+	}
+
 	/**
 	* Constructs a new IfcQuantityArea object using the given parameters.
 	*

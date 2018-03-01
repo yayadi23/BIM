@@ -22,6 +22,13 @@ public class IfcFlowTerminal extends IfcDistributionFlowElement implements Class
 	**/
 	public IfcFlowTerminal(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFlowTerminal.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowTerminal object using the given parameters.
 	*

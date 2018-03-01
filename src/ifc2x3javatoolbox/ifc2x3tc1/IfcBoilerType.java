@@ -24,6 +24,13 @@ public class IfcBoilerType extends IfcEnergyConversionDeviceType implements Clas
 	**/
 	public IfcBoilerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcBoilerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBoilerType object using the given parameters.
 	*

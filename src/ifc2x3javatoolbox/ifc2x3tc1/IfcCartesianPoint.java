@@ -24,6 +24,13 @@ public class IfcCartesianPoint extends IfcPoint implements IfcTrimmingSelect, Cl
 	**/
 	public IfcCartesianPoint(){}
 
+	private static final String[] attributes = new String[]{"Coordinates"};
+
+	public String[] getAttributes() {
+		return IfcCartesianPoint.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcCartesianPoint object using the given parameters.
 	*

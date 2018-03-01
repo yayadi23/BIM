@@ -27,6 +27,11 @@ public class IfcStructuralLoadTemperature extends IfcStructuralLoadStatic implem
 	* The default constructor.
 	**/
 	public IfcStructuralLoadTemperature(){}
+	private static final String[] attributes = new String[]{"Name","DeltaT_Constant","DeltaT_Y","DeltaT_Z"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadTemperature.attributes;
+	}
 
 	/**
 	* Constructs a new IfcStructuralLoadTemperature object using the given parameters.

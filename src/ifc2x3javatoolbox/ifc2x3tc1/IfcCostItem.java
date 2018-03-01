@@ -22,6 +22,12 @@ public class IfcCostItem extends IfcControl implements ClassInterface
 	**/
 	public IfcCostItem(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType"};
+
+	public String[] getAttributes() {
+		return IfcCostItem.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCostItem object using the given parameters.
 	*

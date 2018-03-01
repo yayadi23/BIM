@@ -24,6 +24,12 @@ public class IfcVertexLoop extends IfcLoop implements ClassInterface
 	**/
 	public IfcVertexLoop(){}
 
+	private static final String[] attributes = new String[]{"LoopVertex"};
+
+	public String[] getAttributes(){
+		return IfcVertexLoop.attributes;
+	}
+
 	/**
 	* Constructs a new IfcVertexLoop object using the given parameters.
 	*

@@ -36,6 +36,12 @@ public class IfcTextStyleTextModel extends InternalAccessClass implements IfcTex
 	**/
 	public IfcTextStyleTextModel(){}
 
+	private static final String[] attributes = new String[]{"TextIndent","TextAlign","TextDecoration","LetterSpacing","WordSpacing","TextTransform","LineHeight"};
+
+	public String[] getAttributes(){
+		return IfcTextStyleTextModel.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextStyleTextModel object using the given parameters.
 	*

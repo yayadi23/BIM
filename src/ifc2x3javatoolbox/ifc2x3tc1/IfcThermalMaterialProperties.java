@@ -30,6 +30,13 @@ public class IfcThermalMaterialProperties extends IfcMaterialProperties implemen
 	**/
 	public IfcThermalMaterialProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","SpecificHeatCapacity","BoilingPoint","FreezingPoint",
+			"ThermalConductivity"};
+
+	public String[] getAttributes(){
+		return IfcThermalMaterialProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcThermalMaterialProperties object using the given parameters.
 	*

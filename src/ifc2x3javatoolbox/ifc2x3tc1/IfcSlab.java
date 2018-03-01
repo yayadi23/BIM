@@ -24,6 +24,14 @@ public class IfcSlab extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcSlab(){}
 
+
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcSlab.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSlab object using the given parameters.
 	*

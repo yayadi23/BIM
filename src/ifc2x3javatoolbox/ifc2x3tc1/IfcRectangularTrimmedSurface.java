@@ -36,6 +36,12 @@ public class IfcRectangularTrimmedSurface extends IfcBoundedSurface implements C
 	**/
 	public IfcRectangularTrimmedSurface(){}
 
+	private static final String[] attributes = new String[]{"BasisSurface","U1","V1","U2","V2","Usense","Vsense"};
+
+	public String[] getAttributes() {
+		return IfcRectangularTrimmedSurface.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRectangularTrimmedSurface object using the given parameters.
 	*

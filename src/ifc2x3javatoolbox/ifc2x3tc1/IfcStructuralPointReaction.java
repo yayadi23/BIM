@@ -22,6 +22,13 @@ public class IfcStructuralPointReaction extends IfcStructuralReaction implements
 	**/
 	public IfcStructuralPointReaction(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedLoad","GlobalOrLocal"};
+
+	public String[] getAttributes(){
+		return IfcStructuralPointReaction.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralPointReaction object using the given parameters.
 	*

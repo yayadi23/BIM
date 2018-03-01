@@ -22,6 +22,13 @@ public class IfcBezierCurve extends IfcBSplineCurve implements ClassInterface
 	**/
 	public IfcBezierCurve(){}
 
+	private static final String[] attributes = new String[]{"Degree","ControlPointsList","CurveForm","ClosedCurve"
+			,"SelfIntersect"};
+
+	public String[] getAttributes() {
+		return IfcBezierCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBezierCurve object using the given parameters.
 	*

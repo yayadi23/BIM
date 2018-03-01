@@ -24,6 +24,12 @@ public class IfcPresentationStyleAssignment extends InternalAccessClass implemen
 	**/
 	public IfcPresentationStyleAssignment(){}
 
+	private static final String[] attributes = new String[]{"Styles"};
+
+	public String[] getAttributes() {
+		return IfcPresentationStyleAssignment.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPresentationStyleAssignment object using the given parameters.
 	*

@@ -32,6 +32,12 @@ public abstract class IfcBSplineCurve extends IfcBoundedCurve implements ClassIn
 	**/
 	public IfcBSplineCurve(){}
 
+	private static final String[] attributes = new String[]{"Degree","ControlPointsList","CurveForm","ClosedCurve","SelfIntersect"};
+
+	public String[] getAttributes() {
+		return IfcBSplineCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBSplineCurve object using the given parameters.
 	*

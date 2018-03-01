@@ -22,6 +22,13 @@ public class IfcEnergyConversionDevice extends IfcDistributionFlowElement implem
 	**/
 	public IfcEnergyConversionDevice(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcEnergyConversionDevice.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEnergyConversionDevice object using the given parameters.
 	*

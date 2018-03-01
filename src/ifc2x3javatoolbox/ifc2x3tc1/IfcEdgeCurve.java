@@ -26,6 +26,12 @@ public class IfcEdgeCurve extends IfcEdge implements IfcCurveOrEdgeCurve, ClassI
 	**/
 	public IfcEdgeCurve(){}
 
+	private static final String[] attributes = new String[]{"EdgeStart","EdgeEnd","EdgeGeometry","SameSense"};
+
+	public String[] getAttributes() {
+		return IfcEdgeCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEdgeCurve object using the given parameters.
 	*

@@ -28,6 +28,14 @@ public class IfcPointOnSurface extends IfcPoint implements ClassInterface
 	**/
 	public IfcPointOnSurface(){}
 
+	private static final String[] attributes = new String[]{"BasisSurface","PointParameterU","PointParameterV"};
+
+
+	public String[] getAttributes() {
+		return IfcPointOnSurface.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcPointOnSurface object using the given parameters.
 	*

@@ -38,6 +38,14 @@ public class IfcTendon extends IfcReinforcingElement implements ClassInterface
 	**/
 	public IfcTendon(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag","SteelGrade","PredefinedType","NominalDiameter","CrossSectionArea","TensionForce"
+		,"PreStress","FrictionCoefficient","AnchorageSlip","MinCurvatureRadius"};
+
+	public String[] getAttributes(){
+		return IfcTendon.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTendon object using the given parameters.
 	*

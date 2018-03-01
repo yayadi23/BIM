@@ -24,6 +24,12 @@ public abstract class IfcStructuralMember extends IfcStructuralItem implements C
 	**/
 	public IfcStructuralMember(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation"};
+
+	public String[] getAttributes(){
+		return IfcStructuralMember.attributes;
+	}
 	/**
 	* Constructs a new IfcStructuralMember object using the given parameters.
 	*

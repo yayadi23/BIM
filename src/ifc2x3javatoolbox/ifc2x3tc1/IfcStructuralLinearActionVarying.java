@@ -26,6 +26,14 @@ public class IfcStructuralLinearActionVarying extends IfcStructuralLinearAction 
 	**/
 	public IfcStructuralLinearActionVarying(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedLoad","GlobalOrLocal","DestabilizingLoad",
+	"CausedBy","ProjectedOrTrue","VaryingAppliedLoadLocation","SubsequentAppliedLoads"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLinearActionVarying.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLinearActionVarying object using the given parameters.
 	*

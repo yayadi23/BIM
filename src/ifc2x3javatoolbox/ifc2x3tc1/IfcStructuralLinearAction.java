@@ -24,6 +24,14 @@ public class IfcStructuralLinearAction extends IfcStructuralAction implements Cl
 	**/
 	public IfcStructuralLinearAction(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedLoad","GlobalOrLocal","DestabilizingLoad",
+			"CausedBy","ProjectedOrTrue"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLinearAction.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLinearAction object using the given parameters.
 	*

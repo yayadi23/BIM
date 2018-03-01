@@ -22,6 +22,13 @@ public class IfcElectricalCircuit extends IfcSystem implements ClassInterface
 	**/
 	public IfcElectricalCircuit(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType"};
+
+	public String[] getAttributes() {
+		return IfcElectricalCircuit.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricalCircuit object using the given parameters.
 	*

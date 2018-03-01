@@ -32,6 +32,12 @@ public class IfcTextStyleFontModel extends IfcPreDefinedTextFont implements Clas
 	**/
 	public IfcTextStyleFontModel(){}
 
+	private static final String[] attributes = new String[]{"Name","FontFamily","FontStyle","FontVariant","FontWeight","FontSize"};
+
+	public String[] getAttributes(){
+		return IfcTextStyleFontModel.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextStyleFontModel object using the given parameters.
 	*

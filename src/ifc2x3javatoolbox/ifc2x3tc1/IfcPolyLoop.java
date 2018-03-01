@@ -24,6 +24,12 @@ public class IfcPolyLoop extends IfcLoop implements ClassInterface
 	**/
 	public IfcPolyLoop(){}
 
+	private static final String[] attributes = new String[]{"Polygon"};
+
+	public String[] getAttributes() {
+		return IfcPolyLoop.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPolyLoop object using the given parameters.
 	*

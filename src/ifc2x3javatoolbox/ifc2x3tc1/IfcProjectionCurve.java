@@ -22,6 +22,12 @@ public class IfcProjectionCurve extends IfcAnnotationCurveOccurrence implements 
 	**/
 	public IfcProjectionCurve(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes() {
+		return IfcProjectionCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProjectionCurve object using the given parameters.
 	*

@@ -58,6 +58,15 @@ public class IfcDocumentInformation extends InternalAccessClass implements Class
 	**/
 	public IfcDocumentInformation(){}
 
+	private static final String[] attributes = new String[]{"DocumentId","Name","Description"
+	,"DocumentReferences","Purpose","IntendedUse","Scope","Revision","DocumentOwner"
+	,"Editors","CreationTime","LastRevisionTime","ElectronicFormat","ValidFrom","ValidUntil"
+	,"Confidentiality","Status"};
+
+	public String[] getAttributes() {
+		return IfcDocumentInformation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDocumentInformation object using the given parameters.
 	*

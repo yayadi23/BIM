@@ -24,6 +24,13 @@ public class IfcElectricTimeControlType extends IfcFlowControllerType implements
 	**/
 	public IfcElectricTimeControlType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcElectricTimeControlType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricTimeControlType object using the given parameters.
 	*

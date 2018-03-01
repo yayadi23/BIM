@@ -22,6 +22,12 @@ public class IfcStyledRepresentation extends IfcStyleModel implements ClassInter
 	**/
 	public IfcStyledRepresentation(){}
 
+	private static final String[] attributes = new String[]{"ContextOfItems","RepresentationIdentifier","RepresentationType","Items"};
+
+	public String[] getAttributes(){
+		return IfcStyledRepresentation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStyledRepresentation object using the given parameters.
 	*

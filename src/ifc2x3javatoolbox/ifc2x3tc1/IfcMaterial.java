@@ -26,6 +26,12 @@ public class IfcMaterial extends InternalAccessClass implements IfcObjectReferen
 	**/
 	public IfcMaterial(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcMaterial.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMaterial object using the given parameters.
 	*

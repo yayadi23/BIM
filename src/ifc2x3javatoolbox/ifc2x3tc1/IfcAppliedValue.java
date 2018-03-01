@@ -37,6 +37,12 @@ public abstract class IfcAppliedValue extends InternalAccessClass implements Ifc
 	**/
 	public IfcAppliedValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","AppliedValue","UnitBasis","ApplicableDate","FixedUntilDate"};
+
+	public String[] getAttributes() {
+		return IfcAppliedValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAppliedValue object using the given parameters.
 	*

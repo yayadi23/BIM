@@ -7,11 +7,13 @@ import java.io.IOException;
 
 /**
  * Created by Diak on 2017/6/2.
+ * IfcWall、IfcPropertySet、IfcPropertySingleValue三个文件试验
  */
 public class DataMaker {
     private String filepath = "";
     private long start;
     private long end;
+
 
     public DataMaker(String filepath, long start, long end){
         this.filepath = filepath;

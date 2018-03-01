@@ -30,6 +30,13 @@ public class IfcPixelTexture extends IfcSurfaceTexture implements ClassInterface
 	**/
 	public IfcPixelTexture(){}
 
+	private static final String[] attributes = new String[]{"RepeatS","RepeatT","TextureType","TextureTransform"
+			,"Width","Height","ColourComponents","Pixel"};
+
+	public String[] getAttributes() {
+		return IfcPixelTexture.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPixelTexture object using the given parameters.
 	*

@@ -30,6 +30,13 @@ public class IfcWindowStyle extends IfcTypeProduct implements ClassInterface
 	**/
 	public IfcWindowStyle(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ConstructionType","OperationType","ParameterTakesPrecedence","Sizeable"};
+
+	public String[] getAttributes(){
+		return IfcWindowStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWindowStyle object using the given parameters.
 	*

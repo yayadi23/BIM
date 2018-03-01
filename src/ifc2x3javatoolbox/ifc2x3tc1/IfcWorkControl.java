@@ -42,6 +42,13 @@ public abstract class IfcWorkControl extends IfcControl implements ClassInterfac
 	**/
 	public IfcWorkControl(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","Identifier","CreationDate","Creators","Purpose","Duration","TotalFloat","StartTime","FinishTime","WorkControlType","UserDefinedControlType"};
+
+	public String[] getAttributes(){
+		return IfcWorkControl.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWorkControl object using the given parameters.
 	*

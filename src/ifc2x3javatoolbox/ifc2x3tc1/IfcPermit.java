@@ -24,6 +24,13 @@ public class IfcPermit extends IfcControl implements ClassInterface
 	**/
 	public IfcPermit(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","PermitID"};
+
+	public String[] getAttributes() {
+		return IfcPermit.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPermit object using the given parameters.
 	*

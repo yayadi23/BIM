@@ -26,6 +26,13 @@ public class IfcCovering extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcCovering(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType"
+			,"ObjectPlacement","Representation","Tag","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCovering.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCovering object using the given parameters.
 	*

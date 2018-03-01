@@ -26,6 +26,12 @@ public class IfcEllipseProfileDef extends IfcParameterizedProfileDef implements 
 	**/
 	public IfcEllipseProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","SemiAxis1","SemiAxis2"};
+
+	public String[] getAttributes() {
+		return IfcEllipseProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEllipseProfileDef object using the given parameters.
 	*

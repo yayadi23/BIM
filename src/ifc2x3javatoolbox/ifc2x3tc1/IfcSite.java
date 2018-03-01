@@ -32,6 +32,15 @@ public class IfcSite extends IfcSpatialStructureElement implements ClassInterfac
 	**/
 	public IfcSite(){}
 
+
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","LongName","CompositionType","RefLatitude","RefLongitude","RefElevation","LandTitleNumber","SiteAddress"};
+
+	public String[] getAttributes(){
+		return IfcSite.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcSite object using the given parameters.
 	*

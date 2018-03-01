@@ -26,6 +26,13 @@ public class IfcRelAssignsToActor extends IfcRelAssigns implements ClassInterfac
 	**/
 	public IfcRelAssignsToActor(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingActor","ActingRole"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsToActor.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsToActor object using the given parameters.
 	*

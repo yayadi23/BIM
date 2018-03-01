@@ -30,6 +30,12 @@ public class IfcPropertyConstraintRelationship extends InternalAccessClass imple
 	**/
 	public IfcPropertyConstraintRelationship(){}
 
+	private static final String[] attributes = new String[]{"RelatingConstraint","RelatedProperties","Name","Description"};
+
+	public String[] getAttributes() {
+		return IfcPropertyConstraintRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyConstraintRelationship object using the given parameters.
 	*

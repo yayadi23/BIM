@@ -24,6 +24,13 @@ public class IfcStair extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcStair(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag","ShapeType"};
+
+	public String[] getAttributes(){
+		return IfcStair.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStair object using the given parameters.
 	*

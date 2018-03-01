@@ -24,6 +24,14 @@ public class IfcRelAssociatesApproval extends IfcRelAssociates implements ClassI
 	**/
 	public IfcRelAssociatesApproval(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingApproval"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesApproval.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcRelAssociatesApproval object using the given parameters.
 	*

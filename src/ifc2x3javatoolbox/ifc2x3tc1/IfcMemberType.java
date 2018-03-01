@@ -24,6 +24,13 @@ public class IfcMemberType extends IfcBuildingElementType implements ClassInterf
 	**/
 	public IfcMemberType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcMemberType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMemberType object using the given parameters.
 	*

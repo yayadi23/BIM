@@ -24,6 +24,13 @@ public class IfcElectricGeneratorType extends IfcEnergyConversionDeviceType impl
 	**/
 	public IfcElectricGeneratorType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcElectricGeneratorType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricGeneratorType object using the given parameters.
 	*

@@ -26,6 +26,12 @@ public class IfcMaterialClassificationRelationship extends InternalAccessClass i
 	**/
 	public IfcMaterialClassificationRelationship(){}
 
+	private static final String[] attributes = new String[]{"MaterialClassifications","ClassifiedMaterial"};
+
+	public String[] getAttributes() {
+		return IfcMaterialClassificationRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMaterialClassificationRelationship object using the given parameters.
 	*

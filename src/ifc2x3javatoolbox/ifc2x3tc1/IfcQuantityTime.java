@@ -24,6 +24,12 @@ public class IfcQuantityTime extends IfcPhysicalSimpleQuantity implements ClassI
 	**/
 	public IfcQuantityTime(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Unit","TimeValue"};
+
+	public String[] getAttributes() {
+		return IfcQuantityTime.attributes;
+	}
+
 	/**
 	* Constructs a new IfcQuantityTime object using the given parameters.
 	*

@@ -32,6 +32,13 @@ public class IfcRelSpaceBoundary extends IfcRelConnects implements ClassInterfac
 	**/
 	public IfcRelSpaceBoundary(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingSpace","RelatedBuildingElement","ConnectionGeometry","PhysicalOrVirtualBoundary","InternalOrExternalBoundary"};
+
+	public String[] getAttributes() {
+		return IfcRelSpaceBoundary.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelSpaceBoundary object using the given parameters.
 	*

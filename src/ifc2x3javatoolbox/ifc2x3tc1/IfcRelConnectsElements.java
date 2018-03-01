@@ -28,6 +28,13 @@ public class IfcRelConnectsElements extends IfcRelConnects implements ClassInter
 	**/
 	public IfcRelConnectsElements(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ConnectionGeometry","RelatingElement","RelatedElement"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsElements.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelConnectsElements object using the given parameters.
 	*

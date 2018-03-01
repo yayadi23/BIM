@@ -26,6 +26,13 @@ public class IfcReinforcementDefinitionProperties extends IfcPropertySetDefiniti
 	**/
 	public IfcReinforcementDefinitionProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"DefinitionType","ReinforcementSectionDefinitions"};
+
+	public String[] getAttributes() {
+		return IfcReinforcementDefinitionProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcReinforcementDefinitionProperties object using the given parameters.
 	*

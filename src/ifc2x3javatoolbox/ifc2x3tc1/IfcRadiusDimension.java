@@ -22,6 +22,12 @@ public class IfcRadiusDimension extends IfcDimensionCurveDirectedCallout impleme
 	**/
 	public IfcRadiusDimension(){}
 
+	private static final String[] attributes = new String[]{"Contents"};
+
+	public String[] getAttributes() {
+		return IfcRadiusDimension.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRadiusDimension object using the given parameters.
 	*

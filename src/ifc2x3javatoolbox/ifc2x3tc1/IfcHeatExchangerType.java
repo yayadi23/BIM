@@ -24,6 +24,13 @@ public class IfcHeatExchangerType extends IfcEnergyConversionDeviceType implemen
 	**/
 	public IfcHeatExchangerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcHeatExchangerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcHeatExchangerType object using the given parameters.
 	*

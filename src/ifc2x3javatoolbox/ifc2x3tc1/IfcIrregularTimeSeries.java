@@ -24,6 +24,13 @@ public class IfcIrregularTimeSeries extends IfcTimeSeries implements ClassInterf
 	**/
 	public IfcIrregularTimeSeries(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","StartTime","EndTime"
+			,"TimeSeriesDataType","DataOrigin","UserDefinedDataOrigin","Unit","Values"};
+
+	public String[] getAttributes() {
+		return IfcIrregularTimeSeries.attributes;
+	}
+
 	/**
 	* Constructs a new IfcIrregularTimeSeries object using the given parameters.
 	*

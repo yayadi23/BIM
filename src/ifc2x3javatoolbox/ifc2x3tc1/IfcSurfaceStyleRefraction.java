@@ -26,6 +26,11 @@ public class IfcSurfaceStyleRefraction extends InternalAccessClass implements Cl
 	**/
 	public IfcSurfaceStyleRefraction(){}
 
+	private static final String[] attributes = new String[]{"RefractionIndex","DispersionFactor"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceStyleRefraction.attributes;
+	}
 	/**
 	* Constructs a new IfcSurfaceStyleRefraction object using the given parameters.
 	*

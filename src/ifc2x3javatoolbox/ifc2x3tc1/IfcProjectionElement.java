@@ -22,6 +22,13 @@ public class IfcProjectionElement extends IfcFeatureElementAddition implements C
 	**/
 	public IfcProjectionElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcProjectionElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProjectionElement object using the given parameters.
 	*

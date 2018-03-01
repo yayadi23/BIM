@@ -22,6 +22,12 @@ public class IfcDimensionCalloutRelationship extends IfcDraughtingCalloutRelatio
 	**/
 	public IfcDimensionCalloutRelationship(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","RelatingDraughtingCallout","RelatedDraughtingCallout"};
+
+	public String[] getAttributes() {
+		return IfcDimensionCalloutRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDimensionCalloutRelationship object using the given parameters.
 	*

@@ -25,6 +25,13 @@ public class IfcDistributionControlElement extends IfcDistributionElement implem
 	**/
 	public IfcDistributionControlElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","ControlElementId"};
+
+	public String[] getAttributes() {
+		return IfcDistributionControlElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDistributionControlElement object using the given parameters.
 	*

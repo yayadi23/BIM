@@ -24,6 +24,12 @@ public class IfcFacetedBrepWithVoids extends IfcManifoldSolidBrep implements Cla
 	**/
 	public IfcFacetedBrepWithVoids(){}
 
+	private static final String[] attributes = new String[]{"Outer","Voids"};
+
+	public String[] getAttributes() {
+		return IfcFacetedBrepWithVoids.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFacetedBrepWithVoids object using the given parameters.
 	*

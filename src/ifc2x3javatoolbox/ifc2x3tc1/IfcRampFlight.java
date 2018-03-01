@@ -22,6 +22,13 @@ public class IfcRampFlight extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcRampFlight(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcRampFlight.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRampFlight object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcGasTerminalType extends IfcFlowTerminalType implements ClassInte
 	**/
 	public IfcGasTerminalType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcGasTerminalType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGasTerminalType object using the given parameters.
 	*

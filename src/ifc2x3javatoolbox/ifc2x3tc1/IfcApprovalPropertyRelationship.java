@@ -26,6 +26,12 @@ public class IfcApprovalPropertyRelationship extends InternalAccessClass impleme
 	**/
 	public IfcApprovalPropertyRelationship(){}
 
+	private static final String[] attributes = new String[]{"ApprovedProperties","Approval"};
+
+	public String[] getAttributes() {
+		return IfcApprovalPropertyRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcApprovalPropertyRelationship object using the given parameters.
 	*

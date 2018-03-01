@@ -22,6 +22,13 @@ public class IfcDistributionElementType extends IfcElementType implements ClassI
 	**/
 	public IfcDistributionElementType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType"};
+
+	public String[] getAttributes() {
+		return IfcDistributionElementType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDistributionElementType object using the given parameters.
 	*

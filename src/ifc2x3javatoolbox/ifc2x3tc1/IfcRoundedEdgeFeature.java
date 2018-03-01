@@ -24,6 +24,13 @@ public class IfcRoundedEdgeFeature extends IfcEdgeFeature implements ClassInterf
 	**/
 	public IfcRoundedEdgeFeature(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","FeatureLength","Radius"};
+
+	public String[] getAttributes() {
+		return IfcRoundedEdgeFeature.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRoundedEdgeFeature object using the given parameters.
 	*

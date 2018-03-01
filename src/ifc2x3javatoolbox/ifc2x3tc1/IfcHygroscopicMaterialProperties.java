@@ -32,6 +32,13 @@ public class IfcHygroscopicMaterialProperties extends IfcMaterialProperties impl
 	**/
 	public IfcHygroscopicMaterialProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","UpperVaporResistanceFactor","LowerVaporResistanceFactor"
+			,"IsothermalMoistureCapacity","VaporPermeability","MoistureDiffusivity"};
+
+	public String[] getAttributes() {
+		return IfcHygroscopicMaterialProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcHygroscopicMaterialProperties object using the given parameters.
 	*

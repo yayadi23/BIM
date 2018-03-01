@@ -27,6 +27,11 @@ public class IfcSlippageConnectionCondition extends IfcStructuralConnectionCondi
 	* The default constructor.
 	**/
 	public IfcSlippageConnectionCondition(){}
+	private static final String[] attributes = new String[]{"Name","SlippageX","SlippageY","SlippageZ"};
+
+	public String[] getAttributes(){
+		return IfcSlippageConnectionCondition.attributes;
+	}
 
 	/**
 	* Constructs a new IfcSlippageConnectionCondition object using the given parameters.

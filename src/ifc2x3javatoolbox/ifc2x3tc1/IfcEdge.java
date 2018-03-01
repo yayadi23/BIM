@@ -26,6 +26,12 @@ public class IfcEdge extends IfcTopologicalRepresentationItem implements ClassIn
 	**/
 	public IfcEdge(){}
 
+	private static final String[] attributes = new String[]{"EdgeStart","EdgeEnd"};
+
+	public String[] getAttributes() {
+		return IfcEdge.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEdge object using the given parameters.
 	*

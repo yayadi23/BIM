@@ -22,6 +22,12 @@ public class IfcPreDefinedPointMarkerSymbol extends IfcPreDefinedSymbol implemen
 	**/
 	public IfcPreDefinedPointMarkerSymbol(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcPreDefinedPointMarkerSymbol.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPreDefinedPointMarkerSymbol object using the given parameters.
 	*

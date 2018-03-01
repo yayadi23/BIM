@@ -36,6 +36,14 @@ public class IfcDimensionalExponents extends InternalAccessClass implements Clas
 	**/
 	public IfcDimensionalExponents(){}
 
+	private static final String[] attributes = new String[]{"LengthExponent","MassExponent"
+			,"TimeExponent","ElectricCurrentExponent","ThermodynamicTemperatureExponent"
+			,"AmountOfSubstanceExponent","LuminousIntensityExponent"};
+
+	public String[] getAttributes() {
+		return IfcDimensionalExponents.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDimensionalExponents object using the given parameters.
 	*

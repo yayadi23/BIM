@@ -26,6 +26,14 @@ public class IfcServiceLife extends IfcControl implements ClassInterface
 	**/
 	public IfcServiceLife(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ServiceLifeType","ServiceLifeDuration"};
+
+	public String[] getAttributes(){
+		return IfcServiceLife.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcServiceLife object using the given parameters.
 	*

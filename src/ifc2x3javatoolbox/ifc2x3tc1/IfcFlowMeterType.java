@@ -24,6 +24,13 @@ public class IfcFlowMeterType extends IfcFlowControllerType implements ClassInte
 	**/
 	public IfcFlowMeterType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcFlowMeterType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowMeterType object using the given parameters.
 	*

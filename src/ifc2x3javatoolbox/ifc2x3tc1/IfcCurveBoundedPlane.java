@@ -28,6 +28,12 @@ public class IfcCurveBoundedPlane extends IfcBoundedSurface implements ClassInte
 	**/
 	public IfcCurveBoundedPlane(){}
 
+	private static final String[] attributes = new String[]{"BasisSurface","OuterBoundary","InnerBoundaries"};
+
+	public String[] getAttributes() {
+		return IfcCurveBoundedPlane.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCurveBoundedPlane object using the given parameters.
 	*

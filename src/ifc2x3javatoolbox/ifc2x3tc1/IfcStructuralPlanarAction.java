@@ -24,6 +24,14 @@ public class IfcStructuralPlanarAction extends IfcStructuralAction implements Cl
 	**/
 	public IfcStructuralPlanarAction(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedLoad","GlobalOrLocal","DestabilizingLoad","CausedBy",
+			"ProjectedOrTrue"};
+
+	public String[] getAttributes(){
+		return IfcStructuralPlanarAction.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralPlanarAction object using the given parameters.
 	*

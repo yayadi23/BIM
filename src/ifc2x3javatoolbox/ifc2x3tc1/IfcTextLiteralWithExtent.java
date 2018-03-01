@@ -26,6 +26,12 @@ public class IfcTextLiteralWithExtent extends IfcTextLiteral implements ClassInt
 	**/
 	public IfcTextLiteralWithExtent(){}
 
+	private static final String[] attributes = new String[]{"Literal","Placement","Path","Extent","BoxAlignment"};
+
+	public String[] getAttributes(){
+		return IfcTextLiteralWithExtent.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextLiteralWithExtent object using the given parameters.
 	*

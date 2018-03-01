@@ -26,6 +26,12 @@ public class File_Description extends InternalAccessClass implements ClassInterf
 	**/
 	public File_Description(){}
 
+	private static final String[] attributes = new String[]{"description","implementationLevel"};
+
+	public String[] getAttributes() {
+		return File_Description.attributes;
+	}
+
 	/**
 	* Constructs a new File_Description object using the given parameters.
 	*

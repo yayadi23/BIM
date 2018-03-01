@@ -54,6 +54,17 @@ public class IfcStructuralProfileProperties extends IfcGeneralProfileProperties 
 	**/
 	public IfcStructuralProfileProperties(){}
 
+	private static final String[] attributes = new String[]{"ProfileName","ProfileDefinition","PhysicalWeight","Perimeter",
+			"MinimumPlateThickness","MaximumPlateThickness","CrossSectionArea","TorsionalConstantX"
+			,"MomentOfInertiaYZ","MomentOfInertiaY","MomentOfInertiaZ","WarpingConstant","ShearCentreZ",
+			"ShearCentreY","ShearDeformationAreaZ","ShearDeformationAreaY","MaximumSectionModulusY",
+			"MinimumSectionModulusY","MaximumSectionModulusZ","MinimumSectionModulusZ","TorsionalSectionModulus"
+			,"CentreOfGravityInX","CentreOfGravityInY"};
+
+	public String[] getAttributes(){
+		return IfcStructuralProfileProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralProfileProperties object using the given parameters.
 	*

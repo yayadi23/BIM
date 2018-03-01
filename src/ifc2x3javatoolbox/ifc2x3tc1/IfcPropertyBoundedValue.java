@@ -28,6 +28,13 @@ public class IfcPropertyBoundedValue extends IfcSimpleProperty implements ClassI
 	**/
 	public IfcPropertyBoundedValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","UpperBoundValue","LowerBoundValue"
+			,"Unit"};
+
+	public String[] getAttributes() {
+		return IfcPropertyBoundedValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyBoundedValue object using the given parameters.
 	*

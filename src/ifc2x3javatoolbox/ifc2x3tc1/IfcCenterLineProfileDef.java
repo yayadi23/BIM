@@ -24,6 +24,12 @@ public class IfcCenterLineProfileDef extends IfcArbitraryOpenProfileDef implemen
 	**/
 	public IfcCenterLineProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Curve","Thickness"};
+
+	public String[] getAttributes() {
+		return IfcCenterLineProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCenterLineProfileDef object using the given parameters.
 	*

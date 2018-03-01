@@ -26,6 +26,12 @@ public class IfcPolygonalBoundedHalfSpace extends IfcHalfSpaceSolid implements C
 	**/
 	public IfcPolygonalBoundedHalfSpace(){}
 
+	private static final String[] attributes = new String[]{"BaseSurface","AgreementFlag","Position","PolygonalBoundary"};
+
+	public String[] getAttributes() {
+		return IfcPolygonalBoundedHalfSpace.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPolygonalBoundedHalfSpace object using the given parameters.
 	*

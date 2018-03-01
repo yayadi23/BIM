@@ -26,6 +26,12 @@ public class IfcTable extends InternalAccessClass implements IfcMetricValueSelec
 	**/
 	public IfcTable(){}
 
+	private static final String[] attributes = new String[]{"Name","Rows"};
+
+	public String[] getAttributes(){
+		return IfcTable.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTable object using the given parameters.
 	*

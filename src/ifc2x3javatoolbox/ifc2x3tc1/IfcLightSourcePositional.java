@@ -32,6 +32,13 @@ public class IfcLightSourcePositional extends IfcLightSource implements ClassInt
 	**/
 	public IfcLightSourcePositional(){}
 
+	private static final String[] attributes = new String[]{"Name","LightColour","AmbientIntensity","Intensity"
+			,"Position","Radius","ConstantAttenuation","DistanceAttenuation","QuadricAttenuation"};
+
+	public String[] getAttributes() {
+		return IfcLightSourcePositional.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLightSourcePositional object using the given parameters.
 	*

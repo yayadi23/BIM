@@ -24,6 +24,12 @@ public class IfcShellBasedSurfaceModel extends IfcGeometricRepresentationItem im
 	**/
 	public IfcShellBasedSurfaceModel(){}
 
+	private static final String[] attributes = new String[]{"SbsmBoundary"};
+
+	public String[] getAttributes(){
+		return IfcShellBasedSurfaceModel.attributes;
+	}
+
 	/**
 	* Constructs a new IfcShellBasedSurfaceModel object using the given parameters.
 	*

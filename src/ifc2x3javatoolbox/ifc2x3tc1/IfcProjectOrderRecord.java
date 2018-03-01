@@ -26,6 +26,13 @@ public class IfcProjectOrderRecord extends IfcControl implements ClassInterface
 	**/
 	public IfcProjectOrderRecord(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","Records","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcProjectOrderRecord.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProjectOrderRecord object using the given parameters.
 	*

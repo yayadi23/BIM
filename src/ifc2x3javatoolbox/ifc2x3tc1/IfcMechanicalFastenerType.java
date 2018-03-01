@@ -22,6 +22,13 @@ public class IfcMechanicalFastenerType extends IfcFastenerType implements ClassI
 	**/
 	public IfcMechanicalFastenerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType"};
+
+	public String[] getAttributes() {
+		return IfcMechanicalFastenerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMechanicalFastenerType object using the given parameters.
 	*

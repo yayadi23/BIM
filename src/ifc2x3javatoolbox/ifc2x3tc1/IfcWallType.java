@@ -24,6 +24,13 @@ public class IfcWallType extends IfcBuildingElementType implements ClassInterfac
 	**/
 	public IfcWallType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcWallType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWallType object using the given parameters.
 	*

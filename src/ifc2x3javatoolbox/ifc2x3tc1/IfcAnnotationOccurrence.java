@@ -22,6 +22,13 @@ public abstract class IfcAnnotationOccurrence extends IfcStyledItem implements C
 	**/
 	public IfcAnnotationOccurrence(){}
 
+
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationOccurrence.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAnnotationOccurrence object using the given parameters.
 	*

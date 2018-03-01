@@ -38,6 +38,13 @@ public class IfcOwnerHistory extends InternalAccessClass implements ClassInterfa
 	**/
 	public IfcOwnerHistory(){}
 
+	private static final String[] attributes = new String[]{"OwningUser","OwningApplication","State","ChangeAction"
+			,"LastModifiedDate","LastModifyingUser","LastModifyingApplication","CreationDate"};
+
+	public String[] getAttributes() {
+		return IfcOwnerHistory.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOwnerHistory object using the given parameters.
 	*

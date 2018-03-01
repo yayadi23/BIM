@@ -26,6 +26,13 @@ public class IfcRelVoidsElement extends IfcRelConnects implements ClassInterface
 	**/
 	public IfcRelVoidsElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingBuildingElement","RelatedOpeningElement"};
+
+	public String[] getAttributes() {
+		return IfcRelVoidsElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelVoidsElement object using the given parameters.
 	*

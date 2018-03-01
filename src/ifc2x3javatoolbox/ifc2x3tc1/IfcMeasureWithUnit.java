@@ -26,6 +26,13 @@ public class IfcMeasureWithUnit extends InternalAccessClass implements IfcApplie
 	**/
 	public IfcMeasureWithUnit(){}
 
+	private static final String[] attributes = new String[]{"ValueComponent","UnitComponent"};
+
+	public String[] getAttributes() {
+		return IfcMeasureWithUnit.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcMeasureWithUnit object using the given parameters.
 	*

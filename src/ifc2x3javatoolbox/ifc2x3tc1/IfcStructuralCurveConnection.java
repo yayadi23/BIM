@@ -21,6 +21,12 @@ public class IfcStructuralCurveConnection extends IfcStructuralConnection implem
 	* The default constructor.
 	**/
 	public IfcStructuralCurveConnection(){}
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedCondition"};
+
+	public String[] getAttributes(){
+		return IfcStructuralCurveConnection.attributes;
+	}
 
 	/**
 	* Constructs a new IfcStructuralCurveConnection object using the given parameters.

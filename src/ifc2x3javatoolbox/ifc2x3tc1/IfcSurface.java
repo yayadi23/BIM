@@ -26,6 +26,12 @@ public abstract class IfcSurface extends IfcGeometricRepresentationItem implemen
 		resolveInverses();
 	}
 
+	private static final String[] attributes = new String[]{};
+
+	public String[] getAttributes(){
+		return IfcSurface.attributes;
+	}
+
 	/**
 	 * This method is used internally and should NOT be used for own purposes.
 	**/

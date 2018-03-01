@@ -24,6 +24,13 @@ public class IfcRelAssociatesLibrary extends IfcRelAssociates implements ClassIn
 	**/
 	public IfcRelAssociatesLibrary(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingLibrary"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesLibrary.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociatesLibrary object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcFace extends IfcTopologicalRepresentationItem implements ClassIn
 	**/
 	public IfcFace(){}
 
+	private static final String[] attributes = new String[]{"Bounds"};
+
+	public String[] getAttributes() {
+		return IfcFace.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFace object using the given parameters.
 	*

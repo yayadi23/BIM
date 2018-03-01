@@ -32,6 +32,13 @@ public class IfcMechanicalMaterialProperties extends IfcMaterialProperties imple
 	**/
 	public IfcMechanicalMaterialProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","DynamicViscosity","YoungModulus","ShearModulus"
+			,"PoissonRatio","ThermalExpansionCoefficient"};
+
+	public String[] getAttributes() {
+		return IfcMechanicalMaterialProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMechanicalMaterialProperties object using the given parameters.
 	*

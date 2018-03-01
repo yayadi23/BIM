@@ -23,6 +23,13 @@ public class IfcTransportElementType extends IfcElementType implements ClassInte
 	* The default constructor.
 	**/
 	public IfcTransportElementType(){}
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcTransportElementType.attributes;
+	}
+
 
 	/**
 	* Constructs a new IfcTransportElementType object using the given parameters.

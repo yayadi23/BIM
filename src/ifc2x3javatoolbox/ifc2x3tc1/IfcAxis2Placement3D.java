@@ -26,6 +26,12 @@ public class IfcAxis2Placement3D extends IfcPlacement implements IfcAxis2Placeme
 	**/
 	public IfcAxis2Placement3D(){}
 
+	private static final String[] attributes = new String[]{"Location","Axis","RefDirection"};
+
+	public String[] getAttributes() {
+		return IfcAxis2Placement3D.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAxis2Placement3D object using the given parameters.
 	*

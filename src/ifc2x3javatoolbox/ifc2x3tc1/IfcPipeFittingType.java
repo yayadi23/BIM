@@ -24,6 +24,12 @@ public class IfcPipeFittingType extends IfcFlowFittingType implements ClassInter
 	**/
 	public IfcPipeFittingType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcPipeFittingType.attributes;
+	}
 	/**
 	* Constructs a new IfcPipeFittingType object using the given parameters.
 	*

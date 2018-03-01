@@ -22,6 +22,13 @@ public class IfcFlowFitting extends IfcDistributionFlowElement implements ClassI
 	**/
 	public IfcFlowFitting(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFlowFitting.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowFitting object using the given parameters.
 	*

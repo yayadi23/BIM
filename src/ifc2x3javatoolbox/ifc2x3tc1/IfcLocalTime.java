@@ -32,6 +32,13 @@ public class IfcLocalTime extends InternalAccessClass implements IfcObjectRefere
 	**/
 	public IfcLocalTime(){}
 
+	private static final String[] attributes = new String[]{"HourComponent","MinuteComponent"
+	,"SecondComponent","Zone","DaylightSavingOffset"};
+
+	public String[] getAttributes() {
+		return IfcLocalTime.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLocalTime object using the given parameters.
 	*

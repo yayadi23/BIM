@@ -24,6 +24,12 @@ public class IfcGeometricSet extends IfcGeometricRepresentationItem implements C
 	**/
 	public IfcGeometricSet(){}
 
+	private static final String[] attributes = new String[]{"Elements"};
+
+	public String[] getAttributes() {
+		return IfcGeometricSet.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGeometricSet object using the given parameters.
 	*

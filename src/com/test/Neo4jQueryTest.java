@@ -22,6 +22,8 @@ import java.util.Set;
 
 /**
  * Created by Diak on 2017/4/23.
+ * åˆ›å»ºneo4jè¯•éªŒ
+ * æŸ¥è¯¢neo4jè¯•éªŒ
  */
 public class Neo4jQueryTest {
 
@@ -44,7 +46,7 @@ public class Neo4jQueryTest {
 
     private void clearDB(){
         try{
-            FileUtils.deleteDirectory(new File(dbPath));//±ä³ÉÊäÈëµÄ²ÎÊý
+            FileUtils.deleteDirectory(new File(dbPath));//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -52,11 +54,11 @@ public class Neo4jQueryTest {
 
 
 
-    //store a node                          ´æ´¢µ¥¸ö½Úµã
-    //index a node                          Ë÷Òýµ¥¸ö½Úµã
+    //store a node                          ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½
+    //index a node                          ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½
 
 
-    //store nodes by batch without index    ÅúÁ¿´æ´¢º£Á¿½Úµã£¬²»½¨Ë÷Òý
+    //store nodes by batch without index    ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Úµã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void storeWithoutIndex1(){
         try{
             clearDB();
@@ -75,12 +77,12 @@ public class Neo4jQueryTest {
                 }else{
                     label = Label.label("Second");
                 }
-                inserter.createNode(i, nodeMap, label);//ÕâÀïÒª¼ÓÉÏlabel
+                inserter.createNode(i, nodeMap, label);//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½label
             }
             end = System.currentTimeMillis();
             System.out.println("create-node-time:" + (end - start) + "ms");
 
-            //create relationship           ´´½¨¹ØÏµ
+            //create relationship           ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ
             long relID;
             start = System.currentTimeMillis();
             Map<String, Object> relMap = new HashMap<>();
@@ -118,14 +120,14 @@ public class Neo4jQueryTest {
                 }else{
                     label = Label.label("Second");
                 }
-                inserter.createNode(i, nodeMap, label);//ÕâÀïÒª¼ÓÉÏlabel
-                nodeIndex.add(i, nodeMap);//ËùÓÐµÄÊôÐÔ¶¼¼üÈëÁËindex
+                inserter.createNode(i, nodeMap, label);//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½label
+                nodeIndex.add(i, nodeMap);//ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½index
             }
             end = System.currentTimeMillis();
             System.out.println("create-node-time:" + (end - start) + "ms");
 
 
-            //create relationship           ´´½¨¹ØÏµ
+            //create relationship           ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ
             long relID;
             start = System.currentTimeMillis();
             Map<String, Object> relMap = new HashMap<>();
@@ -145,7 +147,7 @@ public class Neo4jQueryTest {
         }
     }
 
-    //store nodes by batch with index       ÅúÁ¿´æ´¢º£Á¿½Úµã£¬ÅúÁ¿½¨Ë÷Òý£¨ÕâÊÇÖ¸½ÚµãµÄÃ¿¸öÊôÐÔ¶¼½¨Á¢Ë÷ÒýÂð£¿Èç¹ûÊÇµÄ»°£¬ÄÇ½¨Á¢Ë÷ÒýµÄÊ±¼äÒ»ÑùÂð£¿£©
+    //store nodes by batch with index       ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Úµã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½Úµï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÇµÄ»ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ð£¿£ï¿½
     public void StoreWithIndex(){
         try{
             clearDB();
@@ -167,14 +169,14 @@ public class Neo4jQueryTest {
                 }else{
                     label = Label.label("Second");
                 }
-                inserter.createNode(i, nodeMap, label);//ÕâÀïÒª¼ÓÉÏlabel
-                nodeIndex.add(i, nodeMap);//ËùÓÐµÄÊôÐÔ¶¼¼üÈëÁËindex
+                inserter.createNode(i, nodeMap, label);//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½label
+                nodeIndex.add(i, nodeMap);//ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½index
             }
             end = System.currentTimeMillis();
             System.out.println("create-node-time:" + (end - start) + "ms");
 
 
-            //create relationship           ´´½¨¹ØÏµ
+            //create relationship           ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ
             long relID;
             start = System.currentTimeMillis();
             Map<String, Object> relMap = new HashMap<>();
@@ -194,7 +196,7 @@ public class Neo4jQueryTest {
         }
     }
 
-    //get GraphDB                           »ñÈ¡graphdbserviceÊµÀý
+    //get GraphDB                           ï¿½ï¿½È¡graphdbserviceÊµï¿½ï¿½
     public GraphDatabaseService getGraphDBService(){
         long start,end;
         start = System.currentTimeMillis();
@@ -204,18 +206,18 @@ public class Neo4jQueryTest {
         return graphdb;
     }
 
-    //query non-index nodes                 ²éÑ¯ÎÞË÷Òý½Úµã
-    //query index nodes                     ²éÑ¯ÓÐË÷Òý½Úµã
-    //ÕâÁ½ÖÖÇé¿öÏÂ¶¼¿ÉÒÔÖ±½ÓÓÃcypherÀ´½øÐÐ²éÑ¯¡£APIµ±È»Âú×ã²»ÁË¾ø´ó²¿·ÖµÄ²éÑ¯£»ÔÚÓÐË÷ÒýµÄÇé¿öÏÂ£¬cypherµÄÖ´ÐÐ¼Æ»®»á×Ô¶¯Ê¹ÓÃË÷Òý¡£
-    //Ê¹ÓÃprofile¿ÉÒÔÌ½²âÖ´ÐÐ¼Æ»®ÓÐ¶àÉÙ´Îdb·ÃÎÊ
+    //query non-index nodes                 ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½
+    //query index nodes                     ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½cypherï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½Ñ¯ï¿½ï¿½APIï¿½ï¿½È»ï¿½ï¿½ï¿½ã²»ï¿½Ë¾ï¿½ï¿½ó²¿·ÖµÄ²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½cypherï¿½ï¿½Ö´ï¿½Ð¼Æ»ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //Ê¹ï¿½ï¿½profileï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ö´ï¿½Ð¼Æ»ï¿½ï¿½Ð¶ï¿½ï¿½Ù´ï¿½dbï¿½ï¿½ï¿½ï¿½
     public void cypherQuery(GraphDatabaseService graphDatabaseService){
-        //ÔÚÊý¾ÝÁ¿Îª1Ç§ÍòµÄÇé¿öÏÂ£¬Ê¹ÓÃÎÞ/ÓÐË÷ÒýÊý¾Ý¿â
-        //query 1: ²éÑ¯idÎª9999µÄnode
-        //query 2: ²éÑ¯label1,attribute1Îª9µÄnode
-        //query 3: ²éÑ¯label1,attribute2Îª9µÄnode
-        //query 4: ²éÑ¯label1,attribute3Îª9µÄnode
-        //query 5: ²éÑ¯label1,attribute4Îª9µÄnode
-        //query 6: ²éÑ¯¹ØÁª¹ØÏµ£¨Òª¶Ô±ÈesµÄ±íÁ¬½Ó²éÑ¯£©
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1Ç§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
+        //query 1: ï¿½ï¿½Ñ¯idÎª9999ï¿½ï¿½node
+        //query 2: ï¿½ï¿½Ñ¯label1,attribute1Îª9ï¿½ï¿½node
+        //query 3: ï¿½ï¿½Ñ¯label1,attribute2Îª9ï¿½ï¿½node
+        //query 4: ï¿½ï¿½Ñ¯label1,attribute3Îª9ï¿½ï¿½node
+        //query 5: ï¿½ï¿½Ñ¯label1,attribute4Îª9ï¿½ï¿½node
+        //query 6: ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½Òªï¿½Ô±ï¿½esï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ó²ï¿½Ñ¯ï¿½ï¿½
         long start, end;
         Result result;
         String query1 = "match (n) where id(n)=9999 return count(n),id(n),n.label,n.attribute1,n.attribute2,n.attribute3,n.attribute4";
@@ -226,7 +228,7 @@ public class Neo4jQueryTest {
         String query6 = "match (n:First{attribute1:9}) return count(n)";
         String query7 = ":schema";
         String query8 = "match (n:First{attribute1:9}) - [r] -> (m:Second) return count(m)";
-//        String query6 = "match (n)-()";//1.Õâ¸örelationshipÓÐÃ»ÓÐÌí¼ÓË÷Òý£¿2.ÓÐÃ»ÓÐ¶¨Òå²»Í¬µÄrelType£¿
+//        String query6 = "match (n)-()";//1.ï¿½ï¿½ï¿½relationshipï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2.ï¿½ï¿½Ã»ï¿½Ð¶ï¿½ï¿½å²»Í¬ï¿½ï¿½relTypeï¿½ï¿½
 
 //        start = System.currentTimeMillis();
 //        result = graphDatabaseService.execute(query1);
@@ -307,9 +309,9 @@ public class Neo4jQueryTest {
     public void dynamicRun(Neo4jQueryTest test){
 //        String path = dbPath.substring(dbPath.lastIndexOf("\\") + 1);
 //        if(path.startsWith("indexed")){
-//            test.StoreWithIndex();//´æ´¢Îª´øË÷ÒýÊý¾Ý¿â,Êý¾Ý¿âÃû°üº¬Ë÷Òý
+//            test.StoreWithIndex();//ï¿½æ´¢Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½,ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //        }else if(path.startsWith("unindexed")){
-//            test.storeWithoutIndex();//´æ´¢Îª²»´øË÷ÒýµÄÊý¾Ý¿â£¬Êý¾Ý¿âÃû²»°üº¬Ë÷Òý
+//            test.storeWithoutIndex();//ï¿½æ´¢Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿â£¬ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //        }
         GraphDatabaseService graphDatabaseService = test.getGraphDBService();
         Transaction tx = graphDatabaseService.beginTx();

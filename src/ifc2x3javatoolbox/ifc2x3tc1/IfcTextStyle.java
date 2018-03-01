@@ -28,6 +28,12 @@ public class IfcTextStyle extends IfcPresentationStyle implements IfcPresentatio
 	**/
 	public IfcTextStyle(){}
 
+	private static final String[] attributes = new String[]{"Name","TextCharacterAppearance","TextStyle","TextFontStyle"};
+
+	public String[] getAttributes(){
+		return IfcTextStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextStyle object using the given parameters.
 	*

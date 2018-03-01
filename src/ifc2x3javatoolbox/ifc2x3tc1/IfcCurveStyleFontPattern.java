@@ -26,6 +26,13 @@ public class IfcCurveStyleFontPattern extends InternalAccessClass implements Cla
 	**/
 	public IfcCurveStyleFontPattern(){}
 
+	private static final String[] attributes = new String[]{"VisibleSegmentLength","InvisibleSegmentLength"};
+
+	public String[] getAttributes() {
+		return IfcCurveStyleFontPattern.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcCurveStyleFontPattern object using the given parameters.
 	*

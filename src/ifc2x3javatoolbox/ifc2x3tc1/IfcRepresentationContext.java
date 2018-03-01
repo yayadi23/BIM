@@ -27,6 +27,12 @@ public class IfcRepresentationContext extends InternalAccessClass implements Cla
 	**/
 	public IfcRepresentationContext(){}
 
+	private static final String[] attributes = new String[]{"ContextIdentifier","ContextType"};
+
+	public String[] getAttributes() {
+		return IfcRepresentationContext.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRepresentationContext object using the given parameters.
 	*

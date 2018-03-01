@@ -34,6 +34,14 @@ public class IfcLightSourceGoniometric extends IfcLightSource implements ClassIn
 	**/
 	public IfcLightSourceGoniometric(){}
 
+	private static final String[] attributes = new String[]{"Name","LightColour","AmbientIntensity","Intensity"
+			,"Position","ColourAppearance","ColourTemperature","LuminousFlux","LightEmissionSource"
+	,"LightDistributionDataSource"};
+
+	public String[] getAttributes() {
+		return IfcLightSourceGoniometric.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLightSourceGoniometric object using the given parameters.
 	*

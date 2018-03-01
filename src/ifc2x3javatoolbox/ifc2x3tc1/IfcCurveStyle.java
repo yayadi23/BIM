@@ -28,6 +28,12 @@ public class IfcCurveStyle extends IfcPresentationStyle implements IfcPresentati
 	**/
 	public IfcCurveStyle(){}
 
+	private static final String[] attributes = new String[]{"Name","CurveFont","CurveWidth","CurveColour"};
+
+	public String[] getAttributes() {
+		return IfcCurveStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCurveStyle object using the given parameters.
 	*

@@ -28,6 +28,12 @@ public class IfcGeneralMaterialProperties extends IfcMaterialProperties implemen
 	**/
 	public IfcGeneralMaterialProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","MolecularWeight","Porosity","MassDensity"};
+
+	public String[] getAttributes() {
+		return IfcGeneralMaterialProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGeneralMaterialProperties object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcSurfaceStyleShading extends InternalAccessClass implements Class
 	**/
 	public IfcSurfaceStyleShading(){}
 
+	private static final String[] attributes = new String[]{"SurfaceColour"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceStyleShading.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSurfaceStyleShading object using the given parameters.
 	*

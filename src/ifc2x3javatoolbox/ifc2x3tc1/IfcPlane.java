@@ -22,6 +22,12 @@ public class IfcPlane extends IfcElementarySurface implements ClassInterface
 	**/
 	public IfcPlane(){}
 
+	private static final String[] attributes = new String[]{"Position"};
+
+	public String[] getAttributes() {
+		return IfcPlane.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPlane object using the given parameters.
 	*

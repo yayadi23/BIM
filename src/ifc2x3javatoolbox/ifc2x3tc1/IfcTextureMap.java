@@ -24,6 +24,12 @@ public class IfcTextureMap extends IfcTextureCoordinate implements ClassInterfac
 	**/
 	public IfcTextureMap(){}
 
+	private static final String[] attributes = new String[]{"TextureMaps"};
+
+	public String[] getAttributes(){
+		return IfcTextureMap.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextureMap object using the given parameters.
 	*

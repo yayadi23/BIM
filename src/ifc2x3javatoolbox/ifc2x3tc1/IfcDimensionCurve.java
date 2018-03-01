@@ -23,6 +23,12 @@ public class IfcDimensionCurve extends IfcAnnotationCurveOccurrence implements C
 	**/
 	public IfcDimensionCurve(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes() {
+		return IfcDimensionCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDimensionCurve object using the given parameters.
 	*

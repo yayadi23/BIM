@@ -26,6 +26,12 @@ public class IfcPlanarExtent extends IfcGeometricRepresentationItem implements C
 	**/
 	public IfcPlanarExtent(){}
 
+	private static final String[] attributes = new String[]{"SizeInX","SizeInY"};
+
+	public String[] getAttributes() {
+		return IfcPlanarExtent.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPlanarExtent object using the given parameters.
 	*

@@ -23,6 +23,12 @@ public class IfcLibraryReference extends IfcExternalReference implements ClassIn
 	**/
 	public IfcLibraryReference(){}
 
+	private static final String[] attributes = new String[]{"Location","ItemReference","Name"};
+
+	public String[] getAttributes() {
+		return IfcLibraryReference.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLibraryReference object using the given parameters.
 	*

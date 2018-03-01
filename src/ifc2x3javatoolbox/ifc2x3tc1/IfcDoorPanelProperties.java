@@ -32,6 +32,14 @@ public class IfcDoorPanelProperties extends IfcPropertySetDefinition implements 
 	**/
 	public IfcDoorPanelProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"PanelDepth","PanelOperation","PanelWidth","PanelPosition","ShapeAspectStyle"};
+
+	public String[] getAttributes() {
+		return IfcDoorPanelProperties.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcDoorPanelProperties object using the given parameters.
 	*

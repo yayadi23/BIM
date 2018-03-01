@@ -22,6 +22,13 @@ public class IfcStructuralPointConnection extends IfcStructuralConnection implem
 	**/
 	public IfcStructuralPointConnection(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedCondition"};
+
+	public String[] getAttributes(){
+		return IfcStructuralPointConnection.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralPointConnection object using the given parameters.
 	*

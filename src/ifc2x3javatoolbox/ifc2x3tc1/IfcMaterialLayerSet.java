@@ -26,6 +26,12 @@ public class IfcMaterialLayerSet extends InternalAccessClass implements ClassInt
 	**/
 	public IfcMaterialLayerSet(){}
 
+	private static final String[] attributes = new String[]{"MaterialLayers","LayerSetName"};
+
+	public String[] getAttributes() {
+		return IfcMaterialLayerSet.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMaterialLayerSet object using the given parameters.
 	*

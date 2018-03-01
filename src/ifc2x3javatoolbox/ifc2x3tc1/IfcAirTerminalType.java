@@ -22,6 +22,14 @@ public class IfcAirTerminalType extends IfcFlowTerminalType implements ClassInte
 	/**
 	* The default constructor.
 	**/
+
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name"
+			,"Description","ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcAirTerminalType.attributes;
+	}
+
 	public IfcAirTerminalType(){}
 
 	/**

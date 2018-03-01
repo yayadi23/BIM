@@ -35,6 +35,13 @@ public class IfcOrganization extends InternalAccessClass implements IfcActorSele
 	**/
 	public IfcOrganization(){}
 
+	private static final String[] attributes = new String[]{"Id","Name","Description","Roles"
+			,"Addresses"};
+
+	public String[] getAttributes() {
+		return IfcOrganization.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOrganization object using the given parameters.
 	*

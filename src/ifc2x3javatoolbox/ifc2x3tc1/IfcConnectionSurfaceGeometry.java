@@ -26,6 +26,12 @@ public class IfcConnectionSurfaceGeometry extends IfcConnectionGeometry implemen
 	**/
 	public IfcConnectionSurfaceGeometry(){}
 
+	private static final String[] attributes = new String[]{"SurfaceOnRelatingElement","SurfaceOnRelatedElement"};
+
+	public String[] getAttributes() {
+		return IfcConnectionSurfaceGeometry.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConnectionSurfaceGeometry object using the given parameters.
 	*

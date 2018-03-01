@@ -40,6 +40,13 @@ public class IfcCraneRailFShapeProfileDef extends IfcParameterizedProfileDef imp
 	**/
 	public IfcCraneRailFShapeProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","OverallHeight","HeadWidth"
+			,"Radius","HeadDepth2","HeadDepth3","WebThickness","BaseDepth1","BaseDepth2","CentreOfGravityInY"};
+
+	public String[] getAttributes() {
+		return IfcCraneRailFShapeProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCraneRailFShapeProfileDef object using the given parameters.
 	*

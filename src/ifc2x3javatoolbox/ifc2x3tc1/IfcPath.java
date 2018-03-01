@@ -24,6 +24,12 @@ public class IfcPath extends IfcTopologicalRepresentationItem implements ClassIn
 	**/
 	public IfcPath(){}
 
+	private static final String[] attributes = new String[]{"EdgeList"};
+
+	public String[] getAttributes() {
+		return IfcPath.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPath object using the given parameters.
 	*

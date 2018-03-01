@@ -26,6 +26,12 @@ public class IfcTypeProduct extends IfcTypeObject implements ClassInterface
 	**/
 	public IfcTypeProduct(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag"};
+
+	public String[] getAttributes(){
+		return IfcTypeProduct.attributes;
+	}
 	/**
 	* Constructs a new IfcTypeProduct object using the given parameters.
 	*

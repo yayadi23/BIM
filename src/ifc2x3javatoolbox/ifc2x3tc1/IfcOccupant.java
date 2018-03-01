@@ -24,6 +24,13 @@ public class IfcOccupant extends IfcActor implements ClassInterface
 	**/
 	public IfcOccupant(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","TheActor","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcOccupant.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOccupant object using the given parameters.
 	*

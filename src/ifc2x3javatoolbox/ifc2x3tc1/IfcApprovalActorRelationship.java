@@ -28,6 +28,12 @@ public class IfcApprovalActorRelationship extends InternalAccessClass implements
 	**/
 	public IfcApprovalActorRelationship(){}
 
+	private static final String[] attributes = new String[]{"Actor","Approval","Role"};
+
+	public String[] getAttributes() {
+		return IfcApprovalActorRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcApprovalActorRelationship object using the given parameters.
 	*

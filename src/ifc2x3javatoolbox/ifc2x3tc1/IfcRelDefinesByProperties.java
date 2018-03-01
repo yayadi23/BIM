@@ -24,6 +24,13 @@ public class IfcRelDefinesByProperties extends IfcRelDefines implements ClassInt
 	**/
 	public IfcRelDefinesByProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingPropertyDefinition"};
+
+	public String[] getAttributes() {
+		return IfcRelDefinesByProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelDefinesByProperties object using the given parameters.
 	*

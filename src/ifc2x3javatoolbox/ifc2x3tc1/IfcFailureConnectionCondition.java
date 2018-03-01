@@ -34,6 +34,13 @@ public class IfcFailureConnectionCondition extends IfcStructuralConnectionCondit
 	**/
 	public IfcFailureConnectionCondition(){}
 
+	private static final String[] attributes = new String[]{"Name","TensionFailureX","TensionFailureY","TensionFailureZ"
+	,"CompressionFailureX","CompressionFailureY","CompressionFailureZ"};
+
+	public String[] getAttributes() {
+		return IfcFailureConnectionCondition.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFailureConnectionCondition object using the given parameters.
 	*

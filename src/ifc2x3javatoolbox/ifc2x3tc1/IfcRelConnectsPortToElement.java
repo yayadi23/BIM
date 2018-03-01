@@ -26,6 +26,14 @@ public class IfcRelConnectsPortToElement extends IfcRelConnects implements Class
 	**/
 	public IfcRelConnectsPortToElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingPort","RelatedElement"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsPortToElement.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcRelConnectsPortToElement object using the given parameters.
 	*

@@ -39,6 +39,13 @@ public class IfcPerson extends InternalAccessClass implements IfcActorSelect, If
 	**/
 	public IfcPerson(){}
 
+	private static final String[] attributes = new String[]{"Id","FamilyName","GivenName","MiddleNames"
+			,"PrefixTitles","SuffixTitles","Roles","Addresses"};
+
+	public String[] getAttributes() {
+		return IfcPerson.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPerson object using the given parameters.
 	*

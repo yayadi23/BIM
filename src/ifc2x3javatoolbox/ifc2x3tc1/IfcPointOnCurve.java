@@ -26,6 +26,13 @@ public class IfcPointOnCurve extends IfcPoint implements ClassInterface
 	**/
 	public IfcPointOnCurve(){}
 
+	private static final String[] attributes = new String[]{"BasisCurve","PointParameter"};
+
+
+	public String[] getAttributes() {
+		return IfcPointOnCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPointOnCurve object using the given parameters.
 	*

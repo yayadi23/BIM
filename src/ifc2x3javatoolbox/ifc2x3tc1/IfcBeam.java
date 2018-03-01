@@ -22,6 +22,13 @@ public class IfcBeam extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcBeam(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcBeam.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBeam object using the given parameters.
 	*

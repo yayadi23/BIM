@@ -30,6 +30,12 @@ public class IfcSurfaceCurveSweptAreaSolid extends IfcSweptAreaSolid implements 
 	**/
 	public IfcSurfaceCurveSweptAreaSolid(){}
 
+	private static final String[] attributes = new String[]{"SweptArea","Position","Directrix","StartParam","EndParam","ReferenceSurface"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceCurveSweptAreaSolid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSurfaceCurveSweptAreaSolid object using the given parameters.
 	*

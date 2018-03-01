@@ -24,6 +24,14 @@ public class IfcBuildingElementProxyType extends IfcBuildingElementType implemen
 	**/
 	public IfcBuildingElementProxyType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcBuildingElementProxyType.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcBuildingElementProxyType object using the given parameters.
 	*

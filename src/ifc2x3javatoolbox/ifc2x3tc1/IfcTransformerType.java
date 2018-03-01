@@ -24,6 +24,12 @@ public class IfcTransformerType extends IfcEnergyConversionDeviceType implements
 	**/
 	public IfcTransformerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcTransformerType.attributes;
+	}
 	/**
 	* Constructs a new IfcTransformerType object using the given parameters.
 	*

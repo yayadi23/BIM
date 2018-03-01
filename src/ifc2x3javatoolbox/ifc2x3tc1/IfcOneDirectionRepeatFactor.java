@@ -24,6 +24,12 @@ public class IfcOneDirectionRepeatFactor extends IfcGeometricRepresentationItem 
 	**/
 	public IfcOneDirectionRepeatFactor(){}
 
+	private static final String[] attributes = new String[]{"RepeatFactor"};
+
+	public String[] getAttributes() {
+		return IfcOneDirectionRepeatFactor.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOneDirectionRepeatFactor object using the given parameters.
 	*

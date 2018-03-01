@@ -22,6 +22,13 @@ public class IfcFastener extends IfcElementComponent implements ClassInterface
 	**/
 	public IfcFastener(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFastener.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFastener object using the given parameters.
 	*

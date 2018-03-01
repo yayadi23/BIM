@@ -26,6 +26,13 @@ public class IfcConstructionMaterialResource extends IfcConstructionResource imp
 	**/
 	public IfcConstructionMaterialResource(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType"
+			,"ResourceIdentifier","ResourceGroup","ResourceConsumption","BaseQuantity","Suppliers","UsageRatio"};
+
+	public String[] getAttributes() {
+		return IfcConstructionMaterialResource.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConstructionMaterialResource object using the given parameters.
 	*

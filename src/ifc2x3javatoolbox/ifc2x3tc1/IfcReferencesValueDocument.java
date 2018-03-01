@@ -30,6 +30,12 @@ public class IfcReferencesValueDocument extends InternalAccessClass implements C
 	**/
 	public IfcReferencesValueDocument(){}
 
+	private static final String[] attributes = new String[]{"ReferencedDocument","ReferencingValues","Name","Description"};
+
+	public String[] getAttributes() {
+		return IfcReferencesValueDocument.attributes;
+	}
+
 	/**
 	* Constructs a new IfcReferencesValueDocument object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcFilterType extends IfcFlowTreatmentDeviceType implements ClassIn
 	**/
 	public IfcFilterType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcFilterType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFilterType object using the given parameters.
 	*

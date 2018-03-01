@@ -30,6 +30,13 @@ public class IfcFuelProperties extends IfcMaterialProperties implements ClassInt
 	**/
 	public IfcFuelProperties(){}
 
+	private static final String[] attributes = new String[]{"Material","CombustionTemperature","CarbonContent"
+			,"LowerHeatingValue","HigherHeatingValue"};
+
+	public String[] getAttributes() {
+		return IfcFuelProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFuelProperties object using the given parameters.
 	*

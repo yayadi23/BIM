@@ -22,6 +22,13 @@ public class IfcCurtainWall extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcCurtainWall(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType"
+	,"ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcCurtainWall.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCurtainWall object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcStairFlightType extends IfcBuildingElementType implements ClassI
 	**/
 	public IfcStairFlightType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcStairFlightType.attributes;
+	}
 	/**
 	* Constructs a new IfcStairFlightType object using the given parameters.
 	*

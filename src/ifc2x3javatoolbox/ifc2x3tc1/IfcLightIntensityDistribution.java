@@ -26,6 +26,12 @@ public class IfcLightIntensityDistribution extends InternalAccessClass implement
 	**/
 	public IfcLightIntensityDistribution(){}
 
+	private static final String[] attributes = new String[]{"LightDistributionCurve","DistributionData"};
+
+	public String[] getAttributes() {
+		return IfcLightIntensityDistribution.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLightIntensityDistribution object using the given parameters.
 	*

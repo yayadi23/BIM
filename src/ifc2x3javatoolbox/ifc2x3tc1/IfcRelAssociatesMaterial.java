@@ -24,6 +24,13 @@ public class IfcRelAssociatesMaterial extends IfcRelAssociates implements ClassI
 	**/
 	public IfcRelAssociatesMaterial(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingMaterial"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesMaterial.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociatesMaterial object using the given parameters.
 	*

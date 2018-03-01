@@ -26,6 +26,12 @@ public class IfcDraughtingCallout extends IfcGeometricRepresentationItem impleme
 	**/
 	public IfcDraughtingCallout(){}
 
+	private static final String[] attributes = new String[]{"Contents"};
+
+	public String[] getAttributes() {
+		return IfcDraughtingCallout.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDraughtingCallout object using the given parameters.
 	*

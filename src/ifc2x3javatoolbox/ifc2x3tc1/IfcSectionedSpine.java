@@ -28,6 +28,14 @@ public class IfcSectionedSpine extends IfcGeometricRepresentationItem implements
 	**/
 	public IfcSectionedSpine(){}
 
+
+	private static final String[] attributes = new String[]{"SpineCurve","CrossSections","CrossSectionPositions"};
+
+	public String[] getAttributes(){
+		return IfcSectionedSpine.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcSectionedSpine object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcTendonAnchor extends IfcReinforcingElement implements ClassInter
 	**/
 	public IfcTendonAnchor(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag","SteelGrade"};
+
+	public String[] getAttributes(){
+		return IfcTendonAnchor.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTendonAnchor object using the given parameters.
 	*

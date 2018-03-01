@@ -26,6 +26,12 @@ public class IfcTextStyleForDefinedFont extends InternalAccessClass implements I
 	**/
 	public IfcTextStyleForDefinedFont(){}
 
+	private static final String[] attributes = new String[]{"Colour","BackgroundColour"};
+
+	public String[] getAttributes(){
+		return IfcTextStyleForDefinedFont.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextStyleForDefinedFont object using the given parameters.
 	*

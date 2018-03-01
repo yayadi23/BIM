@@ -30,6 +30,12 @@ public class IfcSurfaceStyleLighting extends InternalAccessClass implements Clas
 	**/
 	public IfcSurfaceStyleLighting(){}
 
+	private static final String[] attributes = new String[]{"DiffuseTransmissionColour","DiffuseReflectionColour","TransmissionColour","ReflectanceColour"};
+
+	public String[] getAttributes(){
+		return IfcSurfaceStyleLighting.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSurfaceStyleLighting object using the given parameters.
 	*

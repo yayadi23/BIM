@@ -22,6 +22,13 @@ public class IfcDimensionPair extends IfcDraughtingCalloutRelationship implement
 	**/
 	public IfcDimensionPair(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","RelatingDraughtingCallout","RelatedDraughtingCallout"};
+
+	public String[] getAttributes() {
+		return IfcDimensionPair.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcDimensionPair object using the given parameters.
 	*

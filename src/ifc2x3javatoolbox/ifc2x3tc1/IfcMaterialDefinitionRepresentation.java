@@ -24,6 +24,12 @@ public class IfcMaterialDefinitionRepresentation extends IfcProductRepresentatio
 	**/
 	public IfcMaterialDefinitionRepresentation(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Representations","RepresentedMaterial"};
+
+	public String[] getAttributes() {
+		return IfcMaterialDefinitionRepresentation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMaterialDefinitionRepresentation object using the given parameters.
 	*

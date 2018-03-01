@@ -32,6 +32,14 @@ public class IfcReinforcingBar extends IfcReinforcingElement implements ClassInt
 	**/
 	public IfcReinforcingBar(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","SteelGrade","NominalDiameter"
+	,"CrossSectionArea","BarLength","BarRole","BarSurface"};
+
+	public String[] getAttributes() {
+		return IfcReinforcingBar.attributes;
+	}
+
 	/**
 	* Constructs a new IfcReinforcingBar object using the given parameters.
 	*

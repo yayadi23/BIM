@@ -28,6 +28,13 @@ public class IfcMove extends IfcTask implements ClassInterface
 	**/
 	public IfcMove(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","TaskId","Status","WorkMethod","IsMilestone","Priority","MoveFrom","MoveTo","PunchList"};
+
+	public String[] getAttributes() {
+		return IfcMove.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMove object using the given parameters.
 	*
@@ -396,7 +403,7 @@ public class IfcMove extends IfcTask implements ClassInterface
 
 	/**
 	 * This method registers an ObjectChangeListener to this object. An event is fired whenever one of its values was changed.
-	 * 
+	 *
 	 *@param listener the listener to register
 	**/
 	public void addObjectChangeListener(ObjectChangeListener listener)
@@ -407,7 +414,7 @@ public class IfcMove extends IfcTask implements ClassInterface
 
 	/**
 	 * This method unregisters an ObjectChangeListener from this object.
-	 * 
+	 *
 	 *@param listener the listener to unregister
 	**/
 	public void removeObjectChangeListener(ObjectChangeListener listener)

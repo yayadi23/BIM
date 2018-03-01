@@ -22,6 +22,13 @@ public class IfcFastenerType extends IfcElementComponentType implements ClassInt
 	**/
 	public IfcFastenerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcFastenerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFastenerType object using the given parameters.
 	*

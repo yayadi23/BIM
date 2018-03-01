@@ -30,6 +30,13 @@ public class IfcTrapeziumProfileDef extends IfcParameterizedProfileDef implement
 	**/
 	public IfcTrapeziumProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","BottomXDim",
+			"TopXDim","YDim","TopXOffset"};
+
+	public String[] getAttributes(){
+		return IfcTrapeziumProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTrapeziumProfileDef object using the given parameters.
 	*

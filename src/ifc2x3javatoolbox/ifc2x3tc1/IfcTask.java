@@ -32,6 +32,12 @@ public class IfcTask extends IfcProcess implements ClassInterface
 	**/
 	public IfcTask(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","TaskId","Status","WorkMethod","IsMilestone","Priority"};
+
+	public String[] getAttributes(){
+		return IfcTask.attributes;
+	}
 	/**
 	* Constructs a new IfcTask object using the given parameters.
 	*

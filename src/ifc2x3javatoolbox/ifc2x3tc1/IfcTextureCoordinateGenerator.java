@@ -26,6 +26,12 @@ public class IfcTextureCoordinateGenerator extends IfcTextureCoordinate implemen
 	**/
 	public IfcTextureCoordinateGenerator(){}
 
+	private static final String[] attributes = new String[]{"Mode","Parameter"};
+
+	public String[] getAttributes(){
+		return IfcTextureCoordinateGenerator.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextureCoordinateGenerator object using the given parameters.
 	*

@@ -24,6 +24,12 @@ public class IfcPolyline extends IfcBoundedCurve implements ClassInterface
 	**/
 	public IfcPolyline(){}
 
+	private static final String[] attributes = new String[]{"Points"};
+
+	public String[] getAttributes() {
+		return IfcPolyline.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPolyline object using the given parameters.
 	*

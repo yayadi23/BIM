@@ -34,6 +34,13 @@ public class IfcStructuralLoadGroup extends IfcGroup implements ClassInterface
 	**/
 	public IfcStructuralLoadGroup(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","PredefinedType","ActionType","ActionSource","Coefficient","Purpose"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadGroup.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralLoadGroup object using the given parameters.
 	*

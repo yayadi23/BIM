@@ -28,6 +28,14 @@ public class IfcBuilding extends IfcSpatialStructureElement implements ClassInte
 	**/
 	public IfcBuilding(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ObjectType","ObjectPlacement","Representation","LongName","CompositionType","ElevationOfRefHeight"
+	,"ElevationOfTerrain","BuildingAddress"};
+
+	public String[] getAttributes() {
+		return IfcBuilding.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBuilding object using the given parameters.
 	*

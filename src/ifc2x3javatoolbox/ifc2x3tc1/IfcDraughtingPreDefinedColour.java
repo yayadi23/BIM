@@ -22,6 +22,13 @@ public class IfcDraughtingPreDefinedColour extends IfcPreDefinedColour implement
 	**/
 	public IfcDraughtingPreDefinedColour(){}
 
+
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcDraughtingPreDefinedColour.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDraughtingPreDefinedColour object using the given parameters.
 	*

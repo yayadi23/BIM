@@ -21,6 +21,12 @@ public class IfcBoundedSurface extends IfcSurface implements ClassInterface
 	* Constructs a new IfcBoundedSurface object using the given parameters.
 	*
 	**/
+	private static final String[] attributes = new String[]{};
+
+	public String[] getAttributes() {
+		return IfcBoundedSurface.attributes;
+	}
+
 	public IfcBoundedSurface()
 	{
 		resolveInverses();

@@ -26,6 +26,12 @@ public class IfcSIUnit extends IfcNamedUnit implements ClassInterface
 	**/
 	public IfcSIUnit(){}
 
+	private static final String[] attributes = new String[]{"Dimensions","UnitType","Prefix","Name"};
+
+	public String[] getAttributes(){
+		return IfcSIUnit.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSIUnit object using the given parameters.
 	*

@@ -26,6 +26,12 @@ public class IfcFaceBound extends IfcTopologicalRepresentationItem implements Cl
 	**/
 	public IfcFaceBound(){}
 
+	private static final String[] attributes = new String[]{"Bound","Orientation"};
+
+	public String[] getAttributes() {
+		return IfcFaceBound.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFaceBound object using the given parameters.
 	*

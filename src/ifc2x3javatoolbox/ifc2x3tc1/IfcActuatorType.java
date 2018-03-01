@@ -19,6 +19,16 @@ public class IfcActuatorType extends IfcDistributionControlElementType implement
 	protected int stepLineNumber;
 	/** PredefinedType is an DEMANDED attribute - may not be null**/
 	protected IfcActuatorTypeEnum PredefinedType;
+
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+																		,"ApplicableOccurrence","HasPropertySets"
+																		,"RepresentationMaps","Tag"
+																		,"ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcActuatorType.attributes;
+	}
+
 	/**
 	* The default constructor.
 	**/

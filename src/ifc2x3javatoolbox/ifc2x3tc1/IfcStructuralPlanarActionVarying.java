@@ -26,6 +26,14 @@ public class IfcStructuralPlanarActionVarying extends IfcStructuralPlanarAction 
 	**/
 	public IfcStructuralPlanarActionVarying(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedLoad","GlobalOrLocal","DestabilizingLoad","CausedBy",
+	"ProjectedOrTrue","VaryingAppliedLoadLocation","SubsequentAppliedLoads"};
+
+	public String[] getAttributes(){
+		return IfcStructuralPlanarActionVarying.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralPlanarActionVarying object using the given parameters.
 	*

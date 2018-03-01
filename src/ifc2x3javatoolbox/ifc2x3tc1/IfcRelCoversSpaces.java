@@ -26,6 +26,13 @@ public class IfcRelCoversSpaces extends IfcRelConnects implements ClassInterface
 	**/
 	public IfcRelCoversSpaces(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedSpace","RelatedCoverings"};
+
+	public String[] getAttributes() {
+		return IfcRelCoversSpaces.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelCoversSpaces object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcCondition extends IfcGroup implements ClassInterface
 	**/
 	public IfcCondition(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType"};
+
+	public String[] getAttributes() {
+		return IfcCondition.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCondition object using the given parameters.
 	*

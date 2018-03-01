@@ -24,6 +24,12 @@ public abstract class IfcStructuralConnectionCondition extends InternalAccessCla
 	**/
 	public IfcStructuralConnectionCondition(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes(){
+		return IfcStructuralConnectionCondition.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralConnectionCondition object using the given parameters.
 	*

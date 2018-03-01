@@ -22,6 +22,12 @@ public class IfcDraughtingPreDefinedCurveFont extends IfcPreDefinedCurveFont imp
 	**/
 	public IfcDraughtingPreDefinedCurveFont(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcDraughtingPreDefinedCurveFont.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDraughtingPreDefinedCurveFont object using the given parameters.
 	*

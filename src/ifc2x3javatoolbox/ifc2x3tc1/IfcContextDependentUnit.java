@@ -24,6 +24,12 @@ public class IfcContextDependentUnit extends IfcNamedUnit implements ClassInterf
 	**/
 	public IfcContextDependentUnit(){}
 
+	private static final String[] attributes = new String[]{"Dimensions","UnitType","Name"};
+
+	public String[] getAttributes() {
+		return IfcContextDependentUnit.attributes;
+	}
+
 	/**
 	* Constructs a new IfcContextDependentUnit object using the given parameters.
 	*

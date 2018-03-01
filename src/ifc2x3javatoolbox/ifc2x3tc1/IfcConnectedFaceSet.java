@@ -24,6 +24,13 @@ public class IfcConnectedFaceSet extends IfcTopologicalRepresentationItem implem
 	**/
 	public IfcConnectedFaceSet(){}
 
+	private static final String[] attributes = new String[]{"CfsFaces"};
+
+	public String[] getAttributes() {
+		return IfcConnectedFaceSet.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcConnectedFaceSet object using the given parameters.
 	*

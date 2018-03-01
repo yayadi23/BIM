@@ -24,6 +24,13 @@ public class IfcRelAssociatesDocument extends IfcRelAssociates implements ClassI
 	**/
 	public IfcRelAssociatesDocument(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingDocument"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesDocument.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociatesDocument object using the given parameters.
 	*

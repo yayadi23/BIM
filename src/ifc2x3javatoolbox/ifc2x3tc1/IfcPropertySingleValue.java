@@ -26,6 +26,12 @@ public class IfcPropertySingleValue extends IfcSimpleProperty implements ClassIn
 	**/
 	public IfcPropertySingleValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","NominalValue","Unit"};
+
+	public String[] getAttributes() {
+		return IfcPropertySingleValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertySingleValue object using the given parameters.
 	*

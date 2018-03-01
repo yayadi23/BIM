@@ -24,6 +24,13 @@ public class IfcChillerType extends IfcEnergyConversionDeviceType implements Cla
 	**/
 	public IfcChillerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcChillerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcChillerType object using the given parameters.
 	*

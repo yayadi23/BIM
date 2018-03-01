@@ -30,6 +30,12 @@ public class IfcOffsetCurve3D extends IfcCurve implements ClassInterface
 	**/
 	public IfcOffsetCurve3D(){}
 
+	private static final String[] attributes = new String[]{"BasisCurve","Distance","SelfIntersect","RefDirection"};
+
+	public String[] getAttributes() {
+		return IfcOffsetCurve3D.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOffsetCurve3D object using the given parameters.
 	*

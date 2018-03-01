@@ -26,6 +26,12 @@ public class IfcConversionBasedUnit extends IfcNamedUnit implements ClassInterfa
 	**/
 	public IfcConversionBasedUnit(){}
 
+	private static final String[] attributes = new String[]{"Dimensions","UnitType","Name","ConversionFactor"};
+
+	public String[] getAttributes() {
+		return IfcConversionBasedUnit.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConversionBasedUnit object using the given parameters.
 	*

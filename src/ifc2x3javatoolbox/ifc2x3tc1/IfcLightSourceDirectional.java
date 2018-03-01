@@ -24,6 +24,12 @@ public class IfcLightSourceDirectional extends IfcLightSource implements ClassIn
 	**/
 	public IfcLightSourceDirectional(){}
 
+	private static final String[] attributes = new String[]{"Name","LightColour","AmbientIntensity","Intensity","Orientation"};
+
+	public String[] getAttributes() {
+		return IfcLightSourceDirectional.attributes;
+	}
+
 	/**
 	* Constructs a new IfcLightSourceDirectional object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcMotorConnectionType extends IfcEnergyConversionDeviceType implem
 	**/
 	public IfcMotorConnectionType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcMotorConnectionType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMotorConnectionType object using the given parameters.
 	*

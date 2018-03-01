@@ -22,6 +22,12 @@ public class IfcClosedShell extends IfcConnectedFaceSet implements IfcShell, Cla
 	**/
 	public IfcClosedShell(){}
 
+	private static final String[] attributes = new String[]{"CfsFaces"};
+
+	public String[] getAttributes() {
+		return IfcClosedShell.attributes;
+	}
+
 	/**
 	* Constructs a new IfcClosedShell object using the given parameters.
 	*

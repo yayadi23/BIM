@@ -26,6 +26,12 @@ public class IfcRelaxation extends InternalAccessClass implements ClassInterface
 	**/
 	public IfcRelaxation(){}
 
+	private static final String[] attributes = new String[]{"RelaxationValue","InitialStress"};
+
+	public String[] getAttributes() {
+		return IfcRelaxation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelaxation object using the given parameters.
 	*

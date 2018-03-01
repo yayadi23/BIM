@@ -24,6 +24,13 @@ public class IfcRationalBezierCurve extends IfcBezierCurve implements ClassInter
 	**/
 	public IfcRationalBezierCurve(){}
 
+	private static final String[] attributes = new String[]{"Degree","ControlPointsList","CurveForm","ClosedCurve"
+			,"SelfIntersect","WeightsData"};
+
+	public String[] getAttributes() {
+		return IfcRationalBezierCurve.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRationalBezierCurve object using the given parameters.
 	*

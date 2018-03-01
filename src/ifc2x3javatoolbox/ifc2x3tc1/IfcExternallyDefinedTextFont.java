@@ -22,6 +22,12 @@ public class IfcExternallyDefinedTextFont extends IfcExternalReference implement
 	**/
 	public IfcExternallyDefinedTextFont(){}
 
+	private static final String[] attributes = new String[]{"Location","ItemReference","Name"};
+
+	public String[] getAttributes() {
+		return IfcExternallyDefinedTextFont.attributes;
+	}
+
 	/**
 	* Constructs a new IfcExternallyDefinedTextFont object using the given parameters.
 	*

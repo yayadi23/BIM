@@ -26,6 +26,12 @@ public abstract class IfcSweptAreaSolid extends IfcSolidModel implements ClassIn
 	**/
 	public IfcSweptAreaSolid(){}
 
+	private static final String[] attributes = new String[]{"SweptArea","Position"};
+
+	public String[] getAttributes(){
+		return IfcSweptAreaSolid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSweptAreaSolid object using the given parameters.
 	*

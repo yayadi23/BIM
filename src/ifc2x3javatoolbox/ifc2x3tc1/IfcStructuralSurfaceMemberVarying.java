@@ -26,6 +26,13 @@ public class IfcStructuralSurfaceMemberVarying extends IfcStructuralSurfaceMembe
 	**/
 	public IfcStructuralSurfaceMemberVarying(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","PredefinedType","Thickness","SubsequentThickness","VaryingThicknessLocation"};
+
+	public String[] getAttributes(){
+		return IfcStructuralSurfaceMemberVarying.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralSurfaceMemberVarying object using the given parameters.
 	*

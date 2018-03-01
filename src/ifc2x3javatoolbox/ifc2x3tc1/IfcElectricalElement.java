@@ -22,6 +22,13 @@ public class IfcElectricalElement extends IfcElement implements ClassInterface
 	**/
 	public IfcElectricalElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcElectricalElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricalElement object using the given parameters.
 	*

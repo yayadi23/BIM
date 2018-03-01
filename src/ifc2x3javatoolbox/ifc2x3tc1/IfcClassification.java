@@ -31,6 +31,12 @@ public class IfcClassification extends InternalAccessClass implements ClassInter
 	**/
 	public IfcClassification(){}
 
+	private static final String[] attributes = new String[]{"Source","Edition","EditionDate","Name"};
+
+	public String[] getAttributes() {
+		return IfcClassification.attributes;
+	}
+
 	/**
 	* Constructs a new IfcClassification object using the given parameters.
 	*

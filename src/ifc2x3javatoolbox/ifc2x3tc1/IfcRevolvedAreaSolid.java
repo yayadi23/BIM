@@ -26,6 +26,12 @@ public class IfcRevolvedAreaSolid extends IfcSweptAreaSolid implements ClassInte
 	**/
 	public IfcRevolvedAreaSolid(){}
 
+	private static final String[] attributes = new String[]{"SweptArea","Position","Axis","Angle"};
+
+	public String[] getAttributes() {
+		return IfcRevolvedAreaSolid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRevolvedAreaSolid object using the given parameters.
 	*

@@ -23,6 +23,12 @@ public class IfcTwoDirectionRepeatFactor extends IfcOneDirectionRepeatFactor imp
 	* The default constructor.
 	**/
 	public IfcTwoDirectionRepeatFactor(){}
+	private static final String[] attributes = new String[]{"RepeatFactor","SecondRepeatFactor"};
+
+	public String[] getAttributes(){
+		return IfcTwoDirectionRepeatFactor.attributes;
+	}
+
 
 	/**
 	* Constructs a new IfcTwoDirectionRepeatFactor object using the given parameters.

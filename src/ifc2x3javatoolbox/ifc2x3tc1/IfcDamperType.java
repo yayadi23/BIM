@@ -24,6 +24,13 @@ public class IfcDamperType extends IfcFlowControllerType implements ClassInterfa
 	**/
 	public IfcDamperType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ApplicableOccurrence"
+			,"HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcDamperType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDamperType object using the given parameters.
 	*

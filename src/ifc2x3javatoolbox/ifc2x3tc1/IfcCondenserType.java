@@ -24,6 +24,13 @@ public class IfcCondenserType extends IfcEnergyConversionDeviceType implements C
 	**/
 	public IfcCondenserType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCondenserType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCondenserType object using the given parameters.
 	*

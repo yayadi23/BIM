@@ -24,6 +24,12 @@ public class IfcDirection extends IfcGeometricRepresentationItem implements IfcV
 	**/
 	public IfcDirection(){}
 
+	private static final String[] attributes = new String[]{"DirectionRatios"};
+
+	public String[] getAttributes() {
+		return IfcDirection.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDirection object using the given parameters.
 	*

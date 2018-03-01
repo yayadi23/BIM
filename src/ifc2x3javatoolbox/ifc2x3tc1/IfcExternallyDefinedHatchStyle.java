@@ -22,6 +22,12 @@ public class IfcExternallyDefinedHatchStyle extends IfcExternalReference impleme
 	**/
 	public IfcExternallyDefinedHatchStyle(){}
 
+	private static final String[] attributes = new String[]{"Location","ItemReference","Name"};
+
+	public String[] getAttributes() {
+		return IfcExternallyDefinedHatchStyle.attributes;
+	}
+
 	/**
 	* Constructs a new IfcExternallyDefinedHatchStyle object using the given parameters.
 	*

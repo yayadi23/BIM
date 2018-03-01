@@ -32,6 +32,13 @@ public class IfcPropertyTableValue extends IfcSimpleProperty implements ClassInt
 	**/
 	public IfcPropertyTableValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","DefiningValues","DefinedValues"
+	,"Expression","DefiningUnit","DefinedUnit"};
+
+	public String[] getAttributes() {
+		return IfcPropertyTableValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyTableValue object using the given parameters.
 	*

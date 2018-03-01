@@ -30,6 +30,12 @@ public class IfcApplication extends InternalAccessClass implements ClassInterfac
 	**/
 	public IfcApplication(){}
 
+	private static final String[] attributes = new String[]{"ApplicationDeveloper","Version","ApplicationFullName","ApplicationIdentifier"};
+
+	public String[] getAttributes() {
+		return IfcApplication.attributes;
+	}
+
 	/**
 	* Constructs a new IfcApplication object using the given parameters.
 	*

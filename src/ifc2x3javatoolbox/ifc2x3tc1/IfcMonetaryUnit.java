@@ -24,6 +24,12 @@ public class IfcMonetaryUnit extends InternalAccessClass implements IfcUnit, Cla
 	**/
 	public IfcMonetaryUnit(){}
 
+	private static final String[] attributes = new String[]{"Currency"};
+
+	public String[] getAttributes() {
+		return IfcMonetaryUnit.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMonetaryUnit object using the given parameters.
 	*

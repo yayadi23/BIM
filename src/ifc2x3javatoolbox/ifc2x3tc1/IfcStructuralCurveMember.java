@@ -23,6 +23,12 @@ public class IfcStructuralCurveMember extends IfcStructuralMember implements Cla
 	* The default constructor.
 	**/
 	public IfcStructuralCurveMember(){}
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcStructuralCurveMember.attributes;
+	}
 
 	/**
 	* Constructs a new IfcStructuralCurveMember object using the given parameters.

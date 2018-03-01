@@ -32,6 +32,14 @@ public class IfcTelecomAddress extends IfcAddress implements ClassInterface
 	**/
 	public IfcTelecomAddress(){}
 
+	private static final String[] attributes = new String[]{"Purpose","Description","UserDefinedPurpose","TelephoneNumbers",
+			"FacsimileNumbers","PagerNumber","ElectronicMailAddresses","WWWHomePageURL"};
+
+	public String[] getAttributes(){
+		return IfcTelecomAddress.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcTelecomAddress object using the given parameters.
 	*

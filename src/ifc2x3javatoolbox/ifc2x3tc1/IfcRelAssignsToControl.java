@@ -24,6 +24,13 @@ public class IfcRelAssignsToControl extends IfcRelAssigns implements ClassInterf
 	**/
 	public IfcRelAssignsToControl(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingControl"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsToControl.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsToControl object using the given parameters.
 	*

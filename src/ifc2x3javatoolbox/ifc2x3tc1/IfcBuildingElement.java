@@ -22,6 +22,7 @@ public abstract class IfcBuildingElement extends IfcElement implements ClassInte
 	**/
 	public IfcBuildingElement(){}
 
+
 	/**
 	* Constructs a new IfcBuildingElement object using the given parameters.
 	*

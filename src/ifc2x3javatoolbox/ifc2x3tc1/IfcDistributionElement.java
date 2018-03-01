@@ -22,6 +22,13 @@ public class IfcDistributionElement extends IfcElement implements ClassInterface
 	**/
 	public IfcDistributionElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcDistributionElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDistributionElement object using the given parameters.
 	*

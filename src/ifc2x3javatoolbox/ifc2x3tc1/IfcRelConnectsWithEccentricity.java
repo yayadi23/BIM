@@ -24,6 +24,14 @@ public class IfcRelConnectsWithEccentricity extends IfcRelConnectsStructuralMemb
 	**/
 	public IfcRelConnectsWithEccentricity(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingStructuralMember","RelatedStructuralConnection","AppliedCondition","AdditionalConditions"
+			,"SupportedLength","ConditionCoordinateSystem","ConnectionConstraint"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsWithEccentricity.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelConnectsWithEccentricity object using the given parameters.
 	*

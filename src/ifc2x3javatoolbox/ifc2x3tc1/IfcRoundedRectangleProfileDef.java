@@ -24,6 +24,13 @@ public class IfcRoundedRectangleProfileDef extends IfcRectangleProfileDef implem
 	**/
 	public IfcRoundedRectangleProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","XDim"
+			,"YDim","RoundingRadius"};
+
+	public String[] getAttributes() {
+		return IfcRoundedRectangleProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRoundedRectangleProfileDef object using the given parameters.
 	*

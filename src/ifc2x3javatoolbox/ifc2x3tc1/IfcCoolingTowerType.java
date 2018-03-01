@@ -24,6 +24,13 @@ public class IfcCoolingTowerType extends IfcEnergyConversionDeviceType implement
 	**/
 	public IfcCoolingTowerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCoolingTowerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCoolingTowerType object using the given parameters.
 	*

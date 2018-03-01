@@ -30,6 +30,13 @@ public class IfcStructuralAnalysisModel extends IfcSystem implements ClassInterf
 	**/
 	public IfcStructuralAnalysisModel(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","PredefinedType","OrientationOf2DPlane","LoadedBy","HasResults"};
+
+	public String[] getAttributes(){
+		return IfcStructuralAnalysisModel.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralAnalysisModel object using the given parameters.
 	*

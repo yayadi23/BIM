@@ -33,6 +33,12 @@ public class IfcStructuralLoadLinearForce extends IfcStructuralLoadStatic implem
 	* The default constructor.
 	**/
 	public IfcStructuralLoadLinearForce(){}
+	private static final String[] attributes = new String[]{"Name","LinearForceX","LinearForceY","LinearForceZ",
+			"LinearMomentX","LinearMomentY","LinearMomentZ"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadLinearForce.attributes;
+	}
 
 	/**
 	* Constructs a new IfcStructuralLoadLinearForce object using the given parameters.

@@ -26,6 +26,12 @@ public class IfcCartesianTransformationOperator3DnonUniform extends IfcCartesian
 	**/
 	public IfcCartesianTransformationOperator3DnonUniform(){}
 
+	private static final String[] attributes = new String[]{"Axis1","Axis2","LocalOrigin","Scale","Axis3","Scale2","Scale3"};
+
+	public String[] getAttributes() {
+		return IfcCartesianTransformationOperator3DnonUniform.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCartesianTransformationOperator3DnonUniform object using the given parameters.
 	*

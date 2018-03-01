@@ -28,6 +28,13 @@ public class IfcSoundProperties extends IfcPropertySetDefinition implements Clas
 	**/
 	public IfcSoundProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"IsAttenuating","SoundScale","SoundValues"};
+
+	public String[] getAttributes(){
+		return IfcSoundProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSoundProperties object using the given parameters.
 	*

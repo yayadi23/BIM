@@ -26,6 +26,12 @@ public class IfcOrientedEdge extends IfcEdge implements ClassInterface
 	**/
 	public IfcOrientedEdge(){}
 
+	private static final String[] attributes = new String[]{"EdgeStart","EdgeEnd","EdgeElement","Orientation"};
+
+	public String[] getAttributes() {
+		return IfcOrientedEdge.attributes;
+	}
+
 	/**
 	* Constructs a new IfcOrientedEdge object using the given parameters.
 	*

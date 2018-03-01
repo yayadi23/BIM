@@ -26,6 +26,12 @@ public class IfcRightCircularCone extends IfcCsgPrimitive3D implements ClassInte
 	**/
 	public IfcRightCircularCone(){}
 
+	private static final String[] attributes = new String[]{"Position","Height","BottomRadius"};
+
+	public String[] getAttributes() {
+		return IfcRightCircularCone.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRightCircularCone object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcCableCarrierFittingType extends IfcFlowFittingType implements Cl
 	**/
 	public IfcCableCarrierFittingType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCableCarrierFittingType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCableCarrierFittingType object using the given parameters.
 	*

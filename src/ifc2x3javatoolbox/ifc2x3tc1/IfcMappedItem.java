@@ -26,6 +26,12 @@ public class IfcMappedItem extends IfcRepresentationItem implements ClassInterfa
 	**/
 	public IfcMappedItem(){}
 
+	private static final String[] attributes = new String[]{"MappingSource","MappingTarget"};
+
+	public String[] getAttributes() {
+		return IfcMappedItem.attributes;
+	}
+
 	/**
 	* Constructs a new IfcMappedItem object using the given parameters.
 	*

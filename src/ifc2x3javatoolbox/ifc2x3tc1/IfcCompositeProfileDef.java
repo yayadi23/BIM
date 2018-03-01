@@ -26,6 +26,12 @@ public class IfcCompositeProfileDef extends IfcProfileDef implements ClassInterf
 	**/
 	public IfcCompositeProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Profiles","Label"};
+
+	public String[] getAttributes() {
+		return IfcCompositeProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCompositeProfileDef object using the given parameters.
 	*

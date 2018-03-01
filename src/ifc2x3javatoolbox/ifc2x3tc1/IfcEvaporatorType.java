@@ -24,6 +24,13 @@ public class IfcEvaporatorType extends IfcEnergyConversionDeviceType implements 
 	**/
 	public IfcEvaporatorType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcEvaporatorType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEvaporatorType object using the given parameters.
 	*

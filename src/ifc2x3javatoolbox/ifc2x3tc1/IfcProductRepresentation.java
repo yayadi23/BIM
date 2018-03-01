@@ -28,6 +28,12 @@ public class IfcProductRepresentation extends InternalAccessClass implements Cla
 	**/
 	public IfcProductRepresentation(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","Representations"};
+
+	public String[] getAttributes() {
+		return IfcProductRepresentation.attributes;
+	}
+
 	/**
 	* Constructs a new IfcProductRepresentation object using the given parameters.
 	*

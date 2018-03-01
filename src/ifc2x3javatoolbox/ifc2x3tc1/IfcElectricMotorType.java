@@ -24,6 +24,13 @@ public class IfcElectricMotorType extends IfcEnergyConversionDeviceType implemen
 	**/
 	public IfcElectricMotorType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcElectricMotorType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcElectricMotorType object using the given parameters.
 	*

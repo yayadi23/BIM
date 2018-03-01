@@ -22,6 +22,13 @@ public class IfcFlowSegment extends IfcDistributionFlowElement implements ClassI
 	**/
 	public IfcFlowSegment(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFlowSegment.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowSegment object using the given parameters.
 	*

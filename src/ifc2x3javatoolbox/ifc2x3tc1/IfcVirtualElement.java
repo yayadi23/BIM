@@ -22,6 +22,13 @@ public class IfcVirtualElement extends IfcElement implements ClassInterface
 	**/
 	public IfcVirtualElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes(){
+		return IfcVirtualElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcVirtualElement object using the given parameters.
 	*

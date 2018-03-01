@@ -24,6 +24,13 @@ public class IfcEvaporativeCoolerType extends IfcEnergyConversionDeviceType impl
 	**/
 	public IfcEvaporativeCoolerType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcEvaporativeCoolerType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEvaporativeCoolerType object using the given parameters.
 	*

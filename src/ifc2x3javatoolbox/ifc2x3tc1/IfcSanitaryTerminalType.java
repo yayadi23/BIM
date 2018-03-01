@@ -24,6 +24,13 @@ public class IfcSanitaryTerminalType extends IfcFlowTerminalType implements Clas
 	**/
 	public IfcSanitaryTerminalType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcSanitaryTerminalType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSanitaryTerminalType object using the given parameters.
 	*

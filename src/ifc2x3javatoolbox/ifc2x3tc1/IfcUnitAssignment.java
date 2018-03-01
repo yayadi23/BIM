@@ -24,6 +24,12 @@ public class IfcUnitAssignment extends InternalAccessClass implements ClassInter
 	**/
 	public IfcUnitAssignment(){}
 
+	private static final String[] attributes = new String[]{"Units"};
+
+	public String[] getAttributes(){
+		return IfcUnitAssignment.attributes;
+	}
+
 	/**
 	* Constructs a new IfcUnitAssignment object using the given parameters.
 	*

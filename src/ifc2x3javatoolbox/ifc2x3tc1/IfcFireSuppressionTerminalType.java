@@ -24,6 +24,14 @@ public class IfcFireSuppressionTerminalType extends IfcFlowTerminalType implemen
 	**/
 	public IfcFireSuppressionTerminalType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcFireSuppressionTerminalType.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcFireSuppressionTerminalType object using the given parameters.
 	*

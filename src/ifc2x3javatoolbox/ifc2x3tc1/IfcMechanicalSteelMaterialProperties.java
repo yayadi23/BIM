@@ -35,6 +35,13 @@ public class IfcMechanicalSteelMaterialProperties extends IfcMechanicalMaterialP
 	* The default constructor.
 	**/
 	public IfcMechanicalSteelMaterialProperties(){}
+	private static final String[] attributes = new String[]{"Material","DynamicViscosity","YoungModulus","ShearModulus"
+			,"PoissonRatio","ThermalExpansionCoefficient","YieldStress","UltimateStress","UltimateStrain"
+	,"HardeningModule","ProportionalStress","PlasticStrain","Relaxations"};
+
+	public String[] getAttributes() {
+		return IfcMechanicalSteelMaterialProperties.attributes;
+	}
 
 	/**
 	* Constructs a new IfcMechanicalSteelMaterialProperties object using the given parameters.

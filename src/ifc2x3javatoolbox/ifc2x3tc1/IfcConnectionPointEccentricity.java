@@ -28,6 +28,13 @@ public class IfcConnectionPointEccentricity extends IfcConnectionPointGeometry i
 	**/
 	public IfcConnectionPointEccentricity(){}
 
+	private static final String[] attributes = new String[]{"PointOnRelatingElement","PointOnRelatedElement"
+	,"EccentricityInX","EccentricityInY","EccentricityInZ"};
+
+	public String[] getAttributes() {
+		return IfcConnectionPointEccentricity.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConnectionPointEccentricity object using the given parameters.
 	*

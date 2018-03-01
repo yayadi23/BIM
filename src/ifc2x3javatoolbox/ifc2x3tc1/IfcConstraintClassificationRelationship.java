@@ -26,6 +26,12 @@ public class IfcConstraintClassificationRelationship extends InternalAccessClass
 	**/
 	public IfcConstraintClassificationRelationship(){}
 
+	private static final String[] attributes = new String[]{"ClassifiedConstraint","RelatedClassifications"};
+
+	public String[] getAttributes() {
+		return IfcConstraintClassificationRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConstraintClassificationRelationship object using the given parameters.
 	*

@@ -26,6 +26,14 @@ public class IfcRelConnectsWithRealizingElements extends IfcRelConnectsElements 
 	**/
 	public IfcRelConnectsWithRealizingElements(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ConnectionGeometry","RelatingElement","RelatedElement","RealizingElements"
+			,"ConnectionType"};
+
+	public String[] getAttributes() {
+		return IfcRelConnectsWithRealizingElements.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelConnectsWithRealizingElements object using the given parameters.
 	*

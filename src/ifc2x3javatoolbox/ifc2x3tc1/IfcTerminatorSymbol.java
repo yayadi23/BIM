@@ -24,6 +24,12 @@ public class IfcTerminatorSymbol extends IfcAnnotationSymbolOccurrence implement
 	**/
 	public IfcTerminatorSymbol(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name","AnnotatedCurve"};
+
+	public String[] getAttributes(){
+		return IfcTerminatorSymbol.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTerminatorSymbol object using the given parameters.
 	*

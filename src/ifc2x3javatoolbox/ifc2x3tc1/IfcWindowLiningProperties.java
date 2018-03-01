@@ -40,6 +40,13 @@ public class IfcWindowLiningProperties extends IfcPropertySetDefinition implemen
 	**/
 	public IfcWindowLiningProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"LiningDepth","LiningThickness","TransomThickness","MullionThickness","FirstTransomOffset","SecondTransomOffset","FirstMullionOffset","SecondMullionOffset","ShapeAspectStyle"};
+
+	public String[] getAttributes(){
+		return IfcWindowLiningProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcWindowLiningProperties object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcFlowTreatmentDevice extends IfcDistributionFlowElement implement
 	**/
 	public IfcFlowTreatmentDevice(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcFlowTreatmentDevice.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFlowTreatmentDevice object using the given parameters.
 	*

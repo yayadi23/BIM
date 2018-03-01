@@ -26,6 +26,13 @@ public class IfcEnergyProperties extends IfcPropertySetDefinition implements Cla
 	**/
 	public IfcEnergyProperties(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"EnergySequence","UserDefinedEnergySequence"};
+
+	public String[] getAttributes() {
+		return IfcEnergyProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEnergyProperties object using the given parameters.
 	*

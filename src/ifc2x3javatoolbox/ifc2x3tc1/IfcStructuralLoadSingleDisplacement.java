@@ -34,6 +34,13 @@ public class IfcStructuralLoadSingleDisplacement extends IfcStructuralLoadStatic
 	**/
 	public IfcStructuralLoadSingleDisplacement(){}
 
+	private static final String[] attributes = new String[]{"Name","DisplacementX","DisplacementY","DisplacementZ","RotationalDisplacementRX","RotationalDisplacementRY","RotationalDisplacementRZ"};
+
+	public String[] getAttributes(){
+		return IfcStructuralLoadSingleDisplacement.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcStructuralLoadSingleDisplacement object using the given parameters.
 	*

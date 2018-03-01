@@ -22,6 +22,12 @@ public class IfcBooleanClippingResult extends IfcBooleanResult implements ClassI
 	**/
 	public IfcBooleanClippingResult(){}
 
+	private static final String[] attributes = new String[]{"Operator","FirstOperand","SecondOperand"};
+
+	public String[] getAttributes() {
+		return IfcBooleanClippingResult.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBooleanClippingResult object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcShapeRepresentation extends IfcShapeModel implements ClassInterf
 	**/
 	public IfcShapeRepresentation(){}
 
+	private static final String[] attributes = new String[]{"ContextOfItems","RepresentationIdentifier","RepresentationType","Items"};
+
+	public String[] getAttributes(){
+		return IfcShapeRepresentation.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcShapeRepresentation object using the given parameters.
 	*

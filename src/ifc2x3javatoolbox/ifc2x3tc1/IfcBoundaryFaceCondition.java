@@ -28,6 +28,13 @@ public class IfcBoundaryFaceCondition extends IfcBoundaryCondition implements Cl
 	**/
 	public IfcBoundaryFaceCondition(){}
 
+	private static final String[] attributes = new String[]{"Name","LinearStiffnessByAreaX"
+			,"LinearStiffnessByAreaY","LinearStiffnessByAreaZ"};
+
+	public String[] getAttributes() {
+		return IfcBoundaryFaceCondition.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBoundaryFaceCondition object using the given parameters.
 	*

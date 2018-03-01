@@ -22,6 +22,13 @@ public class IfcStructuralCurveMemberVarying extends IfcStructuralCurveMember im
 	**/
 	public IfcStructuralCurveMemberVarying(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","PredefinedType"};
+
+	public String[] getAttributes(){
+		return IfcStructuralCurveMemberVarying.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralCurveMemberVarying object using the given parameters.
 	*

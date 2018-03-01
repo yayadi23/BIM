@@ -24,6 +24,12 @@ public class IfcClassificationReference extends IfcExternalReference implements 
 	**/
 	public IfcClassificationReference(){}
 
+	private static final String[] attributes = new String[]{"Location","ItemReference","Name","ReferencedSource"};
+
+	public String[] getAttributes() {
+		return IfcClassificationReference.attributes;
+	}
+
 	/**
 	* Constructs a new IfcClassificationReference object using the given parameters.
 	*

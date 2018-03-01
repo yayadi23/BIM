@@ -26,6 +26,13 @@ public class IfcRelProjectsElement extends IfcRelConnects implements ClassInterf
 	**/
 	public IfcRelProjectsElement(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatingElement","RelatedFeatureElement"};
+
+	public String[] getAttributes() {
+		return IfcRelProjectsElement.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelProjectsElement object using the given parameters.
 	*

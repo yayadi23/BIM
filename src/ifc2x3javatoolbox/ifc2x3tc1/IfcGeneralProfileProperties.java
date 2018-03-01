@@ -32,6 +32,13 @@ public class IfcGeneralProfileProperties extends IfcProfileProperties implements
 	**/
 	public IfcGeneralProfileProperties(){}
 
+	private static final String[] attributes = new String[]{"ProfileName","ProfileDefinition","PhysicalWeight"
+			,"Perimeter","MinimumPlateThickness","MaximumPlateThickness","CrossSectionArea"};
+
+	public String[] getAttributes() {
+		return IfcGeneralProfileProperties.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGeneralProfileProperties object using the given parameters.
 	*

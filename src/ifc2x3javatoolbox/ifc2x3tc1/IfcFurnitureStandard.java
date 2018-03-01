@@ -22,6 +22,13 @@ public class IfcFurnitureStandard extends IfcControl implements ClassInterface
 	**/
 	public IfcFurnitureStandard(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType"};
+
+	public String[] getAttributes() {
+		return IfcFurnitureStandard.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFurnitureStandard object using the given parameters.
 	*

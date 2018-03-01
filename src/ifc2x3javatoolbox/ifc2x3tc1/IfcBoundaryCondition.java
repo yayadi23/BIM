@@ -24,6 +24,12 @@ public abstract class IfcBoundaryCondition extends InternalAccessClass implement
 	**/
 	public IfcBoundaryCondition(){}
 
+	private static final String[] attributes = new String[]{"Name"};
+
+	public String[] getAttributes() {
+		return IfcBoundaryCondition.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBoundaryCondition object using the given parameters.
 	*

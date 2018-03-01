@@ -22,6 +22,14 @@ public class IfcColumn extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcColumn(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ObjectType","ObjectPlacement","Representation","Tag"};
+
+	public String[] getAttributes() {
+		return IfcColumn.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcColumn object using the given parameters.
 	*

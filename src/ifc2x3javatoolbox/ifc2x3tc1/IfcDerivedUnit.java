@@ -28,6 +28,12 @@ public class IfcDerivedUnit extends InternalAccessClass implements IfcUnit, Clas
 	**/
 	public IfcDerivedUnit(){}
 
+	private static final String[] attributes = new String[]{"Elements","UnitType","UserDefinedType"};
+
+	public String[] getAttributes() {
+		return IfcDerivedUnit.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDerivedUnit object using the given parameters.
 	*

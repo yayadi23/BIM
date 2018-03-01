@@ -28,6 +28,13 @@ public class IfcTimeSeriesSchedule extends IfcControl implements ClassInterface
 	**/
 	public IfcTimeSeriesSchedule(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ApplicableDates","TimeSeriesScheduleType","TimeSeries"};
+
+	public String[] getAttributes(){
+		return IfcTimeSeriesSchedule.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTimeSeriesSchedule object using the given parameters.
 	*

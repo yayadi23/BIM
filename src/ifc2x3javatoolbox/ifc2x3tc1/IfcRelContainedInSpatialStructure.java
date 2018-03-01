@@ -26,6 +26,13 @@ public class IfcRelContainedInSpatialStructure extends IfcRelConnects implements
 	**/
 	public IfcRelContainedInSpatialStructure(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedElements","RelatingStructure"};
+
+	public String[] getAttributes() {
+		return IfcRelContainedInSpatialStructure.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelContainedInSpatialStructure object using the given parameters.
 	*

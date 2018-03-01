@@ -24,6 +24,13 @@ public class IfcCableCarrierSegmentType extends IfcFlowSegmentType implements Cl
 	**/
 	public IfcCableCarrierSegmentType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCableCarrierSegmentType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCableCarrierSegmentType object using the given parameters.
 	*

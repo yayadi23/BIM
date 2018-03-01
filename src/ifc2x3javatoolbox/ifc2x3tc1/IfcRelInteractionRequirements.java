@@ -32,6 +32,13 @@ public class IfcRelInteractionRequirements extends IfcRelConnects implements Cla
 	**/
 	public IfcRelInteractionRequirements(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"DailyInteraction","ImportanceRating","LocationOfInteraction","RelatedSpaceProgram","RelatingSpaceProgram"};
+
+	public String[] getAttributes() {
+		return IfcRelInteractionRequirements.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelInteractionRequirements object using the given parameters.
 	*

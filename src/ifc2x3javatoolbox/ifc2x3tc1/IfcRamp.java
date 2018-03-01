@@ -24,6 +24,13 @@ public class IfcRamp extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcRamp(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","Tag","ShapeType"};
+
+	public String[] getAttributes() {
+		return IfcRamp.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRamp object using the given parameters.
 	*

@@ -22,6 +22,13 @@ public class IfcAnnotationCurveOccurrence extends IfcAnnotationOccurrence implem
 	**/
 	public IfcAnnotationCurveOccurrence(){}
 
+	private static final String[] attributes = new String[]{"Item","Styles","Name"};
+
+	public String[] getAttributes() {
+		return IfcAnnotationCurveOccurrence.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcAnnotationCurveOccurrence object using the given parameters.
 	*

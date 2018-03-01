@@ -30,6 +30,12 @@ public class IfcDraughtingCalloutRelationship extends InternalAccessClass implem
 	**/
 	public IfcDraughtingCalloutRelationship(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","RelatingDraughtingCallout","RelatedDraughtingCallout"};
+
+	public String[] getAttributes() {
+		return IfcDraughtingCalloutRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDraughtingCalloutRelationship object using the given parameters.
 	*

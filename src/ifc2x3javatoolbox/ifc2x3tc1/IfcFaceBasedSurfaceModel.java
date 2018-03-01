@@ -24,6 +24,12 @@ public class IfcFaceBasedSurfaceModel extends IfcGeometricRepresentationItem imp
 	**/
 	public IfcFaceBasedSurfaceModel(){}
 
+	private static final String[] attributes = new String[]{"FbsmFaces"};
+
+	public String[] getAttributes() {
+		return IfcFaceBasedSurfaceModel.attributes;
+	}
+
 	/**
 	* Constructs a new IfcFaceBasedSurfaceModel object using the given parameters.
 	*

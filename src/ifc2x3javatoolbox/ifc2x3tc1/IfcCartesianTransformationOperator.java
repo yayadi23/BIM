@@ -30,6 +30,7 @@ public abstract class IfcCartesianTransformationOperator extends IfcGeometricRep
 	**/
 	public IfcCartesianTransformationOperator(){}
 
+
 	/**
 	* Constructs a new IfcCartesianTransformationOperator object using the given parameters.
 	*

@@ -32,6 +32,11 @@ public class IfcShapeAspect extends InternalAccessClass implements ClassInterfac
 	**/
 	public IfcShapeAspect(){}
 
+	private static final String[] attributes = new String[]{"ShapeRepresentations","Name","Description","ProductDefinitional","PartOfProductDefinitionShape"};
+
+	public String[] getAttributes(){
+		return IfcShapeAspect.attributes;
+	}
 	/**
 	* Constructs a new IfcShapeAspect object using the given parameters.
 	*

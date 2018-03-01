@@ -26,6 +26,12 @@ public class IfcPropertyListValue extends IfcSimpleProperty implements ClassInte
 	**/
 	public IfcPropertyListValue(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","ListValues","Unit"};
+
+	public String[] getAttributes() {
+		return IfcPropertyListValue.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyListValue object using the given parameters.
 	*

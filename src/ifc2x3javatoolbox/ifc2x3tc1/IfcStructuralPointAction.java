@@ -22,6 +22,13 @@ public class IfcStructuralPointAction extends IfcStructuralAction implements Cla
 	**/
 	public IfcStructuralPointAction(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedLoad","GlobalOrLocal","DestabilizingLoad","CausedBy"};
+
+	public String[] getAttributes(){
+		return IfcStructuralPointAction.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralPointAction object using the given parameters.
 	*

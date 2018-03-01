@@ -23,6 +23,13 @@ public abstract class IfcStructuralReaction extends IfcStructuralActivity implem
 	**/
 	public IfcStructuralReaction(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"ObjectType","ObjectPlacement","Representation","AppliedLoad","GlobalOrLocal"};
+
+	public String[] getAttributes(){
+		return IfcStructuralReaction.attributes;
+	}
+
 	/**
 	* Constructs a new IfcStructuralReaction object using the given parameters.
 	*

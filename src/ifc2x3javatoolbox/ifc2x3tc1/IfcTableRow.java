@@ -27,6 +27,12 @@ public class IfcTableRow extends InternalAccessClass implements ClassInterface
 	**/
 	public IfcTableRow(){}
 
+	private static final String[] attributes = new String[]{"RowCells","IsHeading"};
+
+	public String[] getAttributes(){
+		return IfcTableRow.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTableRow object using the given parameters.
 	*

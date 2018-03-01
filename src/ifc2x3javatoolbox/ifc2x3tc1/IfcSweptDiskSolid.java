@@ -32,6 +32,12 @@ public class IfcSweptDiskSolid extends IfcSolidModel implements ClassInterface
 	**/
 	public IfcSweptDiskSolid(){}
 
+	private static final String[] attributes = new String[]{"Directrix","Radius","InnerRadius","StartParam","EndParam"};
+
+	public String[] getAttributes(){
+		return IfcSweptDiskSolid.attributes;
+	}
+
 	/**
 	* Constructs a new IfcSweptDiskSolid object using the given parameters.
 	*

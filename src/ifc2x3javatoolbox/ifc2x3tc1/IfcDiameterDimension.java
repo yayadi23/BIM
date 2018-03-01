@@ -22,6 +22,13 @@ public class IfcDiameterDimension extends IfcDimensionCurveDirectedCallout imple
 	**/
 	public IfcDiameterDimension(){}
 
+	private static final String[] attributes = new String[]{"Contents"};
+
+	public String[] getAttributes() {
+		return IfcDiameterDimension.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcDiameterDimension object using the given parameters.
 	*

@@ -24,6 +24,13 @@ public class IfcRelAssignsToResource extends IfcRelAssigns implements ClassInter
 	**/
 	public IfcRelAssignsToResource(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingResource"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsToResource.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsToResource object using the given parameters.
 	*

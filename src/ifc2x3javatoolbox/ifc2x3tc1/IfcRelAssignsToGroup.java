@@ -24,6 +24,13 @@ public class IfcRelAssignsToGroup extends IfcRelAssigns implements ClassInterfac
 	**/
 	public IfcRelAssignsToGroup(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingGroup"};
+
+	public String[] getAttributes() {
+		return IfcRelAssignsToGroup.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssignsToGroup object using the given parameters.
 	*

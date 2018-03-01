@@ -24,6 +24,13 @@ public class IfcFillAreaStyle extends IfcPresentationStyle implements IfcPresent
 	**/
 	public IfcFillAreaStyle(){}
 
+	private static final String[] attributes = new String[]{"Name","FillStyles"};
+
+	public String[] getAttributes() {
+		return IfcFillAreaStyle.attributes;
+	}
+
+
 	/**
 	* Constructs a new IfcFillAreaStyle object using the given parameters.
 	*

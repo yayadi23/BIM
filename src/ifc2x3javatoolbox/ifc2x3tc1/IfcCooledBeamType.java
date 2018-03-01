@@ -24,6 +24,13 @@ public class IfcCooledBeamType extends IfcEnergyConversionDeviceType implements 
 	**/
 	public IfcCooledBeamType(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ApplicableOccurrence","HasPropertySets","RepresentationMaps","Tag","ElementType","PredefinedType"};
+
+	public String[] getAttributes() {
+		return IfcCooledBeamType.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCooledBeamType object using the given parameters.
 	*

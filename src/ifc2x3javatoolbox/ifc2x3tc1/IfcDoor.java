@@ -26,6 +26,13 @@ public class IfcDoor extends IfcBuildingElement implements ClassInterface
 	**/
 	public IfcDoor(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ObjectType","ObjectPlacement","Representation","Tag","OverallHeight","OverallWidth"};
+
+	public String[] getAttributes() {
+		return IfcDoor.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDoor object using the given parameters.
 	*

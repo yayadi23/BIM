@@ -30,6 +30,13 @@ public class IfcServiceLifeFactor extends IfcPropertySetDefinition implements Cl
 	**/
 	public IfcServiceLifeFactor(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description",
+			"PredefinedType","UpperValue","MostUsedValue","LowerValue"};
+
+	public String[] getAttributes(){
+		return IfcServiceLifeFactor.attributes;
+	}
+
 	/**
 	* Constructs a new IfcServiceLifeFactor object using the given parameters.
 	*

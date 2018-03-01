@@ -22,6 +22,12 @@ public class IfcZone extends IfcGroup implements ClassInterface
 	**/
 	public IfcZone(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description","ObjectType"};
+
+	public String[] getAttributes(){
+		return IfcZone.attributes;
+	}
+
 	/**
 	* Constructs a new IfcZone object using the given parameters.
 	*

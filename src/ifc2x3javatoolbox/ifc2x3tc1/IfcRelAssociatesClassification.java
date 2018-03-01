@@ -24,6 +24,13 @@ public class IfcRelAssociatesClassification extends IfcRelAssociates implements 
 	**/
 	public IfcRelAssociatesClassification(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatingClassification"};
+
+	public String[] getAttributes() {
+		return IfcRelAssociatesClassification.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelAssociatesClassification object using the given parameters.
 	*

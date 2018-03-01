@@ -24,6 +24,12 @@ public class IfcCircleProfileDef extends IfcParameterizedProfileDef implements C
 	**/
 	public IfcCircleProfileDef(){}
 
+	private static final String[] attributes = new String[]{"ProfileType","ProfileName","Position","Radius"};
+
+	public String[] getAttributes() {
+		return IfcCircleProfileDef.attributes;
+	}
+
 	/**
 	* Constructs a new IfcCircleProfileDef object using the given parameters.
 	*

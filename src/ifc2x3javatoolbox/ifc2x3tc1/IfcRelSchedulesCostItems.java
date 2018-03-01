@@ -22,6 +22,13 @@ public class IfcRelSchedulesCostItems extends IfcRelAssignsToControl implements 
 	**/
 	public IfcRelSchedulesCostItems(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"RelatedObjects","RelatedObjectsType","RelatingControl"};
+
+	public String[] getAttributes() {
+		return IfcRelSchedulesCostItems.attributes;
+	}
+
 	/**
 	* Constructs a new IfcRelSchedulesCostItems object using the given parameters.
 	*

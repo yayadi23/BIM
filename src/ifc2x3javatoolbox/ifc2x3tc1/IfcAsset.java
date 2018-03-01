@@ -40,6 +40,14 @@ public class IfcAsset extends IfcGroup implements ClassInterface
 	**/
 	public IfcAsset(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+	,"ObjectType","AssetID","OriginalValue","CurrentValue","TotalReplacementCost","Owner","User",
+	"ResponsiblePerson","IncorporationDate","DepreciatedValue"};
+
+	public String[] getAttributes() {
+		return IfcAsset.attributes;
+	}
+
 	/**
 	* Constructs a new IfcAsset object using the given parameters.
 	*

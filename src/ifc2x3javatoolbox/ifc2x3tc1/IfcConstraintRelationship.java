@@ -30,6 +30,12 @@ public class IfcConstraintRelationship extends InternalAccessClass implements Cl
 	**/
 	public IfcConstraintRelationship(){}
 
+	private static final String[] attributes = new String[]{"Name","Description","RelatingConstraint","RelatedConstraints"};
+
+	public String[] getAttributes() {
+		return IfcConstraintRelationship.attributes;
+	}
+
 	/**
 	* Constructs a new IfcConstraintRelationship object using the given parameters.
 	*

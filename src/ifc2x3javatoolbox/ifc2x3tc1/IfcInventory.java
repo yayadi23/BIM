@@ -34,6 +34,14 @@ public class IfcInventory extends IfcGroup implements ClassInterface
 	**/
 	public IfcInventory(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","InventoryType","Jurisdiction","ResponsiblePersons","LastUpdateDate","CurrentValue"
+	,"OriginalValue"};
+
+	public String[] getAttributes() {
+		return IfcInventory.attributes;
+	}
+
 	/**
 	* Constructs a new IfcInventory object using the given parameters.
 	*

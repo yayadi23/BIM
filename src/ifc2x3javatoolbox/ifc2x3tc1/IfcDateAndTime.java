@@ -26,6 +26,12 @@ public class IfcDateAndTime extends InternalAccessClass implements IfcObjectRefe
 	**/
 	public IfcDateAndTime(){}
 
+	private static final String[] attributes = new String[]{"DateComponent","TimeComponent"};
+
+	public String[] getAttributes() {
+		return IfcDateAndTime.attributes;
+	}
+
 	/**
 	* Constructs a new IfcDateAndTime object using the given parameters.
 	*

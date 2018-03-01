@@ -28,6 +28,12 @@ public class IfcTextLiteral extends IfcGeometricRepresentationItem implements Cl
 	**/
 	public IfcTextLiteral(){}
 
+	private static final String[] attributes = new String[]{"Literal","Placement","Path"};
+
+	public String[] getAttributes(){
+		return IfcTextLiteral.attributes;
+	}
+
 	/**
 	* Constructs a new IfcTextLiteral object using the given parameters.
 	*

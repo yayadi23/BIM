@@ -26,6 +26,12 @@ public class IfcEllipse extends IfcConic implements ClassInterface
 	**/
 	public IfcEllipse(){}
 
+	private static final String[] attributes = new String[]{"Position","SemiAxis1","SemiAxis2"};
+
+	public String[] getAttributes() {
+		return IfcEllipse.attributes;
+	}
+
 	/**
 	* Constructs a new IfcEllipse object using the given parameters.
 	*

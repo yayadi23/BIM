@@ -28,6 +28,12 @@ public class IfcPropertyEnumeration extends InternalAccessClass implements Class
 	**/
 	public IfcPropertyEnumeration(){}
 
+	private static final String[] attributes = new String[]{"Name","EnumerationValues","Unit"};
+
+	public String[] getAttributes() {
+		return IfcPropertyEnumeration.attributes;
+	}
+
 	/**
 	* Constructs a new IfcPropertyEnumeration object using the given parameters.
 	*

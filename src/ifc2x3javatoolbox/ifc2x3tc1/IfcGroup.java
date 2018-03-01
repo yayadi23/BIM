@@ -23,6 +23,13 @@ public class IfcGroup extends IfcObject implements ClassInterface
 	**/
 	public IfcGroup(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType"};
+
+	public String[] getAttributes() {
+		return IfcGroup.attributes;
+	}
+
 	/**
 	* Constructs a new IfcGroup object using the given parameters.
 	*

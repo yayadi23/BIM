@@ -24,6 +24,13 @@ public class IfcBuildingStorey extends IfcSpatialStructureElement implements Cla
 	**/
 	public IfcBuildingStorey(){}
 
+	private static final String[] attributes = new String[]{"GlobalId","OwnerHistory","Name","Description"
+			,"ObjectType","ObjectPlacement","Representation","LongName","CompositionType","Elevation"};
+
+	public String[] getAttributes() {
+		return IfcBuildingStorey.attributes;
+	}
+
 	/**
 	* Constructs a new IfcBuildingStorey object using the given parameters.
 	*
